@@ -151,57 +151,76 @@ struct ContentView: View {
         
         
         // component 연습 - Section
-        List{
-            Section {
-                HStack{
-                    Image(systemName: "heart")
-                    Text("Apple")
-                }
-                HStack{
-                    Image(systemName: "heart.fill")
-                    Text("Developer")
-                }
-                HStack{
-                    Image(systemName: "bolt")
-                    Text("Academy")
-                }
-            } header: {
-                Text("header1")
-            }
+        //        List{
+        //            Section {
+        //                HStack{
+        //                    Image(systemName: "heart")
+        //                    Text("Apple")
+        //                }
+        //                HStack{
+        //                    Image(systemName: "heart.fill")
+        //                    Text("Developer")
+        //                }
+        //                HStack{
+        //                    Image(systemName: "bolt")
+        //                    Text("Academy")
+        //                }
+        //            } header: {
+        //                Text("header1")
+        //            }
+        //
+        //            Section {
+        //                HStack{
+        //                    Image(systemName: "heart")
+        //                    Text("Apple")
+        //                }
+        //                HStack{
+        //                    Image(systemName: "heart.fill")
+        //                    Text("Developer")
+        //                }
+        //                HStack{
+        //                    Image(systemName: "bolt")
+        //                    Text("Academy")
+        //                }
+        //            } header: {
+        //                Text("header2")
+        //            }
+        //
+        //            Section{
+        //                HStack{
+        //                    Image(systemName: "heart")
+        //                    Text("Apple")
+        //                }
+        //                HStack{
+        //                    Image(systemName: "heart.fill")
+        //                    Text("Developer")
+        //                }
+        //                HStack{
+        //                    Image(systemName: "bolt")
+        //                    Text("Academy")
+        //                }
+        //            } footer: {
+        //                Text("copy right by bokoo")
+        //            }
+        //        }
+        
+        
+        
+        // component 연습 - Spacer
+        VStack{
+            Image(systemName: "bolt")
+                .resizable()
+                .frame(width: 200)
+                .aspectRatio(contentMode: .fit)
             
-            Section {
-                HStack{
-                    Image(systemName: "heart")
-                    Text("Apple")
-                }
-                HStack{
-                    Image(systemName: "heart.fill")
-                    Text("Developer")
-                }
-                HStack{
-                    Image(systemName: "bolt")
-                    Text("Academy")
-                }
-            } header: {
-                Text("header2")
+            Text("Bolt!")
+            Button {
+                print("Blink!")
+            } label: {
+                Text("Click me!")
             }
+
             
-            Section{
-                HStack{
-                    Image(systemName: "heart")
-                    Text("Apple")
-                }
-                HStack{
-                    Image(systemName: "heart.fill")
-                    Text("Developer")
-                }
-                HStack{
-                    Image(systemName: "bolt")
-                    Text("Academy")
-                }
-            } footer: {
-                Text("copy right by bokoo")
-            }
         }
     }
     
