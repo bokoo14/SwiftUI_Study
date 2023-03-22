@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+// component 연습 - List
+struct Person: Identifiable { // 식별가능해야 함 (고유해야 함)
+    var id = UUID() // 각각의 unique id를 생성해줌
+    let name: String
+    let imageName: String
+}
+
 struct ContentView: View {
     var body: some View {
         // component 연습 - Button
@@ -116,23 +123,86 @@ struct ContentView: View {
         
         // componenet 연습 - List
         // UIKit의 UITableView와 비슷한 기능을 함
-        List{ // 정적인 List
-            HStack{
-                Image(systemName: "heart")
-                Text("Apple")
+        //        List{ // 정적인 List
+        //            HStack{
+        //                Image(systemName: "heart")
+        //                Text("Apple")
+        //            }
+        //            HStack{
+        //                Image(systemName: "heart.fill")
+        //                Text("Developer")
+        //            }
+        //            HStack{
+        //                Image(systemName: "bolt")
+        //                Text("Academy")
+        //            }
+        //        }
+        
+        // 동적인 List
+        //        let people: [Person] = [Person(name: "Apple", imageName: "heart"),
+        //                                Person(name: "Developer", imageName: "heart.fill"),
+        //                                Person(name: "Academy", imageName: "bolt")]
+        //        List(people) { person in // person은 고유해야 함
+        //            HStack{
+        //                Image(systemName: person.imageName)
+        //                Text(person.name)
+        //            }
+        //        }
+        
+        
+        // component 연습 - Section
+        List{
+            Section {
+                HStack{
+                    Image(systemName: "heart")
+                    Text("Apple")
+                }
+                HStack{
+                    Image(systemName: "heart.fill")
+                    Text("Developer")
+                }
+                HStack{
+                    Image(systemName: "bolt")
+                    Text("Academy")
+                }
+            } header: {
+                Text("header1")
             }
-            HStack{
-                Image(systemName: "heart.fill")
-                Text("Developer")
+            
+            Section {
+                HStack{
+                    Image(systemName: "heart")
+                    Text("Apple")
+                }
+                HStack{
+                    Image(systemName: "heart.fill")
+                    Text("Developer")
+                }
+                HStack{
+                    Image(systemName: "bolt")
+                    Text("Academy")
+                }
+            } header: {
+                Text("header2")
             }
-            HStack{
-                Image(systemName: "bolt")
-                Text("Academy")
+            
+            Section{
+                HStack{
+                    Image(systemName: "heart")
+                    Text("Apple")
+                }
+                HStack{
+                    Image(systemName: "heart.fill")
+                    Text("Developer")
+                }
+                HStack{
+                    Image(systemName: "bolt")
+                    Text("Academy")
+                }
+            } footer: {
+                Text("copy right by bokoo")
             }
         }
-        
-        
-        
     }
     
 }
