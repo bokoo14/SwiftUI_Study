@@ -205,23 +205,36 @@ struct ContentView: View {
         //        }
         
         
-        
         // component 연습 - Spacer
-        VStack{
-            Image(systemName: "bolt")
-                .resizable()
-                .frame(width: 200)
-                .aspectRatio(contentMode: .fit)
-            
-            Text("Bolt!")
-            Button {
-                print("Blink!")
-            } label: {
-                Text("Click me!")
-            }
-
-            
-        }
+        //        VStack{
+        //            Image(systemName: "bolt")
+        //                .resizable()
+        //                .aspectRatio(contentMode: .fit)
+        //                .frame(width: 200)
+        //
+        //            Spacer()
+        //            HStack{
+        //                Image(systemName: "heart")
+        //                Spacer() // 좌우의 공간을 만들어줌
+        //                Text("Bolt!")
+        //            } .padding(.horizontal, 30) // 좌우에 padding을 30만큼 줌
+        //            Spacer() // 아래에 공간을 만들어줌
+        //
+        //            Button {
+        //                print("Blink!")
+        //            } label: {
+        //                Text("Click me!")
+        //            }
+        //        }
+        
+        // component 연습 - color
+        // Color(.blue).ignoresSafeArea(.all) // .bottom, .top, [.top, .bottom] 가능
+        Color(.blue)
+            .frame(width: 300, height: 300) //배경을 잘라서 사용 가능
+            .clipShape(Circle()) // 모양을 잘라도 됨 -> 동그란 모양으로
+        
+        
+        
     }
     
 }
