@@ -20,6 +20,10 @@ struct ContentView: View {
     // name은 구조체 안에 있는 변수이기 때문에 바꿀 수 없음 -> @State를 붙여줘야 한다
     @State var name: String = ""
     
+    // 실습 - Text, Image, List, Stack, frame, padding
+    @State var strength: Double? = 0
+    @State var isLighting: Bool = false
+    
     var body: some View {
         // component 연습 - Button
         //        Button {
@@ -293,11 +297,37 @@ struct ContentView: View {
         //        }
         
         // component 연습 - frame
-        Image(systemName: "bolt")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 300, height: 200, alignment: .trailing) // 기본 값은 .center .trailing, .leading이 올 수 있음
-            .background(.green)
+        //        Image(systemName: "bolt")
+        //            .resizable()
+        //            .aspectRatio(contentMode: .fit)
+        //            .frame(width: 300, height: 200, alignment: .trailing) // 기본 값은 .center .trailing, .leading이 올 수 있음
+        //            .background(.green)
+        
+        // 실습 - Text, Image, List, Stack, frame, padding
+        ZStack{
+            Color.yellow.edgesIgnoringSafeArea(.all)
+            
+            VStack{
+                Spacer()
+                Image(systemName: isLighting ? "bolt.fill": "bolt")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 200, height: 200, alignment: .center)
+                Spacer()
+                
+                HStack{
+                    Text("번개를 원하시면?")
+                    Button {
+                        isLighting.toggle()
+                    } label: {
+                        Text("번쩍!")
+                            .padding()
+                            .background(.orange)
+                            .cornerRadius(10)
+                    }
+                }
+            }
+        }
         
     }
 }
