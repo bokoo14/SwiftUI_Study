@@ -272,25 +272,32 @@ struct ContentView: View {
         //            .background(.green)
         //            .foregroundColor(.red)
         
+        
         // component 연습 - padding
-        VStack {
-            Image(systemName: "bolt")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100)
-                .background(.green)
-                .foregroundColor(.red)
-                .padding(.bottom, 100)
-            
-            Image(systemName: "bolt")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100)
-                .background(.green)
-                .foregroundColor(.red)
-                .padding(.leading, 100)
-            
-        }
+        //        VStack {
+        //            Image(systemName: "bolt")
+        //                .resizable()
+        //                .aspectRatio(contentMode: .fit)
+        //                .frame(width: 100)
+        //                .background(.green)
+        //                .foregroundColor(.red)
+        //                .padding(.bottom, 100) // 방향과 크기를 입력받을 수 있다, 아무것도 입력하지 않으면 기본값인 .all이 들어간다
+        //
+        //            Image(systemName: "bolt")
+        //                .resizable()
+        //                .aspectRatio(contentMode: .fit)
+        //                .frame(width: 100)
+        //                .background(.green)
+        //                .foregroundColor(.red)
+        //                .padding(.leading, 100) // 왼쪽에 여백을 줌 [.bottom, .top]이런 식으로 넣는 것도 가능
+        //        }
+        
+        // component 연습 - frame
+        Image(systemName: "bolt")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 300, height: 200, alignment: .trailing) // 기본 값은 .center .trailing, .leading이 올 수 있음
+            .background(.green)
         
     }
 }
