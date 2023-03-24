@@ -5,6 +5,7 @@
 //  Created by Bokyung on 2023/03/22.
 //
 
+// 한 조각씩 배우는 SwiftUI - 입문편
 import SwiftUI
 
 // component 연습 - List
@@ -15,6 +16,10 @@ struct Person: Identifiable { // 식별가능해야 함 (고유해야 함)
 }
 
 struct ContentView: View {
+    // component 연습 - state
+    // name은 구조체 안에 있는 변수이기 때문에 바꿀 수 없음 -> @State를 붙여줘야 한다
+    @State var name: String = ""
+    
     var body: some View {
         // component 연습 - Button
         //        Button {
@@ -229,14 +234,72 @@ struct ContentView: View {
         
         // component 연습 - color
         // Color(.blue).ignoresSafeArea(.all) // .bottom, .top, [.top, .bottom] 가능
-        Color(.blue)
-            .frame(width: 300, height: 300) //배경을 잘라서 사용 가능
-            .clipShape(Circle()) // 모양을 잘라도 됨 -> 동그란 모양으로
+        
+        //        Color(.blue)
+        //            .frame(width: 300, height: 300) //배경을 잘라서 사용 가능
+        //            //.clipShape(Circle()) // 모양을 잘라도 됨 -> 동그란 모양으로
+        //            .clipShape(RoundedRectangle(cornerRadius: 30)) // 모서리가 둥근 사각형
+        
+        //Color(red: 0.4, green: 0.5, blue: 0.1) // rgb를 활용
+        //Color(hue: 0.3, saturation: 0.4, brightness: 0.5)
+        //Color("NewColor") // assets에 저장된 색상 사용하기
         
         
+        // component 연습 - View
+        // View란? SwiftUI에서 그림을 그리도록 해주는 것
+        // MyView() // 나의 view를 만들 수 있음
+        
+        
+        // component 연습 - @State
+        // state는 왜 필요할까? struct는 한번 만들면 그 안에 있는 내용을 바꾸기 힘들다, 그 내용을 한번 바꾸면 새로운 화면을 다시 그려야 한다, state변수가 바뀌면 화면을 새로 그릴 수 있음
+        // 화면을 다시 그리기 위해서는 @State변수를 사용하여야 한다
+        //        VStack {
+        //            Text("Hi \(name)")
+        //            Button {
+        //                name = "Bokyung"
+        //            } label: {
+        //                Text("Click")
+        //            }
+        //        }
+        
+        
+        // component 연습 - modifier
+        // 점을 찍으면 내가 원하는 행동을 할 수 있다
+        //        Image(systemName: "bolt")
+        //            .resizable()
+        //            .aspectRatio(contentMode: .fit)
+        //            .frame(width: 100)
+        //            .background(.green)
+        //            .foregroundColor(.red)
+        
+        // component 연습 - padding
+        VStack {
+            Image(systemName: "bolt")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100)
+                .background(.green)
+                .foregroundColor(.red)
+                .padding(.bottom, 100)
+            
+            Image(systemName: "bolt")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100)
+                .background(.green)
+                .foregroundColor(.red)
+                .padding(.leading, 100)
+            
+        }
         
     }
-    
+}
+
+// component 엽습 - View
+struct MyView: View { // view를 직접 만들어 사용할 수 있음
+    var body: some View {
+        Text("this is my new view!")
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
