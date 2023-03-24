@@ -25,7 +25,7 @@ struct ContentView: View {
     @State var isLighting: Bool = false
     
     var body: some View {
-        // component 연습 - Button
+        //component 연습 - Button
         //        Button {
         //            print("Hitted2")
         //        } label: {
@@ -35,7 +35,7 @@ struct ContentView: View {
         //                .background(.indigo)
         //                .cornerRadius(13)
         //        }
-        
+        //
         //        Button("Delete", role: .destructive) {
         //            print("deleted!")
         //        }
@@ -67,7 +67,7 @@ struct ContentView: View {
         //            .clipped() // image 자르기 -> 200, 200에 맞게
         //            .background(.cyan) // 백그라운드 색깔
         //            .border(.black, width: 7) // 테두리
-        
+        //
         //        Image(systemName: "heart.fill") // sf symbol
         //            .resizable()
         //            .aspectRatio(contentMode: .fit)
@@ -82,13 +82,13 @@ struct ContentView: View {
         //                .background(.blue)
         //        } .frame(width: 300, height: 300, alignment: .leading)
         //            .background(.orange)
-        
+        //
         //        HStack{ // 수평 스택
         //            Text("1")
         //            Text("2")
         //            Text("3")
         //        }
-        
+        //
         //        ZStack{ // z축 스택 (위로 쌓기)
         //            Text("1")
         //            Text("2")
@@ -96,7 +96,7 @@ struct ContentView: View {
         //        }
         
         
-        // component 연습 - ScrollView
+        //        component 연습 - ScrollView
         //        ScrollView { // VStack으로 하면 scroll안됨 -> ScrollView를 사용해야함!
         //            // 기본적으로 VStack -> 위아래 scroll
         //            Text("1")
@@ -112,7 +112,7 @@ struct ContentView: View {
         //                .background(.orange)
         //        }
         //        .background(.black) //ScrollView를 사용하면 전체 화면에서 View가 생기는 것이 아닌 짤림!
-        
+        //
         //        ScrollView (.horizontal, showsIndicators: false){ // 좌우 스크롤, indicator가리기
         //            HStack{ // 수평스택
         //                Text("1")
@@ -131,7 +131,7 @@ struct ContentView: View {
         
         
         // componenet 연습 - List
-        // UIKit의 UITableView와 비슷한 기능을 함
+        //UIKit의 UITableView와 비슷한 기능을 함
         //        List{ // 정적인 List
         //            HStack{
         //                Image(systemName: "heart")
@@ -146,8 +146,8 @@ struct ContentView: View {
         //                Text("Academy")
         //            }
         //        }
-        
-        // 동적인 List
+        //
+        //        동적인 List
         //        let people: [Person] = [Person(name: "Apple", imageName: "heart"),
         //                                Person(name: "Developer", imageName: "heart.fill"),
         //                                Person(name: "Academy", imageName: "bolt")]
@@ -156,7 +156,7 @@ struct ContentView: View {
         //                Image(systemName: person.imageName)
         //                Text(person.name)
         //            }
-        //        }
+        //}
         
         
         // component 연습 - Section
@@ -212,9 +212,9 @@ struct ContentView: View {
         //                Text("copy right by bokoo")
         //            }
         //        }
-        
-        
-        // component 연습 - Spacer
+        //
+        //
+        //         component 연습 - Spacer
         //        VStack{
         //            Image(systemName: "bolt")
         //                .resizable()
@@ -235,18 +235,20 @@ struct ContentView: View {
         //                Text("Click me!")
         //            }
         //        }
+        //
+        
         
         // component 연습 - color
-        // Color(.blue).ignoresSafeArea(.all) // .bottom, .top, [.top, .bottom] 가능
-        
+        //        Color(.blue).ignoresSafeArea(.all) // .bottom, .top, [.top, .bottom] 가능
+        //
         //        Color(.blue)
         //            .frame(width: 300, height: 300) //배경을 잘라서 사용 가능
-        //            //.clipShape(Circle()) // 모양을 잘라도 됨 -> 동그란 모양으로
+        //        //.clipShape(Circle()) // 모양을 잘라도 됨 -> 동그란 모양으로
         //            .clipShape(RoundedRectangle(cornerRadius: 30)) // 모서리가 둥근 사각형
-        
-        //Color(red: 0.4, green: 0.5, blue: 0.1) // rgb를 활용
-        //Color(hue: 0.3, saturation: 0.4, brightness: 0.5)
-        //Color("NewColor") // assets에 저장된 색상 사용하기
+        //
+        //        Color(red: 0.4, green: 0.5, blue: 0.1) // rgb를 활용
+        //        Color(hue: 0.3, saturation: 0.4, brightness: 0.5)
+        //        Color("NewColor") // assets에 저장된 색상 사용하기
         
         
         // component 연습 - View
@@ -277,7 +279,7 @@ struct ContentView: View {
         //            .foregroundColor(.red)
         
         
-        // component 연습 - padding
+        //        component 연습 - padding
         //        VStack {
         //            Image(systemName: "bolt")
         //                .resizable()
