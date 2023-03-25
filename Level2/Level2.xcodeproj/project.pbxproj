@@ -14,6 +14,9 @@
 		3E04659029CDE686007D0564 /* MyDarkColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04658F29CDE686007D0564 /* MyDarkColor.swift */; };
 		3E04659229CDE6CB007D0564 /* MyDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04659129CDE6CB007D0564 /* MyDivider.swift */; };
 		3E04659529CDE707007D0564 /* MyModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04659429CDE707007D0564 /* MyModal.swift */; };
+		3E04659729CE9D5B007D0564 /* MyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04659629CE9D5B007D0564 /* MyAlert.swift */; };
+		3E04659B29CEA228007D0564 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04659A29CEA228007D0564 /* MyTabView.swift */; };
+		3E04659E29CEA96D007D0564 /* MyToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04659D29CEA96D007D0564 /* MyToggle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		3E04658F29CDE686007D0564 /* MyDarkColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDarkColor.swift; sourceTree = "<group>"; };
 		3E04659129CDE6CB007D0564 /* MyDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDivider.swift; sourceTree = "<group>"; };
 		3E04659429CDE707007D0564 /* MyModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModal.swift; sourceTree = "<group>"; };
+		3E04659629CE9D5B007D0564 /* MyAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlert.swift; sourceTree = "<group>"; };
+		3E04659A29CEA228007D0564 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
+		3E04659D29CEA96D007D0564 /* MyToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 				3E04658C29CDE62F007D0564 /* Lists */,
 				3E04658D29CDE639007D0564 /* Stacks */,
 				3E04658E29CDE640007D0564 /* Text */,
+				3E04659C29CEA951007D0564 /* Button */,
 				3E04657E29CDAAED007D0564 /* Level2App.swift */,
 				3E04658029CDAAED007D0564 /* ContentView.swift */,
 				3E04658229CDAAEE007D0564 /* Assets.xcassets */,
@@ -104,8 +111,18 @@
 			isa = PBXGroup;
 			children = (
 				3E04659429CDE707007D0564 /* MyModal.swift */,
+				3E04659629CE9D5B007D0564 /* MyAlert.swift */,
+				3E04659A29CEA228007D0564 /* MyTabView.swift */,
 			);
 			path = VIews;
+			sourceTree = "<group>";
+		};
+		3E04659C29CEA951007D0564 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				3E04659D29CEA96D007D0564 /* MyToggle.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,10 +196,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E04659029CDE686007D0564 /* MyDarkColor.swift in Sources */,
+				3E04659E29CEA96D007D0564 /* MyToggle.swift in Sources */,
 				3E04658129CDAAED007D0564 /* ContentView.swift in Sources */,
 				3E04657F29CDAAED007D0564 /* Level2App.swift in Sources */,
 				3E04659229CDE6CB007D0564 /* MyDivider.swift in Sources */,
+				3E04659729CE9D5B007D0564 /* MyAlert.swift in Sources */,
 				3E04659529CDE707007D0564 /* MyModal.swift in Sources */,
+				3E04659B29CEA228007D0564 /* MyTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
