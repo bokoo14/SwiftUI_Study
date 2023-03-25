@@ -11,7 +11,7 @@ import SwiftUI
 struct Level2App: App {
     var body: some Scene {
         WindowGroup {
-            MyModal()
+            MyToggle()
         }
     }
 }
