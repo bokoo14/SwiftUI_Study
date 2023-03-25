@@ -18,6 +18,7 @@
 		3E04659B29CEA228007D0564 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04659A29CEA228007D0564 /* MyTabView.swift */; };
 		3E04659E29CEA96D007D0564 /* MyToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04659D29CEA96D007D0564 /* MyToggle.swift */; };
 		3E0465A029CEAFA0007D0564 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04659F29CEAFA0007D0564 /* MyTextField.swift */; };
+		3E0465A429CEBCC0007D0564 /* MySecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0465A329CEBCC0007D0564 /* MySecureField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		3E04659A29CEA228007D0564 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		3E04659D29CEA96D007D0564 /* MyToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToggle.swift; sourceTree = "<group>"; };
 		3E04659F29CEAFA0007D0564 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		3E0465A329CEBCC0007D0564 /* MySecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySecureField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				3E04658F29CDE686007D0564 /* MyDarkColor.swift */,
 				3E04659129CDE6CB007D0564 /* MyDivider.swift */,
 				3E04659F29CEAFA0007D0564 /* MyTextField.swift */,
+				3E0465A329CEBCC0007D0564 /* MySecureField.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				3E04659029CDE686007D0564 /* MyDarkColor.swift in Sources */,
 				3E04659E29CEA96D007D0564 /* MyToggle.swift in Sources */,
 				3E04658129CDAAED007D0564 /* ContentView.swift in Sources */,
+				3E0465A429CEBCC0007D0564 /* MySecureField.swift in Sources */,
 				3E0465A029CEAFA0007D0564 /* MyTextField.swift in Sources */,
 				3E04657F29CDAAED007D0564 /* Level2App.swift in Sources */,
 				3E04659229CDE6CB007D0564 /* MyDivider.swift in Sources */,
