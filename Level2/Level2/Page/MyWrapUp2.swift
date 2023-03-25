@@ -49,19 +49,17 @@ struct MyWrapUp2: View {
                 }
                 .frame(width: 100, alignment: .leading)
                 
-                if hasShownPassword {
+                if hasShownPassword { // hasShownPassword == true이면 TextField로 input
                     TextField("Text Field", text: $userPassWord)
                 }
-                else {
+                else { // hasShownPassword == false이면 SecureField로 input
                     SecureField("Secure Field", text: $userPassWord)
                 }
                 Spacer()
                 
                 Toggle(isOn: $hasShownPassword) {
-                    
                 }
             }
-            
             
             Button {
                 // 버튼을 눌렀을때 아이디가 bokyung이고, 비밀번호가 1234이면 바인딩 변수가 true로 바뀌개
