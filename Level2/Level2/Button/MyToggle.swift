@@ -17,7 +17,10 @@ struct MyToggle: View {
             } else {
                 Text("Light Off ->")
             }
-        }.padding(30)
+        }
+        .toggleStyle(.switch)
+        .tint(.blue)
+        .padding(30)
         
     }
 }
