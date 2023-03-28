@@ -19,6 +19,9 @@
 		3E0465DE29CFE684007D0564 /* MyTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0465DD29CFE684007D0564 /* MyTextEditor.swift */; };
 		3E0465E029D07754007D0564 /* MyHexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0465DF29D07754007D0564 /* MyHexColor.swift */; };
 		3E0465E329D082FE007D0564 /* MyBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0465E229D082FE007D0564 /* MyBasicAnimation.swift */; };
+		3E2D353629D32F7200A0AD01 /* MyGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D353529D32F7200A0AD01 /* MyGradient.swift */; };
+		3E2D353829D3396800A0AD01 /* MyForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D353729D3396800A0AD01 /* MyForm.swift */; };
+		3E2D353B29D33D9700A0AD01 /* MyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D353A29D33D9700A0AD01 /* MyGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		3E0465DD29CFE684007D0564 /* MyTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextEditor.swift; sourceTree = "<group>"; };
 		3E0465DF29D07754007D0564 /* MyHexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHexColor.swift; sourceTree = "<group>"; };
 		3E0465E229D082FE007D0564 /* MyBasicAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBasicAnimation.swift; sourceTree = "<group>"; };
+		3E2D353529D32F7200A0AD01 /* MyGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGradient.swift; sourceTree = "<group>"; };
+		3E2D353729D3396800A0AD01 /* MyForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyForm.swift; sourceTree = "<group>"; };
+		3E2D353A29D33D9700A0AD01 /* MyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 		3E0465BD29CF34D5007D0564 /* Level3 */ = {
 			isa = PBXGroup;
 			children = (
+				3E2D353929D33D8400A0AD01 /* Layout */,
 				3E0465E129D082E3007D0564 /* Animation */,
 				3E0465CC29CF356E007D0564 /* Page */,
 				3E0465CD29CF3575007D0564 /* Views */,
@@ -101,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3E0465D329CF35E9007D0564 /* MyShape.swift */,
+				3E2D353529D32F7200A0AD01 /* MyGradient.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +143,7 @@
 		3E0465D129CF35AB007D0564 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				3E2D353729D3396800A0AD01 /* MyForm.swift */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -145,6 +154,14 @@
 				3E0465E229D082FE007D0564 /* MyBasicAnimation.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		3E2D353929D33D8400A0AD01 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				3E2D353A29D33D9700A0AD01 /* MyGrid.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,8 +240,11 @@
 				3E0465D829CFD3B1007D0564 /* MySlider.swift in Sources */,
 				3E0465DA29CFDC2A007D0564 /* MyStepper.swift in Sources */,
 				3E0465BF29CF34D5007D0564 /* Level3App.swift in Sources */,
+				3E2D353B29D33D9700A0AD01 /* MyGrid.swift in Sources */,
 				3E0465D629CF3C0A007D0564 /* MyBinding.swift in Sources */,
+				3E2D353629D32F7200A0AD01 /* MyGradient.swift in Sources */,
 				3E0465E029D07754007D0564 /* MyHexColor.swift in Sources */,
+				3E2D353829D3396800A0AD01 /* MyForm.swift in Sources */,
 				3E0465DE29CFE684007D0564 /* MyTextEditor.swift in Sources */,
 				3E0465E329D082FE007D0564 /* MyBasicAnimation.swift in Sources */,
 			);
