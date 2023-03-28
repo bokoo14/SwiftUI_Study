@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct MyBasicAnimation: View {
+    @State var isLighting: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Image(systemName: "cloud")
+                .offset(y: -50)
+            HStack{
+                Image(systemName: "bolt")
+                    .offset(y: isLighting ? 0: -50)
+                    .padding()
+                    .animation(.easeInOut(duration: 7), value: isLighting)
+                Image(systemName: "bolt")
+                    .offset(y: isLighting ? 0: -50)
+                    .padding()
+                    .animation(.easeIn(duration: 7), value: isLighting)
+                Image(systemName: "bolt")
+                    .offset(y: isLighting ? 0: -50)
+                    .padding()
+                    .animation(.easeOut(duration: 7), value: isLighting)
+            }
+            Button {
+                isLighting.toggle()
+            } label: {
+                Text("click")
+            }
+        }
+
     }
 }
 
