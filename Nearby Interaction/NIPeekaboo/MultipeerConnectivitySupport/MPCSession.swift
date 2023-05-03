@@ -50,7 +50,7 @@ class MPCSession: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, M
     
     
     // MARK: - `MPCSession` public methods.
-    // Begins advertising the service provided by a local peer and starts the assistant.
+    // Begins advertising the service provided by a local peer and starts the assistant. - 서비스를 advertising하기 시작하고, assistant시작
     func start() {
         mcAdvertiser.startAdvertisingPeer()
         mcBrowser.startBrowsingForPeers()
