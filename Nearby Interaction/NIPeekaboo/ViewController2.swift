@@ -213,9 +213,9 @@ class ViewController2: UIViewController, NISessionDelegate {
         // 사용자 승인이 없는 경우, 사용자가 액세스를 업데이트할 수 있는 설정으로 이동하는 옵션
         if case NIError.userDidNotAllow = error {
             if #available(iOS 15.0, *) {
-                // In iOS 15.0, Settings persists Nearby Interaction access.
+                // In iOS 15.0, Settings persists Nearby Interaction access. - UIKit의 label을 변경하는 함수
                 updateInformationLabel(description: "Nearby Interactions access required. You can change access for NIPeekaboo in Settings.")
-                // Create an alert that directs the user to Settings.
+                // Create an alert that directs the user to Settings. - UIKit의 alert
                 let accessAlert = UIAlertController(title: "Access Required",
                                                     message: """
                                                     NIPeekaboo requires access to Nearby Interactions for this sample app.
@@ -225,13 +225,13 @@ class ViewController2: UIViewController, NISessionDelegate {
                                                     preferredStyle: .alert)
                 accessAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                 accessAlert.addAction(UIAlertAction(title: "Go to Settings", style: .default, handler: {_ in
-                    // Send the user to the app's Settings to update Nearby Interactions access.
+                    // Send the user to the app's Settings to update Nearby Interactions access. - setting으로 갈 수 있도록 해줌
                     if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
                         UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
                     }
                 }))
 
-                // Display the alert.
+                // Display the alert. - 화면에 alert를 보여줌
                 present(accessAlert, animated: true, completion: nil)
             } else {
                 // Before iOS 15.0, ask the user to restart the app so the
@@ -262,6 +262,8 @@ class ViewController2: UIViewController, NISessionDelegate {
             mpc?.peerDataHandler = dataReceivedHandler
             mpc?.peerDisconnectedHandler = disconnectedFromPeer
         }
+        
+        // mpc를 무효화 후 시작
         mpc?.invalidate()
         mpc?.start()
     }
@@ -272,12 +274,14 @@ class ViewController2: UIViewController, NISessionDelegate {
             fatalError("Unexpectedly failed to initialize nearby interaction session.")
         }
 
+        // 이미 연결되어 있으면 -> 연결되었다고 알려줌
         if connectedPeer != nil { // 연결된 피어가 nil이 아니면
             fatalError("Already connected to a peer.") // 이미 연결되어있음을 알려준다.
         }
 
-        if !sharedTokenWithPeer { // 피어와 토큰이 공유되었는지 확인하는 부울값이 false이면
-            shareMyDiscoveryToken(token: myToken) // 피어와 토큰을 공유하는 함수를 실행한다.
+        // 토큰을 공유하지 않았다면 peer에게 나의 토큰 공유
+        if !sharedTokenWithPeer { // 피어와 토큰이 공유되었는지 확인하는 부울값이 false이면 -> peer와 토큰을 공유하지 않았으면
+            shareMyDiscoveryToken(token: myToken) // 피어와 토큰을 공유하는 함수를 실행한다. -> peer에게 나의 토큰을 공유
         }
 
         connectedPeer = peer // 연결된 피어 값을 저장하고,
@@ -286,13 +290,15 @@ class ViewController2: UIViewController, NISessionDelegate {
         centerInformationLabel.text = peerDisplayName // 라벨 값을 바꾼다.
         detailDeviceNameLabel.text = peerDisplayName
     }
+    
     // 피어로부터 disconnect 하는 함수
     func disconnectedFromPeer(peer: MCPeerID) {
         if connectedPeer == peer { // peer가 연결되어있는 피어가 맞으면 상태 초기화
-            connectedPeer = nil
-            sharedTokenWithPeer = false
+            connectedPeer = nil // 연결된 peer없음
+            sharedTokenWithPeer = false // peer와 토큰을 공유하지 않았음
         }
     }
+    
     // peerID와 data를 받아와서 token을 전달하는 함수
     func dataReceivedHandler(data: Data, peer: MCPeerID) {
         guard let discoveryToken = try? NSKeyedUnarchiver.unarchivedObject(ofClass: NIDiscoveryToken.self, from: data) else {
@@ -308,6 +314,7 @@ class ViewController2: UIViewController, NISessionDelegate {
         mpc?.sendDataToAllPeers(data: encodedData)
         sharedTokenWithPeer = true
     }
+    
     // 전달받은 token을 connectedPeer의 토큰이 맞는지 확인하고, 인터랙션을 시작하는 함수이다.
     func peerDidShareDiscoveryToken(peer: MCPeerID, token: NIDiscoveryToken) {
         if connectedPeer != peer { // peer가 connectedPeer와 일치하는지 여부 파악
@@ -322,6 +329,8 @@ class ViewController2: UIViewController, NISessionDelegate {
         session?.run(config) // 두 디바이스 간 인터랙션 시작하는 함수
     }
 
+    
+    
     // MARK: - Visualizations
   
     // isNearby함수는 인자로 할당되는 distance가 우리가 지정한 임계값보다 작으면 True를, 크면 false를 할당한다.
@@ -445,6 +454,7 @@ class ViewController2: UIViewController, NISessionDelegate {
             detailAzimuthLabel.text = String(format: "% 3.0f°", azimuth!.radiansToDegrees)
         }
     }
+    
     
     // 현재상태와 다음상태에 따라 햅틱을 재생(?)하고 비주얼 업데이트하는 함수
     func updateVisualization(from currentState: DistanceDirectionState, to nextState: DistanceDirectionState, with peer: NINearbyObject) {
