@@ -14,6 +14,12 @@
 		3E8F026B2A02745500F5F75B /* NISessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F026A2A02745500F5F75B /* NISessionManager.swift */; };
 		3E8F02702A04E70100F5F75B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F026F2A04E70100F5F75B /* HomeView.swift */; };
 		3E8F02732A04E8D400F5F75B /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F02722A04E8D400F5F75B /* LocalNetworkAuthorization.swift */; };
+		3E8F02762A0552F300F5F75B /* UserCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F02752A0552F300F5F75B /* UserCheckViewModel.swift */; };
+		3E8F02782A0553F200F5F75B /* MathUtillities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F02772A0553F200F5F75B /* MathUtillities.swift */; };
+		3E8F027A2A05548200F5F75B /* PermissionCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F02792A05548200F5F75B /* PermissionCheckView.swift */; };
+		3E8F027D2A05666800F5F75B /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F027C2A05666800F5F75B /* HomeMainButton.swift */; };
+		3E8F027F2A0566AA00F5F75B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F027E2A0566AA00F5F75B /* Extension.swift */; };
+		3E8F02812A0611C900F5F75B /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F02802A0611C900F5F75B /* Match.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		3E8F026A2A02745500F5F75B /* NISessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NISessionManager.swift; sourceTree = "<group>"; };
 		3E8F026F2A04E70100F5F75B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3E8F02722A04E8D400F5F75B /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
+		3E8F02752A0552F300F5F75B /* UserCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheckViewModel.swift; sourceTree = "<group>"; };
+		3E8F02772A0553F200F5F75B /* MathUtillities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtillities.swift; sourceTree = "<group>"; };
+		3E8F02792A05548200F5F75B /* PermissionCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCheckView.swift; sourceTree = "<group>"; };
+		3E8F027C2A05666800F5F75B /* HomeMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainButton.swift; sourceTree = "<group>"; };
+		3E8F027E2A0566AA00F5F75B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		3E8F02802A0611C900F5F75B /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				3E8F02592A00B49800F5F75B /* NearbyInteractionEXApp.swift */,
-				3E8F02712A04E77800F5F75B /* Views */,
+				3E8F02742A0552C100F5F75B /* Model */,
+				3E8F02712A04E77800F5F75B /* View */,
 				3E8F026C2A02745E00F5F75B /* NIUtils */,
 				3E8F025D2A00B49A00F5F75B /* Assets.xcassets */,
 				3E8F025F2A00B49A00F5F75B /* Preview Content */,
@@ -85,6 +98,7 @@
 		3E8F026C2A02745E00F5F75B /* NIUtils */ = {
 			isa = PBXGroup;
 			children = (
+				3E8F02772A0553F200F5F75B /* MathUtillities.swift */,
 				3E8F026A2A02745500F5F75B /* NISessionManager.swift */,
 				3E8F02672A01338700F5F75B /* MPCSupport */,
 				3E8F02722A04E8D400F5F75B /* LocalNetworkAuthorization.swift */,
@@ -92,12 +106,32 @@
 			path = NIUtils;
 			sourceTree = "<group>";
 		};
-		3E8F02712A04E77800F5F75B /* Views */ = {
+		3E8F02712A04E77800F5F75B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3E8F027B2A05665400F5F75B /* Components */,
 				3E8F026F2A04E70100F5F75B /* HomeView.swift */,
+				3E8F02792A05548200F5F75B /* PermissionCheckView.swift */,
 			);
-			path = Views;
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E8F02742A0552C100F5F75B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E8F02752A0552F300F5F75B /* UserCheckViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E8F027B2A05665400F5F75B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3E8F027C2A05666800F5F75B /* HomeMainButton.swift */,
+				3E8F027E2A0566AA00F5F75B /* Extension.swift */,
+				3E8F02802A0611C900F5F75B /* Match.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,10 +204,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E8F02782A0553F200F5F75B /* MathUtillities.swift in Sources */,
 				3E8F025A2A00B49800F5F75B /* NearbyInteractionEXApp.swift in Sources */,
 				3E8F02692A0133D300F5F75B /* MPCSession.swift in Sources */,
 				3E8F02702A04E70100F5F75B /* HomeView.swift in Sources */,
 				3E8F02732A04E8D400F5F75B /* LocalNetworkAuthorization.swift in Sources */,
+				3E8F027F2A0566AA00F5F75B /* Extension.swift in Sources */,
+				3E8F027D2A05666800F5F75B /* HomeMainButton.swift in Sources */,
+				3E8F02762A0552F300F5F75B /* UserCheckViewModel.swift in Sources */,
+				3E8F02812A0611C900F5F75B /* Match.swift in Sources */,
+				3E8F027A2A05548200F5F75B /* PermissionCheckView.swift in Sources */,
 				3E8F026B2A02745500F5F75B /* NISessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
