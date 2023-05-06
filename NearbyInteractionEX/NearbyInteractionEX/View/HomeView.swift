@@ -19,9 +19,6 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                Color.red
-                    .ignoresSafeArea()
-                
                 
                 if isLocalNetworkPermissionDenied || niObject.isPermissionDenied {
                     PermissionCheckView()
@@ -30,29 +27,12 @@ struct HomeView: View {
                         VStack{
                             switch
                             niObject.gameState{
-                            case.finding:
-                                Text("finding")
-                            case.found:
-                                Text("found")
                             case.ready:
-                                Text("ready")
-                                
-                            }
-                        }
-                        
-                        VStack{
-                            switch
-                            niObject.gameState{
+                                Text("gameState: ready")
                             case.finding:
-                                
-                                Text("finding")
-                                
+                                Text("gameState: finding\n 찾은 peer 수: \(niObject.peersCnt)")
                             case.found:
-                                
-                                Text("found")
-                                
-                            case.ready:
-                                Text("ready")
+                                Text("gameState: found")
                             }
                             Spacer().frame(height:600)
                         }
@@ -68,7 +48,7 @@ struct HomeView: View {
                                 Text("찾은 peer 수: \(niObject.peersCnt)")
                             case .found:
                                 Text("found!")
-                            }
+                            } // :Switch - niObject.gameState
                         }
                         
                         VStack {
@@ -103,22 +83,22 @@ struct HomeView: View {
                     }
                 }
             }
-            .toolbar{
-                ToolbarItemGroup(placement:.navigationBarTrailing) {
-                    NavigationLink {
-                        //ProfileView()
-                        Text("ProfileView")
-                    } label: {
-                        Image(systemName: "pencil.circle")
-                            .resizable()
-                            .frame(width:35*1.2, height:35*1.2)
-                    }
-                    .offset(
-                        x : niObject.gameState == .ready ? 0 : 100,
-                        y : niObject.gameState == .ready ? 0 : -100
-                    )
-                }
-            }
+//            .toolbar{
+//                ToolbarItemGroup(placement:.navigationBarTrailing) {
+//                    NavigationLink {
+//                        //ProfileView()
+//                        Text("ProfileView")
+//                    } label: {
+//                        Image(systemName: "pencil.circle")
+//                            .resizable()
+//                            .frame(width:35*1.2, height:35*1.2)
+//                    }
+//                    .offset(
+//                        x : niObject.gameState == .ready ? 0 : 100,
+//                        y : niObject.gameState == .ready ? 0 : -100
+//                    )
+//                }
+//            } //: toolbar
         }
         .onChange(of: scenePhase) { newValue in
             if !isLaunched {
@@ -126,15 +106,15 @@ struct HomeView: View {
                     isLocalNetworkPermissionDenied = !auth
                 }
             }
-        }
-        //        .customSheet(isPresented: $niObject.isBumped, dismiss: {
-        //            niObject.gameState = .ready
-        //            niObject.stop()
-        //        }) {
-        //            Match(imageData: niObject.bumpedImage, nickName: niObject.bumpedName, keywords: niObject.bumpedKeywords)
-        //        }
+        } // :onChange
+        .sheet(isPresented: $niObject.isBumped) {
+            niObject.gameState = .ready
+            niObject.stop()
+        } content: {
+         Text("\(niObject.bumpedName)")
+        } //: sheet
+        
     }
-    
 }
 
 
