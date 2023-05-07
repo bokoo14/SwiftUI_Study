@@ -40,6 +40,3 @@ struct PermissionCheckView_Previews: PreviewProvider {
         PermissionCheckView()
     }
 }
-
-
-

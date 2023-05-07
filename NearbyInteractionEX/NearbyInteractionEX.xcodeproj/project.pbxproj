@@ -24,7 +24,7 @@
 		3E8F02782A0553F200F5F75B /* MathUtillities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F02772A0553F200F5F75B /* MathUtillities.swift */; };
 		3E8F027A2A05548200F5F75B /* PermissionCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F02792A05548200F5F75B /* PermissionCheckView.swift */; };
 		3E8F027D2A05666800F5F75B /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F027C2A05666800F5F75B /* HomeMainButton.swift */; };
-		3E8F027F2A0566AA00F5F75B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F027E2A0566AA00F5F75B /* Extension.swift */; };
+		3E8F027F2A0566AA00F5F75B /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F027E2A0566AA00F5F75B /* UserState.swift */; };
 		3E8F02812A0611C900F5F75B /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F02802A0611C900F5F75B /* Match.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		3E8F02772A0553F200F5F75B /* MathUtillities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtillities.swift; sourceTree = "<group>"; };
 		3E8F02792A05548200F5F75B /* PermissionCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCheckView.swift; sourceTree = "<group>"; };
 		3E8F027C2A05666800F5F75B /* HomeMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainButton.swift; sourceTree = "<group>"; };
-		3E8F027E2A0566AA00F5F75B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		3E8F027E2A0566AA00F5F75B /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
 		3E8F02802A0611C900F5F75B /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +70,7 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		3E8F024D2A00B49800F5F75B = {
+		3E8380BE2A07A67600943410 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				3E8380B62A07996B00943410 /* Buddy+CoreDataClass.swift */,
@@ -78,6 +78,21 @@
 				3E8380B82A07996B00943410 /* User+CoreDataClass.swift */,
 				3E8380B92A07996B00943410 /* User+CoreDataProperties.swift */,
 				3E8380B32A0798D400943410 /* UserDataModel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3E8380BF2A07A73300943410 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E8F025D2A00B49A00F5F75B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3E8F024D2A00B49800F5F75B = {
+			isa = PBXGroup;
+			children = (
 				3E8F02582A00B49800F5F75B /* NearbyInteractionEX */,
 				3E8F02572A00B49800F5F75B /* Products */,
 			);
@@ -97,7 +112,7 @@
 				3E8F02592A00B49800F5F75B /* NearbyInteractionEXApp.swift */,
 				3E8F02742A0552C100F5F75B /* Model */,
 				3E8F02712A04E77800F5F75B /* View */,
-				3E8F025D2A00B49A00F5F75B /* Assets.xcassets */,
+				3E8380BF2A07A73300943410 /* Resources */,
 				3E8F025F2A00B49A00F5F75B /* Preview Content */,
 			);
 			path = NearbyInteractionEX;
@@ -122,11 +137,11 @@
 		3E8F026C2A02745E00F5F75B /* NIUtils */ = {
 			isa = PBXGroup;
 			children = (
+				3E8F02722A04E8D400F5F75B /* LocalNetworkAuthorization.swift */,
 				3E8380B02A077DAC00943410 /* CoreDataManager.swift */,
 				3E8F02772A0553F200F5F75B /* MathUtillities.swift */,
 				3E8F026A2A02745500F5F75B /* NISessionManager.swift */,
 				3E8F02672A01338700F5F75B /* MPCSupport */,
-				3E8F02722A04E8D400F5F75B /* LocalNetworkAuthorization.swift */,
 			);
 			path = NIUtils;
 			sourceTree = "<group>";
@@ -145,6 +160,7 @@
 		3E8F02742A0552C100F5F75B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E8380BE2A07A67600943410 /* CoreData */,
 				3E8F02752A0552F300F5F75B /* UserCheckViewModel.swift */,
 			);
 			path = Model;
@@ -154,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				3E8F027C2A05666800F5F75B /* HomeMainButton.swift */,
-				3E8F027E2A0566AA00F5F75B /* Extension.swift */,
+				3E8F027E2A0566AA00F5F75B /* UserState.swift */,
 				3E8F02802A0611C900F5F75B /* Match.swift */,
 			);
 			path = Components;
@@ -237,7 +253,7 @@
 				3E8380BA2A07996B00943410 /* Buddy+CoreDataClass.swift in Sources */,
 				3E8F02732A04E8D400F5F75B /* LocalNetworkAuthorization.swift in Sources */,
 				3E8380BC2A07996B00943410 /* User+CoreDataClass.swift in Sources */,
-				3E8F027F2A0566AA00F5F75B /* Extension.swift in Sources */,
+				3E8F027F2A0566AA00F5F75B /* UserState.swift in Sources */,
 				3E8380B12A077DAC00943410 /* CoreDataManager.swift in Sources */,
 				3E8F027D2A05666800F5F75B /* HomeMainButton.swift in Sources */,
 				3E8380B52A0798D400943410 /* UserDataModel.xcdatamodeld in Sources */,
