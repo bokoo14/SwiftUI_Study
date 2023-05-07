@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E8380B12A077DAC00943410 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380B02A077DAC00943410 /* CoreDataManager.swift */; };
+		3E8380B52A0798D400943410 /* UserDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380B32A0798D400943410 /* UserDataModel.xcdatamodeld */; };
+		3E8380BA2A07996B00943410 /* Buddy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380B62A07996B00943410 /* Buddy+CoreDataClass.swift */; };
+		3E8380BB2A07996B00943410 /* Buddy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380B72A07996B00943410 /* Buddy+CoreDataProperties.swift */; };
+		3E8380BC2A07996B00943410 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380B82A07996B00943410 /* User+CoreDataClass.swift */; };
+		3E8380BD2A07996B00943410 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380B92A07996B00943410 /* User+CoreDataProperties.swift */; };
 		3E8F025A2A00B49800F5F75B /* NearbyInteractionEXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F02592A00B49800F5F75B /* NearbyInteractionEXApp.swift */; };
 		3E8F025E2A00B49A00F5F75B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8F025D2A00B49A00F5F75B /* Assets.xcassets */; };
 		3E8F02612A00B49A00F5F75B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8F02602A00B49A00F5F75B /* Preview Assets.xcassets */; };
@@ -23,6 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E8380B02A077DAC00943410 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3E8380B42A0798D400943410 /* UserDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserDataModel.xcdatamodel; sourceTree = "<group>"; };
+		3E8380B62A07996B00943410 /* Buddy+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Buddy+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3E8380B72A07996B00943410 /* Buddy+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Buddy+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3E8380B82A07996B00943410 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3E8380B92A07996B00943410 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3E8F02562A00B49800F5F75B /* NearbyInteractionEX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbyInteractionEX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8F02592A00B49800F5F75B /* NearbyInteractionEXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyInteractionEXApp.swift; sourceTree = "<group>"; };
 		3E8F025D2A00B49A00F5F75B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,9 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E8380B22A077DC500943410 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3E8F026C2A02745E00F5F75B /* NIUtils */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3E8F024D2A00B49800F5F75B = {
 			isa = PBXGroup;
 			children = (
+				3E8380B62A07996B00943410 /* Buddy+CoreDataClass.swift */,
+				3E8380B72A07996B00943410 /* Buddy+CoreDataProperties.swift */,
+				3E8380B82A07996B00943410 /* User+CoreDataClass.swift */,
+				3E8380B92A07996B00943410 /* User+CoreDataProperties.swift */,
+				3E8380B32A0798D400943410 /* UserDataModel.xcdatamodeld */,
 				3E8F02582A00B49800F5F75B /* NearbyInteractionEX */,
 				3E8F02572A00B49800F5F75B /* Products */,
 			);
@@ -72,7 +97,6 @@
 				3E8F02592A00B49800F5F75B /* NearbyInteractionEXApp.swift */,
 				3E8F02742A0552C100F5F75B /* Model */,
 				3E8F02712A04E77800F5F75B /* View */,
-				3E8F026C2A02745E00F5F75B /* NIUtils */,
 				3E8F025D2A00B49A00F5F75B /* Assets.xcassets */,
 				3E8F025F2A00B49A00F5F75B /* Preview Content */,
 			);
@@ -98,6 +122,7 @@
 		3E8F026C2A02745E00F5F75B /* NIUtils */ = {
 			isa = PBXGroup;
 			children = (
+				3E8380B02A077DAC00943410 /* CoreDataManager.swift */,
 				3E8F02772A0553F200F5F75B /* MathUtillities.swift */,
 				3E8F026A2A02745500F5F75B /* NISessionManager.swift */,
 				3E8F02672A01338700F5F75B /* MPCSupport */,
@@ -112,6 +137,7 @@
 				3E8F027B2A05665400F5F75B /* Components */,
 				3E8F026F2A04E70100F5F75B /* HomeView.swift */,
 				3E8F02792A05548200F5F75B /* PermissionCheckView.swift */,
+				3E8380B22A077DC500943410 /* Utils */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,10 +234,16 @@
 				3E8F025A2A00B49800F5F75B /* NearbyInteractionEXApp.swift in Sources */,
 				3E8F02692A0133D300F5F75B /* MPCSession.swift in Sources */,
 				3E8F02702A04E70100F5F75B /* HomeView.swift in Sources */,
+				3E8380BA2A07996B00943410 /* Buddy+CoreDataClass.swift in Sources */,
 				3E8F02732A04E8D400F5F75B /* LocalNetworkAuthorization.swift in Sources */,
+				3E8380BC2A07996B00943410 /* User+CoreDataClass.swift in Sources */,
 				3E8F027F2A0566AA00F5F75B /* Extension.swift in Sources */,
+				3E8380B12A077DAC00943410 /* CoreDataManager.swift in Sources */,
 				3E8F027D2A05666800F5F75B /* HomeMainButton.swift in Sources */,
+				3E8380B52A0798D400943410 /* UserDataModel.xcdatamodeld in Sources */,
+				3E8380BB2A07996B00943410 /* Buddy+CoreDataProperties.swift in Sources */,
 				3E8F02762A0552F300F5F75B /* UserCheckViewModel.swift in Sources */,
+				3E8380BD2A07996B00943410 /* User+CoreDataProperties.swift in Sources */,
 				3E8F02812A0611C900F5F75B /* Match.swift in Sources */,
 				3E8F027A2A05548200F5F75B /* PermissionCheckView.swift in Sources */,
 				3E8F026B2A02745500F5F75B /* NISessionManager.swift in Sources */,
@@ -423,6 +455,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3E8380B32A0798D400943410 /* UserDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3E8380B42A0798D400943410 /* UserDataModel.xcdatamodel */,
+			);
+			currentVersion = 3E8380B42A0798D400943410 /* UserDataModel.xcdatamodel */;
+			path = UserDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3E8F024E2A00B49800F5F75B /* Project object */;
 }

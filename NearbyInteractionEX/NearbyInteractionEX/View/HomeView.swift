@@ -16,89 +16,63 @@ struct HomeView: View {
     @State var isLaunched = true
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    @State var myName: String = ""
+    
     var body: some View {
         NavigationView{
             ZStack {
-                
                 if isLocalNetworkPermissionDenied || niObject.isPermissionDenied {
                     PermissionCheckView()
                 } else {
-                    ZStack {
                         VStack{
                             switch
                             niObject.gameState{
                             case.ready:
-                                Text("gameState: ready")
+                                VStack {
+                                    Text("gameState: ready")
+                                    TextField("Enter your name", text: $myName)
+                                        .onSubmit {
+                                            CoreDataManager.coreDM.createUser(userName: myName)
+                                        }
+                                }
                             case.finding:
                                 Text("gameState: finding\n 찾은 peer 수: \(niObject.peersCnt)")
                             case.found:
                                 Text("gameState: found")
                             }
                             Spacer().frame(height:600)
-                        }
-                        
-                        VStack {
-                            Spacer()
-                                .frame(height: 120 + 54)
-                            
-                            switch niObject.gameState {
-                            case .ready:
-                                Text("Burning Buddy is ready!")
-                            case .finding:
-                                Text("찾은 peer 수: \(niObject.peersCnt)")
-                            case .found:
-                                Text("found!")
-                            } // :Switch - niObject.gameState
-                        }
-                        
-                        VStack {
-                            Spacer()
-                            if niObject.gameState != .ready {
-                                Text("Tip Change View")
-                                    .padding(.bottom, 10)
-                            }
-                        }
-                    }
-                }
+                        } // :VStack - switch gameState
+                } // :else
                 
                 HomeMainButton(state: $niObject.gameState) {
+                    
+                    CoreDataManager.coreDM.readAllUser()[0].userName = myName
+                    CoreDataManager.coreDM.updateUser()
+                    
                     withAnimation {
                         switch niObject.gameState {
                         case .ready:
                             niObject.start()
                             niObject.gameState = .finding
+                            
+                            // 앱이 처음 실행될 때만 로컬 네트워크 권한 요청이 발생하도록 제어할 수 있음. 초기 실행 시에만 로컬 네트워크 권한을 요청하고, 이후 실행에서는 필요한 시점에 따라 권한을 다시 확인함
                             if isLaunched {
                                 localNetAuth.requestAuthorization { auth in
                                     isLocalNetworkPermissionDenied = !auth
                                 }
                                 isLaunched = false
-                            }
+                            } //: if launched
+                        // finding과 found의 차이는 뭐지?
                         case .finding:
-                            niObject.stop()
+                            niObject.stop() // finding인데 왜 stop해줘야 하나?
                             niObject.gameState = .ready
                         case .found:
                             niObject.stop()
                             niObject.gameState = .ready
-                        }
-                    }
-                }
+                        } // :switch - gameState
+                    } // :withAnimation
+                } // :HomeMainButton
             }
-//            .toolbar{
-//                ToolbarItemGroup(placement:.navigationBarTrailing) {
-//                    NavigationLink {
-//                        //ProfileView()
-//                        Text("ProfileView")
-//                    } label: {
-//                        Image(systemName: "pencil.circle")
-//                            .resizable()
-//                            .frame(width:35*1.2, height:35*1.2)
-//                    }
-//                    .offset(
-//                        x : niObject.gameState == .ready ? 0 : 100,
-//                        y : niObject.gameState == .ready ? 0 : -100
-//                    )
-//                }
-//            } //: toolbar
         }
         .onChange(of: scenePhase) { newValue in
             if !isLaunched {
@@ -111,9 +85,8 @@ struct HomeView: View {
             niObject.gameState = .ready
             niObject.stop()
         } content: {
-         Text("\(niObject.bumpedName)")
-        } //: sheet
-        
+            Match(nickName: niObject.bumpedName)
+        } //: sheet - 두 디바이스가 접촉을 했을때 sheet이 올라옴
     }
 }
 
