@@ -234,6 +234,25 @@ struct ContentView: View {
         }
         .padding(.leading, 10)
     }
+    
+    // Protocol 'View' can only be used as a generic constraint because it has Self or associated type requirements
+    @ViewBuilder func plainCell<V: View>(imageName: String, cellTitle: String, destination: @escaping () -> V) -> some View{
+        NavigationLink {
+            destination()
+        } label: {
+            HStack {
+                Image(systemName: cellTitle)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 20, height: 20)
+                    .padding(.all, 4)
+                    .background(.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(6)
+                Text(cellTitle)
+            }
+        }
+    } //: ViewBuilder
 }
 
 struct ContentView_Previews: PreviewProvider {
