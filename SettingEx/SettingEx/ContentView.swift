@@ -23,190 +23,59 @@ struct ContentView: View {
                 }// :Section1
                 
                 Section {
-                    HStack {
-                        Image(systemName: "airplane")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.orange)
-                            .foregroundColor(.white)
-                            .cornerRadius(6)
-                        
-                        Toggle(isOn: $isAirPlane) {
-                            Text("에어플레인 모드")
-                        }
-                    }
+                    toggleCell(imageName: "airplane", cellTitle: "에어플레인 모드", imageColor: .orange)
                     
-                    NavigationLink {
+                    navigationLinkCell(imageName: "wifi", cellTitle: "wifi", destination: {
                         Text("Wi-Fi")
-                    } label: {
-                        HStack {
-                            Image(systemName: "wifi")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.all, 4)
-                                .background(.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(6)
-                            Text("Wi-Fi")
-                            Spacer()
-                            Text("연결안됨")
-                                .foregroundColor(.gray)
-                        }
-                    }
+                    }, imageColor: .blue, subTitle: "연결안됨")
                     
-                    NavigationLink {
+                    navigationLinkCell(imageName: "figure.stand.line.dotted.figure.stand", cellTitle: "Bluetooth", destination: {
                         Text("Bluetooth")
-                    } label: {
-                        HStack {
-                            Image(systemName: "figure.stand.line.dotted.figure.stand")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.all, 4)
-                                .background(.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(6)
-                            Text("Bluetooth")
-                            Spacer()
-                            Text("켬")
-                                .foregroundColor(.gray)
-                        }
-                    }
-                    
-                    NavigationLink {
+                    }, imageColor: .blue, subTitle: "켬")
+    
+                    navigationLinkCell(imageName: "antenna.radiowaves.left.and.right", cellTitle: "셀룰러", destination: {
                         Text("셀룰러")
-                    } label: {
-                        HStack {
-                            Image(systemName: "antenna.radiowaves.left.and.right")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.all, 4)
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(6)
-                            Text("셀룰러")
-                        }
-                    }
+                    }, imageColor: .green)
                     
-                    NavigationLink {
+                    navigationLinkCell(imageName: "personalhotspot", cellTitle: "개인용 핫스팟", destination: {
                         Text("개인용 핫스팟")
-                    } label: {
-                        HStack {
-                            Image(systemName: "personalhotspot")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.all, 4)
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(6)
-                            Text("개인용 핫스팟")
-                        }
-                    }
+                    }, imageColor: .green)
                     
                 }// :Section2
                 
                 
                 Section {
-                    NavigationLink {
-                        Text("일반 뷰")
-                    } label: {
-                        HStack {
-                            Image(systemName: "gear")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.all, 4)
-                                .background(.gray)
-                                .foregroundColor(.white)
-                                .cornerRadius(6)
-                            Text("일반")
-                        }
-                    }
+                    navigationLinkCell(imageName: "gear", cellTitle: "일반", destination: {
+                        Text("일반")
+                    }, imageColor: .gray)
                     
-                    NavigationLink {
+                    navigationLinkCell(imageName: "hand.tap.fill", cellTitle: "손쉬운 사용", destination: {
                         Text("손쉬운 사용 뷰")
-                    } label: {
-                        HStack {
-                            Image(systemName: "hand.tap.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.all, 4)
-                                .background(.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(6)
-                            Text("손쉬운 사용")
-                        }
-                    }
+                    }, imageColor: .blue)
                     
-                    NavigationLink {
+                    navigationLinkCell(imageName: "hand.raised.fill", cellTitle: "개인 정보 보호", destination: {
                         Text("개인 정보 보호 뷰")
-                    } label: {
-                        HStack {
-                            Image(systemName: "hand.raised.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.all, 4)
-                                .background(.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(6)
-                            Text("개인 정보 보호")
-                        }
-                    }
+                    }, imageColor: .blue)
                     
-                    HStack {
-                        Image(systemName: "hourglass")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.indigo)
-                            .foregroundColor(.white)
-                            .cornerRadius(6)
-                        NavigationLink("스크린 타임") {
-                            ScreenTimeView()
-                        }
-                    }// :HStack
+                    navigationLinkCell(imageName: "hand.tap.fill", cellTitle: "손쉬운 사용", destination: {
+                        Text("손쉬운 사용 뷰")
+                    }, imageColor: .blue)
+                    
+                    
+                    navigationLinkCell(imageName: "hourglass", cellTitle: "스크린 타임", destination: {
+                        ScreenTimeView()
+                    }, imageColor: .indigo)
                 }//: Section3
                 
                 Section {
-                    NavigationLink {
-                        Text("일반 뷰")
-                    } label: {
-                        HStack {
-                            Image(systemName: "gear")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.all, 4)
-                                .background(.gray)
-                                .foregroundColor(.white)
-                                .cornerRadius(6)
-                            Text("일반")
-                        }
-                    }
+                    navigationLinkCell(imageName: "gear", cellTitle: "일반", destination: {
+                        Text("일반")
+                    }, imageColor: .gray)
                     
-                    NavigationLink {
+                    
+                    navigationLinkCell(imageName: "hand.raised.fill", cellTitle: "암호", destination: {
                         Text("암호")
-                    } label: {
-                        HStack {
-                            Image(systemName: "hand.raised.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.all, 4)
-                                .background(.gray)
-                                .foregroundColor(.white)
-                                .cornerRadius(6)
-                            Text("암호")
-                        }
-                    }
+                    }, imageColor: .gray)
                 }//: Section4
                 
                 Section {
@@ -218,6 +87,7 @@ struct ContentView: View {
         
     }
     
+    // 프로필 Cell
     @ViewBuilder private func profileCell() -> some View {
         Circle()
             .frame(width: 50)
@@ -235,24 +105,49 @@ struct ContentView: View {
         .padding(.leading, 10)
     }
     
+    // 토글 기능이 있는 Cell
+    @ViewBuilder private func toggleCell(imageName: String, cellTitle: String, imageColor: Color) -> some View{
+        HStack {
+        Image(systemName: imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 20, height: 20)
+            .padding(.all, 4)
+            .background(imageColor)
+            .foregroundColor(.white)
+            .cornerRadius(6)
+            
+            Toggle(cellTitle, isOn: $isAirPlane)
+        }
+    }
+    
+    // 단순히 NavigationLink만 있는 Cell
     // Protocol 'View' can only be used as a generic constraint because it has Self or associated type requirements
-    @ViewBuilder func plainCell<V: View>(imageName: String, cellTitle: String, destination: @escaping () -> V) -> some View{
+    @ViewBuilder private func navigationLinkCell<V: View>(imageName: String, cellTitle: String, destination: @escaping () -> V, imageColor: Color, subTitle: String? = nil) -> some View{
         NavigationLink {
             destination()
         } label: {
             HStack {
-                Image(systemName: cellTitle)
+                Image(systemName: imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20)
                     .padding(.all, 4)
-                    .background(.green)
+                    .background(imageColor)
                     .foregroundColor(.white)
                     .cornerRadius(6)
-                Text(cellTitle)
+                if let subTitle = subTitle {
+                    Text(cellTitle)
+                    Spacer()
+                    Text(subTitle)
+                        .foregroundColor(.gray)
+                }
+                else{
+                    Text(cellTitle)
+                }
             }
         }
-    } //: ViewBuilder
+    } //: ViewBuilder - NavigationLinkCell
 }
 
 struct ContentView_Previews: PreviewProvider {
