@@ -75,6 +75,7 @@ struct ContentView: View {
                     //MARK: - offset
                     .offset(y: topOffset >= 200 ? 0 : topOffset - 200)
                     .zIndex(0) // HStack을 밑으로 깔고, Text를 위로 올리기 위해
+                    .clipped() // 올라가면서 위쪽 부분은 없어지도록
                 } //: 2nd VStack
                 .offset(y: topOffset >= 200 ? 0 : -(topOffset - 200))
                 .background(
@@ -87,7 +88,7 @@ struct ContentView: View {
                         DispatchQueue.main.async {
                             topOffset = minY
                         }
-                        return Color.red
+                        return Color.clear // 배경색상 없이
                     })
                 ) //: background
                 .padding()
