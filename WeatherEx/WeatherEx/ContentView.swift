@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var topOffset: CGFloat = 0
     
     var body: some View {
         ZStack {
@@ -39,15 +38,9 @@ struct ContentView: View {
                 
                 
                 // 2번째 - 오후 12시쯤 청명한 상태가 예상됩니다
-                VStack (spacing: 0) {
+                BlurStackView {
                     Text("오전 12시쯤 청명한 상태가 예상됩니다.")
-                        .frame(maxWidth: .infinity)
-                        .background(.ultraThinMaterial) // 배경을 반투명하게 해줌
-                        .zIndex(1) // HStack을 밑으로 깔고, Text를 위로 올리기 위해
-                    
-                    Divider()
-                    
-                    // HStack: 시간대별 날씨
+                } contentView: {
                     HStack {
                         VStack {
                             Text("지금")
@@ -69,30 +62,9 @@ struct ContentView: View {
                             Image(systemName: "cloud.fill")
                             Text("13°")
                         }
-                    }//: HStack: 시간대별 날씨
-                    .frame(maxWidth: .infinity)
-                    .background(.ultraThinMaterial) // 배경을 반투명하게 해줌
-                    //MARK: - offset
-                    .offset(y: topOffset >= 200 ? 0 : topOffset - 200)
-                    .zIndex(0) // HStack을 밑으로 깔고, Text를 위로 올리기 위해
-                    .clipped() // 올라가면서 위쪽 부분은 없어지도록
-                } //: 2nd VStack
-                .offset(y: topOffset >= 200 ? 0 : -(topOffset - 200))
-                .background(
-                    //MARK: - GeometryReader
-                    GeometryReader(content: { geometry -> Color in
-                        // 현재 화면에서 VStack의 가장 위쪽 Y값이 어디인지 읽어와서 topOffset에 넣어줌
-                        let minY = geometry.frame(in: .global).minY
-                        
-                        //MARK: - 동기, 비동기
-                        DispatchQueue.main.async {
-                            topOffset = minY
-                        }
-                        return Color.clear // 배경색상 없이
-                    })
-                ) //: background
-                .padding()
-                 //: 2nd VStack
+                    } //: HStack: 시간대별 날씨
+                }
+
                 
                 
                 // 3번째 - 10일간의 일기예보
