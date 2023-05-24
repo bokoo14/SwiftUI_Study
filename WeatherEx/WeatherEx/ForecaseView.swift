@@ -16,6 +16,7 @@ struct ForecaseView: View {
         VStack {
             Text(time)
                 .fontWeight(.bold)
+                .foregroundColor(.white)
             
             Image(systemName: imageName)
                 .font(.title3)
@@ -25,6 +26,7 @@ struct ForecaseView: View {
             
             Text("\(Int(celcius))°")
                 .fontWeight(.bold)
+                .foregroundColor(.white)
         }
     }
 }
@@ -32,5 +34,6 @@ struct ForecaseView: View {
 struct ForecaseView_Previews: PreviewProvider {
     static var previews: some View {
         ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+            .background(.black)
     }
 }
