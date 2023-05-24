@@ -41,28 +41,13 @@ struct ContentView: View {
                 BlurStackView {
                     Text("오전 12시쯤 청명한 상태가 예상됩니다.")
                 } contentView: {
-                    HStack {
-                        VStack {
-                            Text("지금")
-                            Image(systemName: "cloud.fill")
-                            Text("13°")
-                        }
-                        VStack {
-                            Text("오후 10시")
-                            Image(systemName: "cloud.fill")
-                            Text("13°")
-                        }
-                        VStack {
-                            Text("오후 11시")
-                            Image(systemName: "cloud.fill")
-                            Text("13°")
-                        }
-                        VStack {
-                            Text("오전 12시")
-                            Image(systemName: "cloud.fill")
-                            Text("13°")
-                        }
-                    } //: HStack: 시간대별 날씨
+                    ScrollView (.horizontal, showsIndicators: false){
+                        HStack (spacing: 35) {
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                        }//: HStack
+                    }//: ScrollView
                 }
 
                 
