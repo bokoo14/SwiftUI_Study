@@ -23,7 +23,7 @@ struct BlurStackView<Header: View, Content: View>: View {
         // 2번째 - 오후 12시쯤 청명한 상태가 예상됩니다
         VStack (spacing: 0) {
             headerView
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .background(.ultraThinMaterial) // 배경을 반투명하게 해줌
                 .zIndex(1) // HStack을 밑으로 깔고, Text를 위로 올리기 위해
             

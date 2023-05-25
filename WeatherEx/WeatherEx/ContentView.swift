@@ -23,12 +23,30 @@ struct ContentView: View {
             ScrollView {
                 // 1번째 - 포항시 날씨
                 VStack {
-                    Text("포항시")
-                        .font(.title)
-                        .foregroundColor(.white)
+                    if offset >= 50 {
+                        Text("포항시")
+                            .font(.title)
+                            .foregroundColor(.white)
+                    }
+                    else {
+                        VStack{
+                            Text("포항시")
+                                .font(.title)
+                                .foregroundColor(.white)
+                            HStack {
+                                Text("13°")
+                                    .font(.title3)
+                                    .foregroundColor(.white)
+                                Text("한때 흐림")
+                                    .font(.title3)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                    }
                     Text("13°")
-                        .font(.system(size: 80))
+                        .font(.system(size: 80, weight: .thin))
                         .foregroundColor(.white)
+                        .opacity(setOpacity())
                     Text("한때 흐림")
                         .font(.title3)
                         .foregroundColor(.white)
@@ -76,7 +94,54 @@ struct ContentView: View {
                         }//: HStack
                     }//: ScrollView
                 }
+                
+                BlurStackView {
+                    Text("오전 12시쯤 청명한 상태가 예상됩니다.")
+                        .foregroundColor(.white)
+                } contentView: {
+                    ScrollView (.horizontal, showsIndicators: false){
+                        HStack (spacing: 35) {
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                        }//: HStack
+                    }//: ScrollView
+                }
 
+                BlurStackView {
+                    Text("오전 12시쯤 청명한 상태가 예상됩니다.")
+                        .foregroundColor(.white)
+                } contentView: {
+                    ScrollView (.horizontal, showsIndicators: false){
+                        HStack (spacing: 35) {
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                        }//: HStack
+                    }//: ScrollView
+                }
+                
+                BlurStackView {
+                    Text("오전 12시쯤 청명한 상태가 예상됩니다.")
+                        .foregroundColor(.white)
+                } contentView: {
+                    ScrollView (.horizontal, showsIndicators: false){
+                        HStack (spacing: 35) {
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                            ForecaseView(time: "지금", imageName: "cloud.sun", celcius: 13)
+                        }//: HStack
+                    }//: ScrollView
+                }
                 
                 
                 // 3번째 - 10일간의 일기예보
