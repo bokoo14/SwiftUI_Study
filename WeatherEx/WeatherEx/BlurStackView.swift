@@ -24,6 +24,7 @@ struct BlurStackView<Header: View, Content: View>: View {
         VStack (spacing: 0) {
             headerView
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
                 .background(.ultraThinMaterial) // 배경을 반투명하게 해줌
                 .zIndex(1) // HStack을 밑으로 깔고, Text를 위로 올리기 위해
             
