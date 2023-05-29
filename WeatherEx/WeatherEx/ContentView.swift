@@ -20,7 +20,7 @@ struct ContentView: View {
             }
             .ignoresSafeArea()
             
-            ScrollView {
+            ScrollView (showsIndicators: false){
                 // 1번째 - 포항시 날씨
                 VStack {
                     if offset >= 50 {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// rect의 각각의 corner에 radius를 얼마나 줄지 정함
 struct IndividualCorner: Shape {
     var corners: UIRectCorner
     var radius: CGFloat
