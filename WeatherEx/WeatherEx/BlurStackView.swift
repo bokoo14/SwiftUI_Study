@@ -24,7 +24,8 @@ struct BlurStackView<Header: View, Content: View>: View {
         VStack (spacing: 0) {
             headerView
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading)
+                .padding()
+                .foregroundColor(.white)
                 .background(.ultraThinMaterial) // 배경을 반투명하게 해줌
                 .zIndex(1) // HStack을 밑으로 깔고, Text를 위로 올리기 위해
             
@@ -33,6 +34,7 @@ struct BlurStackView<Header: View, Content: View>: View {
             // HStack: 시간대별 날씨
             contentView
             .frame(maxWidth: .infinity)
+            .padding()
             .background(.ultraThinMaterial) // 배경을 반투명하게 해줌
             //MARK: - offset
             // 오프셋이란, 기준이 되는 주소에 더해지는 값을 의미한다. View 타입에 적용되는 이 메소드는 x, y 값 입력을 통해 해당 View의 위치를 조정한다.
