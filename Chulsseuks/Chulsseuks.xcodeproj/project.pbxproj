@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E4666E32A2B318700E1A20A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E22A2B318700E1A20A /* CalendarView.swift */; };
+		3E4666E72A2B32C200E1A20A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E62A2B32C200E1A20A /* SettingsView.swift */; };
+		3E4666E92A2B338700E1A20A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E82A2B338700E1A20A /* Models.swift */; };
 		3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */; };
 		3E783CE52A27A766005EC804 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE42A27A766005EC804 /* ContentView.swift */; };
 		3E783CE72A27A767005EC804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E783CE62A27A767005EC804 /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E4666E22A2B318700E1A20A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		3E4666E62A2B32C200E1A20A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3E4666E82A2B338700E1A20A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		3E783CDF2A27A766005EC804 /* Chulsseuks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chulsseuks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChulsseuksApp.swift; sourceTree = "<group>"; };
 		3E783CE42A27A766005EC804 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +40,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E4666E02A2B285200E1A20A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E4666E82A2B338700E1A20A /* Models.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E4666E12A2B286300E1A20A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */,
+				3E783CE42A27A766005EC804 /* ContentView.swift */,
+				3E783CF02A27A893005EC804 /* TodayCheckView.swift */,
+				3E4666E42A2B321C00E1A20A /* Calendar */,
+				3E4666E52A2B32AC00E1A20A /* Settings */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E4666E42A2B321C00E1A20A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				3E4666E22A2B318700E1A20A /* CalendarView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		3E4666E52A2B32AC00E1A20A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3E4666E62A2B32C200E1A20A /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		3E783CD62A27A766005EC804 = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +95,8 @@
 		3E783CE12A27A766005EC804 /* Chulsseuks */ = {
 			isa = PBXGroup;
 			children = (
-				3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */,
-				3E783CE42A27A766005EC804 /* ContentView.swift */,
-				3E783CF02A27A893005EC804 /* TodayCheckView.swift */,
+				3E4666E02A2B285200E1A20A /* Model */,
+				3E4666E12A2B286300E1A20A /* View */,
 				3E783CE62A27A767005EC804 /* Assets.xcassets */,
 				3E783CE82A27A767005EC804 /* Preview Content */,
 			);
@@ -140,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4666E72A2B32C200E1A20A /* SettingsView.swift in Sources */,
 				3E783CE52A27A766005EC804 /* ContentView.swift in Sources */,
 				3E783CF12A27A893005EC804 /* TodayCheckView.swift in Sources */,
+				3E4666E92A2B338700E1A20A /* Models.swift in Sources */,
+				3E4666E32A2B318700E1A20A /* CalendarView.swift in Sources */,
 				3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

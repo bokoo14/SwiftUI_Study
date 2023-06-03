@@ -11,7 +11,7 @@ struct TodayCheckView: View {
     var body: some View {
         ZStack{
             Rectangle()
-                .cornerRadius(20)
+                .cornerRadius(25)
                 .foregroundColor(Color(red: 77 / 255, green: 77 / 255, blue: 74 / 255))
             VStack (alignment: .center){
                 Spacer()
