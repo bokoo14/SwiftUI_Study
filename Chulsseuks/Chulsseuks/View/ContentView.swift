@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Color(red: 28 / 255, green: 28 / 255, blue: 30 / 255).ignoresSafeArea()
+//                Color(red: 28 / 255, green: 28 / 255, blue: 30 / 255).ignoresSafeArea()
                 VStack {
                     // 1. 상단의 달력, 설정 뷰
                     HStack{
@@ -45,7 +45,7 @@ struct ContentView: View {
                     // 2. 화이팅
                     HStack {
                         Text("월클 디벨로퍼 \(nickname).\n오늘도 화이팅하세요!")
-                            .foregroundColor(.white)
+                            //.foregroundColor(.white)
                             .font(.system(size: 22, weight: .semibold))
                         Spacer()
                     }

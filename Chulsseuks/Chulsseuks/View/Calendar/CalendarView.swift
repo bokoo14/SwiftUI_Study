@@ -9,12 +9,20 @@ import SwiftUI
 
 struct CalendarView: View {
     var body: some View {
-        Text("Calendar View")
-    }
+        ZStack{
+            Color(red: 28 / 255, green: 28 / 255, blue: 30 / 255).ignoresSafeArea()
+        
+        }
+        .navigationTitle(Text("출쓱기록"))
+        .navigationBarTitleDisplayMode(.inline)    }
 }
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        //ContentView()
+        NavigationView{
+            CalendarView()
+        }
+            
     }
 }
