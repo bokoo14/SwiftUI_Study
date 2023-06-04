@@ -14,7 +14,11 @@ extension Color {
     static let backgroundColor = Color(hex: "#F2F2F6")
     static let buttonColor = Color(hex: "#B4B3E6")
     static let iconColor = Color(hex: "#5756CE")
+    
     static let redColor = Color(hex: "#EB4D3D")
+    static let yellowColor = Color(hex: "F09A37")
+    static let greenColor = Color(hex: "65C466")
+    
     static let TextColor = Color(hex: "8483F7")
     static let iColor = Color(hex: "BCBCC1")
 }
