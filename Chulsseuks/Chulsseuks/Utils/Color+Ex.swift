@@ -9,10 +9,14 @@
 
 import SwiftUI
 
-// custom color
+// custom color - can use without "#"
 extension Color {
-   static let customGray = Color(hex: "#D9D9D9")
-   static let brown = Color(hex: "897853")  // can use without "#"
+    static let backgroundColor = Color(hex: "#F2F2F6")
+    static let buttonColor = Color(hex: "#B4B3E6")
+    static let iconColor = Color(hex: "#5756CE")
+    static let redColor = Color(hex: "#EB4D3D")
+    static let TextColor = Color(hex: "8483F7")
+    static let iColor = Color(hex: "BCBCC1")
 }
 
 // hex code into Color type
@@ -28,5 +32,5 @@ extension Color {
         let g = Double((rgb >>  8) & 0xFF) / 255.0
         let b = Double((rgb >>  0) & 0xFF) / 255.0
         self.init(red: r, green: g, blue: b)
-      }
+    }
 }

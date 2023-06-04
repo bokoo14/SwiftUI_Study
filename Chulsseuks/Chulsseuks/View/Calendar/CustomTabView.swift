@@ -18,18 +18,21 @@ struct CustomTabView: View {
     @State var selectedPicker: CalendarTabInfo = .one
     
     var body: some View {
-        VStack{
-            Picker("Calendar", selection: $selectedPicker) {
-                ForEach(CalendarTabInfo.allCases, id: \.self) {
-                    Text($0.rawValue)
-                }
-            } // :Picker
-            .pickerStyle(.segmented)
-            .padding()
-            
-            // selected된 Tab값을 binding
-            TabDetailView(selectedTab: $selectedPicker)
-            
+        ZStack{
+            Color.backgroundColor.ignoresSafeArea()
+            VStack{
+                Picker("Calendar", selection: $selectedPicker) {
+                    ForEach(CalendarTabInfo.allCases, id: \.self) {
+                        Text($0.rawValue)
+                    }
+                } // :Picker
+                .pickerStyle(.segmented)
+                .padding()
+                
+                // selected된 Tab값을 binding
+                TabDetailView(selectedTab: $selectedPicker)
+
+            }
         }
     }
 }

@@ -12,8 +12,9 @@ struct CalendarView: View {
         ZStack{
             CustomTabView()
         }
-        .navigationTitle(Text("출쓱기록"))
+        .navigationTitle("출쓱 기록")
         .navigationBarTitleDisplayMode(.inline)
+        
     }
 }
 
