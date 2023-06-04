@@ -11,7 +11,6 @@ import SwiftUI
 
 // custom color
 extension Color {
-
    static let customGray = Color(hex: "#D9D9D9")
    static let brown = Color(hex: "897853")  // can use without "#"
 }

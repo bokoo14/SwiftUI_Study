@@ -10,11 +10,11 @@ import SwiftUI
 struct CalendarView: View {
     var body: some View {
         ZStack{
-            Color(red: 28 / 255, green: 28 / 255, blue: 30 / 255).ignoresSafeArea()
-        
+            CustomTabView()
         }
         .navigationTitle(Text("출쓱기록"))
-        .navigationBarTitleDisplayMode(.inline)    }
+        .navigationBarTitleDisplayMode(.inline)
+    }
 }
 
 struct CalendarView_Previews: PreviewProvider {
