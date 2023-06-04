@@ -28,8 +28,7 @@ struct TabDetailView: View {
                     .padding(.vertical)
                     
                     HStack{
-                        Text("결석")
-                            .font(.system(size: 18))
+                        absenceComponent()
                         Text("5/15")
                             .font(.system(size: 18))
                             .foregroundColor(.gray)
@@ -51,8 +50,7 @@ struct TabDetailView: View {
                     .padding(.vertical)
                     
                     HStack{
-                        Text("결석")
-                            .font(.system(size: 18))
+                        absenceComponent()
                         Text("5/15")
                             .font(.system(size: 18))
                             .foregroundColor(.gray)
@@ -70,6 +68,6 @@ struct TabDetailView: View {
 
 struct TabDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TabDetailView(selectedTab: .constant(.two))
+        TabDetailView(selectedTab: .constant(.one))
     }
 }
