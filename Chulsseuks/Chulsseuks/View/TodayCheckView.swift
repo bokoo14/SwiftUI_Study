@@ -12,7 +12,8 @@ struct TodayCheckView: View {
         ZStack{
             Rectangle()
                 .cornerRadius(25)
-                .foregroundColor(Color(red: 77 / 255, green: 77 / 255, blue: 74 / 255))
+                .foregroundColor(.white)
+                .shadow(radius: 15)
             VStack (alignment: .center){
                 Spacer()
                 
@@ -23,15 +24,17 @@ struct TodayCheckView: View {
                 
                 Spacer()
                 Text("아래 버튼을 눌러 \n 오늘의 출쓱을 진행해주세요.")
-                    .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .fontWeight(.heavy)
+                    .fontWeight(.light)
+                    .font(.system(size: 20))
+                    .lineSpacing(5)
                     
                 Text("출석 규정 보러가기 >")
-                    .foregroundColor(.indigo)
+                    .foregroundColor(Color.TextColor)
                     .font(.system(size: 15))
-                    .fontWeight(.bold)
-                    .padding()
+                    .fontWeight(.light)
+                    .padding(.top, 5)
+                    .padding(.bottom, 30)
                 
             }
         }

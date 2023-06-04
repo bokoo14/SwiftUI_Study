@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ZStack{
-//                Color(red: 28 / 255, green: 28 / 255, blue: 30 / 255).ignoresSafeArea()
+                Color.backgroundColor.ignoresSafeArea()
                 VStack {
                     // 1. 상단의 달력, 설정 뷰
                     HStack{
@@ -46,7 +46,8 @@ struct ContentView: View {
                     HStack {
                         Text("월클 디벨로퍼 \(nickname).\n오늘도 화이팅하세요!")
                             //.foregroundColor(.white)
-                            .font(.system(size: 22, weight: .semibold))
+                            .font(.system(size: 20, weight: .regular))
+                            .lineSpacing(5)
                         Spacer()
                     }
                     .padding()
@@ -56,10 +57,10 @@ struct ContentView: View {
                     Button("출쓱하기") {
                         //action
                     }
-                    .font(.system(size: 25, weight: .bold))
+                    .font(.system(size: 22, weight: .bold))
                     .frame(maxWidth: UIScreen.main.bounds.size.width,
                            maxHeight: UIScreen.main.bounds.size.height*0.12)
-                    .background(.indigo)
+                    .background(Color.buttonColor)
                     .foregroundColor(.white)
                     .cornerRadius(50)
                     .padding(20)

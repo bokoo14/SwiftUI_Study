@@ -17,14 +17,15 @@ struct TabDetailView: View {
                 List {
                     HStack{
                         Text("5월")
-                            .font(.system(size: 25, weight: .medium))
+                            .font(.system(size: 23, weight: .medium))
                         Text("(5/6~6/5)")
-                            .font(.system(size: 25))
+                            .font(.system(size: 23))
                             .foregroundColor(.gray)
                         Spacer()
                         Text("-6점")
-                            .font(.system(size: 25, weight: .medium))
+                            .font(.system(size: 23, weight: .medium))
                     }
+                    .padding(.vertical)
                     
                     HStack{
                         Text("결석")
@@ -41,12 +42,13 @@ struct TabDetailView: View {
             case .two:
                 List {
                     HStack{
-                        Text("전체기간")
-                            .font(.system(size: 25, weight: .medium))
+                        Text("전체 기간")
+                            .font(.system(size: 23, weight: .medium))
                         Spacer()
                         Text("-6점")
-                            .font(.system(size: 25, weight: .medium))
+                            .font(.system(size: 23, weight: .medium))
                     }
+                    .padding(.vertical)
                     
                     HStack{
                         Text("결석")

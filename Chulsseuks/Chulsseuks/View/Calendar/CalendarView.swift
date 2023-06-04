@@ -14,7 +14,6 @@ struct CalendarView: View {
         }
         .navigationTitle("출쓱 기록")
         .navigationBarTitleDisplayMode(.inline)
-        
     }
 }
 
