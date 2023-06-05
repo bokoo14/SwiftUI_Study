@@ -17,6 +17,9 @@
 		3E4666F72A2CD30400E1A20A /* CalendarModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666F62A2CD30400E1A20A /* CalendarModalView.swift */; };
 		3E4666F92A2DD0D400E1A20A /* CalendarTextDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666F82A2DD0D400E1A20A /* CalendarTextDetailView.swift */; };
 		3E4666FB2A2DDC2F00E1A20A /* TodayCheckView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666FA2A2DDC2F00E1A20A /* TodayCheckView2.swift */; };
+		3E4666FE2A2DEAAF00E1A20A /* SettingsHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666FD2A2DEAAF00E1A20A /* SettingsHelpView.swift */; };
+		3E4667002A2DEAC000E1A20A /* SettingsPrivateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666FF2A2DEAC000E1A20A /* SettingsPrivateView.swift */; };
+		3E4667022A2DEAD000E1A20A /* SettingsPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */; };
 		3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */; };
 		3E783CE52A27A766005EC804 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE42A27A766005EC804 /* ContentView.swift */; };
 		3E783CE72A27A767005EC804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E783CE62A27A767005EC804 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		3E4666F62A2CD30400E1A20A /* CalendarModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModalView.swift; sourceTree = "<group>"; };
 		3E4666F82A2DD0D400E1A20A /* CalendarTextDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTextDetailView.swift; sourceTree = "<group>"; };
 		3E4666FA2A2DDC2F00E1A20A /* TodayCheckView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCheckView2.swift; sourceTree = "<group>"; };
+		3E4666FD2A2DEAAF00E1A20A /* SettingsHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpView.swift; sourceTree = "<group>"; };
+		3E4666FF2A2DEAC000E1A20A /* SettingsPrivateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPrivateView.swift; sourceTree = "<group>"; };
+		3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPeopleView.swift; sourceTree = "<group>"; };
 		3E783CDF2A27A766005EC804 /* Chulsseuks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chulsseuks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChulsseuksApp.swift; sourceTree = "<group>"; };
 		3E783CE42A27A766005EC804 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,11 +71,9 @@
 		3E4666E12A2B286300E1A20A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3E4666F52A2CC9E500E1A20A /* Component */,
 				3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */,
-				3E783CE42A27A766005EC804 /* ContentView.swift */,
-				3E783CF02A27A893005EC804 /* TodayCheckView.swift */,
-				3E4666FA2A2DDC2F00E1A20A /* TodayCheckView2.swift */,
+				3E4666F52A2CC9E500E1A20A /* Component */,
+				3E4666FC2A2DE7A600E1A20A /* MainVIew */,
 				3E4666E42A2B321C00E1A20A /* Calendar */,
 				3E4666E52A2B32AC00E1A20A /* Settings */,
 			);
@@ -92,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				3E4666E62A2B32C200E1A20A /* SettingsView.swift */,
+				3E4666FD2A2DEAAF00E1A20A /* SettingsHelpView.swift */,
+				3E4666FF2A2DEAC000E1A20A /* SettingsPrivateView.swift */,
+				3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -110,6 +117,16 @@
 				3E4666F32A2CC9DA00E1A20A /* StateComponent.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		3E4666FC2A2DE7A600E1A20A /* MainVIew */ = {
+			isa = PBXGroup;
+			children = (
+				3E783CE42A27A766005EC804 /* ContentView.swift */,
+				3E783CF02A27A893005EC804 /* TodayCheckView.swift */,
+				3E4666FA2A2DDC2F00E1A20A /* TodayCheckView2.swift */,
+			);
+			path = MainVIew;
 			sourceTree = "<group>";
 		};
 		3E783CD62A27A766005EC804 = {
@@ -218,10 +235,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4666FE2A2DEAAF00E1A20A /* SettingsHelpView.swift in Sources */,
 				3E4666F42A2CC9DA00E1A20A /* StateComponent.swift in Sources */,
 				3E4666E72A2B32C200E1A20A /* SettingsView.swift in Sources */,
 				3E783CE52A27A766005EC804 /* ContentView.swift in Sources */,
+				3E4667022A2DEAD000E1A20A /* SettingsPeopleView.swift in Sources */,
 				3E783CF12A27A893005EC804 /* TodayCheckView.swift in Sources */,
+				3E4667002A2DEAC000E1A20A /* SettingsPrivateView.swift in Sources */,
 				3E4666EE2A2CAB4A00E1A20A /* CustomTabView.swift in Sources */,
 				3E4666F92A2DD0D400E1A20A /* CalendarTextDetailView.swift in Sources */,
 				3E4666F02A2CAFCA00E1A20A /* TabDetailView.swift in Sources */,
