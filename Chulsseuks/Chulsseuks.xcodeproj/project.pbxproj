@@ -15,6 +15,7 @@
 		3E4666F02A2CAFCA00E1A20A /* TabDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666EF2A2CAFCA00E1A20A /* TabDetailView.swift */; };
 		3E4666F42A2CC9DA00E1A20A /* StateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666F32A2CC9DA00E1A20A /* StateComponent.swift */; };
 		3E4666F72A2CD30400E1A20A /* CalendarModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666F62A2CD30400E1A20A /* CalendarModalView.swift */; };
+		3E4666F92A2DD0D400E1A20A /* CalendarTextDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666F82A2DD0D400E1A20A /* CalendarTextDetailView.swift */; };
 		3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */; };
 		3E783CE52A27A766005EC804 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE42A27A766005EC804 /* ContentView.swift */; };
 		3E783CE72A27A767005EC804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E783CE62A27A767005EC804 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		3E4666EF2A2CAFCA00E1A20A /* TabDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailView.swift; sourceTree = "<group>"; };
 		3E4666F32A2CC9DA00E1A20A /* StateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateComponent.swift; sourceTree = "<group>"; };
 		3E4666F62A2CD30400E1A20A /* CalendarModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModalView.swift; sourceTree = "<group>"; };
+		3E4666F82A2DD0D400E1A20A /* CalendarTextDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTextDetailView.swift; sourceTree = "<group>"; };
 		3E783CDF2A27A766005EC804 /* Chulsseuks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chulsseuks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChulsseuksApp.swift; sourceTree = "<group>"; };
 		3E783CE42A27A766005EC804 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				3E4666ED2A2CAB4A00E1A20A /* CustomTabView.swift */,
 				3E4666EF2A2CAFCA00E1A20A /* TabDetailView.swift */,
 				3E4666F62A2CD30400E1A20A /* CalendarModalView.swift */,
+				3E4666F82A2DD0D400E1A20A /* CalendarTextDetailView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				3E783CE52A27A766005EC804 /* ContentView.swift in Sources */,
 				3E783CF12A27A893005EC804 /* TodayCheckView.swift in Sources */,
 				3E4666EE2A2CAB4A00E1A20A /* CustomTabView.swift in Sources */,
+				3E4666F92A2DD0D400E1A20A /* CalendarTextDetailView.swift in Sources */,
 				3E4666F02A2CAFCA00E1A20A /* TabDetailView.swift in Sources */,
 				3E4666F72A2CD30400E1A20A /* CalendarModalView.swift in Sources */,
 				3E4666E92A2B338700E1A20A /* Models.swift in Sources */,

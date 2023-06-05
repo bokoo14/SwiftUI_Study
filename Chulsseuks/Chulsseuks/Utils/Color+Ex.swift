@@ -21,6 +21,7 @@ extension Color {
     
     static let TextColor = Color(hex: "8483F7")
     static let iColor = Color(hex: "BCBCC1")
+    static let ModalColor = Color(hex: "5756CE")
 }
 
 // hex code into Color type

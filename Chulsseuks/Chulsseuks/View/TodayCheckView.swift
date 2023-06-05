@@ -44,6 +44,10 @@ struct TodayCheckView: View {
     }
 }
 
+
+// 로테이션 3D 이펙트를 쓰면 됨
+// 내부 문서를 보면 로테이션 3개가 있음 .. 그걸  쓰면 쉬움
+
 struct TodayCheckView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
