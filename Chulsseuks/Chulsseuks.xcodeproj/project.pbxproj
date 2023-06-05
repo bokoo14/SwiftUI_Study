@@ -20,6 +20,8 @@
 		3E4666FE2A2DEAAF00E1A20A /* SettingsHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666FD2A2DEAAF00E1A20A /* SettingsHelpView.swift */; };
 		3E4667002A2DEAC000E1A20A /* SettingsPrivateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666FF2A2DEAC000E1A20A /* SettingsPrivateView.swift */; };
 		3E4667022A2DEAD000E1A20A /* SettingsPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */; };
+		3E4667042A2DEDCD00E1A20A /* SettingsHelpTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4667032A2DEDCD00E1A20A /* SettingsHelpTextView.swift */; };
+		3E4B59C92A2DFA5A009BAE80 /* NotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4B59C82A2DFA5A009BAE80 /* NotionView.swift */; };
 		3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */; };
 		3E783CE52A27A766005EC804 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE42A27A766005EC804 /* ContentView.swift */; };
 		3E783CE72A27A767005EC804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E783CE62A27A767005EC804 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		3E4666FD2A2DEAAF00E1A20A /* SettingsHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpView.swift; sourceTree = "<group>"; };
 		3E4666FF2A2DEAC000E1A20A /* SettingsPrivateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPrivateView.swift; sourceTree = "<group>"; };
 		3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPeopleView.swift; sourceTree = "<group>"; };
+		3E4667032A2DEDCD00E1A20A /* SettingsHelpTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpTextView.swift; sourceTree = "<group>"; };
+		3E4B59C82A2DFA5A009BAE80 /* NotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionView.swift; sourceTree = "<group>"; };
 		3E783CDF2A27A766005EC804 /* Chulsseuks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chulsseuks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChulsseuksApp.swift; sourceTree = "<group>"; };
 		3E783CE42A27A766005EC804 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,7 +101,9 @@
 			children = (
 				3E4666E62A2B32C200E1A20A /* SettingsView.swift */,
 				3E4666FD2A2DEAAF00E1A20A /* SettingsHelpView.swift */,
+				3E4667032A2DEDCD00E1A20A /* SettingsHelpTextView.swift */,
 				3E4666FF2A2DEAC000E1A20A /* SettingsPrivateView.swift */,
+				3E4B59C82A2DFA5A009BAE80 /* NotionView.swift */,
 				3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */,
 			);
 			path = Settings;
@@ -243,6 +249,8 @@
 				3E783CF12A27A893005EC804 /* TodayCheckView.swift in Sources */,
 				3E4667002A2DEAC000E1A20A /* SettingsPrivateView.swift in Sources */,
 				3E4666EE2A2CAB4A00E1A20A /* CustomTabView.swift in Sources */,
+				3E4667042A2DEDCD00E1A20A /* SettingsHelpTextView.swift in Sources */,
+				3E4B59C92A2DFA5A009BAE80 /* NotionView.swift in Sources */,
 				3E4666F92A2DD0D400E1A20A /* CalendarTextDetailView.swift in Sources */,
 				3E4666F02A2CAFCA00E1A20A /* TabDetailView.swift in Sources */,
 				3E4666FB2A2DDC2F00E1A20A /* TodayCheckView2.swift in Sources */,
