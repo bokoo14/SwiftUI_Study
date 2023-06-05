@@ -40,7 +40,6 @@ struct TodayCheckView: View {
         }
         .padding()
         
-        
     }
 }
 

@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CalendarModalView: View {
+    // modal뷰를 제거하는 변수
+    @Environment(\.presentationMode) var presentationMode
+    
+    
     // MARK: Data에 관한 것을 Model에 집어넣어야 할듯 ..
     @State var text1: String = "출석 인정 범위"
     @State var text2: String = "출석 : 세션 시작 시간까지 입실(오전 : 9시, 오후 2시)\n지각 : 세션 시작 후 15분까지 입실시\n결석 : 세션 시작 시간 16분 후 이후 입실\n혹은 불참시"
@@ -21,34 +25,42 @@ struct CalendarModalView: View {
     var body: some View {
         
         // MARK: spacing을 잡을때 Spacer로 잡는게 좋을까 or frame으로 잡는게 좋을까 or padding을 주는게 좋을까?
-        
-        VStack (alignment: .leading){
-            HStack {
+        ScrollView{
+            VStack (alignment: .leading){
+                // X버튼
+                HStack {
+                    Spacer()
+                    Button {
+                        // action - 띄워져있던 모달뷰를 제거
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20)
+                            .foregroundColor(.black)
+                    }
+                }
+                
+                Text("아카데미 출석 규정")
+                    .font(.system(.title, weight: .semibold))
                 Spacer()
-                Image(systemName: "xmark")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 20)
-            }
-            
-            Text("아카데미 출석 규정")
-                .font(.system(.title, weight: .semibold))
-            Spacer()
-                .frame(height: 60)
-            
-            CalendarTextDetail(text1: $text1, text2: $text2)
-            Spacer()
-                .frame(height: 30)
-            CalendarTextDetail(text1: $text3, text2: $text4)
-            Spacer()
-                .frame(height: 30)
-            CalendarTextDetail(text1: $text5, text2: $text6)
-            Spacer()
-                .frame(height: 30)
-            CalendarTextDetail(text1: $text7, text2: $text8)
-            
-        } //: VStack
-        .padding(25)
+                    .frame(height: 60)
+                
+                CalendarTextDetail(text1: $text1, text2: $text2)
+                Spacer()
+                    .frame(height: 30)
+                CalendarTextDetail(text1: $text3, text2: $text4)
+                Spacer()
+                    .frame(height: 30)
+                CalendarTextDetail(text1: $text5, text2: $text6)
+                Spacer()
+                    .frame(height: 30)
+                CalendarTextDetail(text1: $text7, text2: $text8)
+                
+            } //: VStack
+            .padding(25)
+        }
         
     }
 }
