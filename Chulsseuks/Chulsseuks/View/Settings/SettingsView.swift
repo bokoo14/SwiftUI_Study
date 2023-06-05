@@ -49,7 +49,7 @@ struct SettingsView: View {
                         // destination
                         SettingsPeopleView()
                     } label: {
-                        Text("출쓱을 만든 사람")
+                        Text("출쓱을 만든 사람들")
                     }
                 }
                 
