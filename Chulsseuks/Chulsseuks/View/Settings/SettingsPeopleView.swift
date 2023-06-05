@@ -14,11 +14,11 @@ struct SettingsPeopleView: View {
                 Image("character")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 150)
+                    .frame(width: 100)
                     .padding(10)
                     .background(.yellow)
                     .clipShape(Circle()) // 이미지 둥글게 자르기
-                    
+                Spacer()
                 VStack (alignment: .leading){
                     Text("루나 / Luna")
                         .foregroundColor(.indigo)
@@ -29,12 +29,15 @@ struct SettingsPeopleView: View {
                 }
                 Spacer()
             }// :HStack - 1명의 사람
+            .frame(maxWidth: .infinity)
             
                 .navigationTitle("출쓱을 만든 사람들")
                 .navigationBarTitleDisplayMode(.inline)
         } //: ScrollView
-        
+        .padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 30))
     }
+    
+        
 }
 
 struct SettingsPeopleView_Previews: PreviewProvider {
