@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TodayCheckView2: View {
-    
     @Environment(\.colorScheme) var colorMode
     
     var body: some View {
@@ -54,19 +53,6 @@ struct TodayCheckView2: View {
                 
                 
                 Spacer()
-                Text("아래 버튼을 눌러 \n 오늘의 출쓱을 진행해주세요.")
-                    .multilineTextAlignment(.center)
-                    .fontWeight(.light)
-                    .font(.system(size: 20))
-                    .lineSpacing(5)
-                    
-                Text("출석 규정 보러가기 >")
-                    .foregroundColor(Color.TextColor)
-                    .font(.system(size: 15))
-                    .fontWeight(.light)
-                    .padding(.top, 5)
-                    .padding(.bottom, 30)
-                
             }
         }
         .padding()
