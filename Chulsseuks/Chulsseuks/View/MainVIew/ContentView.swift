@@ -52,24 +52,19 @@ struct ContentView: View {
                     }
                     .padding()
                     
+                    // 이 card를 flash card로 바꿔줘야 함 .. -> rotation3DEffect로 ..
                     TodayCheckView()
                     
-                    Button("출쓱하기") {
-                        //action
-                    }
-                    .font(.system(size: 22, weight: .bold))
-                    .frame(maxWidth: UIScreen.main.bounds.size.width,
-                           maxHeight: UIScreen.main.bounds.size.height*0.12)
-                    .background(Color.buttonColor)
-                    .foregroundColor(.white)
-                    .cornerRadius(50)
-                    .padding(20)
+                    MainButtonComponent()
                 }
                 .padding()
             } // ZStack
         }// NavigationView
     }
 }
+
+//MARK: rotate effet - 3D로 돌려야 함... - Z축으로 돌려야 함
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

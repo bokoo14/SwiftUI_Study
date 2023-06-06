@@ -22,11 +22,13 @@
 		3E4667022A2DEAD000E1A20A /* SettingsPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */; };
 		3E4667042A2DEDCD00E1A20A /* SettingsHelpTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4667032A2DEDCD00E1A20A /* SettingsHelpTextView.swift */; };
 		3E4B59C92A2DFA5A009BAE80 /* NotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4B59C82A2DFA5A009BAE80 /* NotionView.swift */; };
+		3E4B59CB2A2E0479009BAE80 /* MainButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4B59CA2A2E0479009BAE80 /* MainButtonComponent.swift */; };
 		3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */; };
 		3E783CE52A27A766005EC804 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE42A27A766005EC804 /* ContentView.swift */; };
 		3E783CE72A27A767005EC804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E783CE62A27A767005EC804 /* Assets.xcassets */; };
 		3E783CEA2A27A767005EC804 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E783CE92A27A767005EC804 /* Preview Assets.xcassets */; };
 		3E783CF12A27A893005EC804 /* TodayCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CF02A27A893005EC804 /* TodayCheckView.swift */; };
+		3EC98BDC2A2F4704006F6B51 /* FlashCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC98BDB2A2F4704006F6B51 /* FlashCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,12 +47,14 @@
 		3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPeopleView.swift; sourceTree = "<group>"; };
 		3E4667032A2DEDCD00E1A20A /* SettingsHelpTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpTextView.swift; sourceTree = "<group>"; };
 		3E4B59C82A2DFA5A009BAE80 /* NotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionView.swift; sourceTree = "<group>"; };
+		3E4B59CA2A2E0479009BAE80 /* MainButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonComponent.swift; sourceTree = "<group>"; };
 		3E783CDF2A27A766005EC804 /* Chulsseuks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chulsseuks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChulsseuksApp.swift; sourceTree = "<group>"; };
 		3E783CE42A27A766005EC804 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E783CE62A27A767005EC804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E783CE92A27A767005EC804 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E783CF02A27A893005EC804 /* TodayCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCheckView.swift; sourceTree = "<group>"; };
+		3EC98BDB2A2F4704006F6B51 /* FlashCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				3E4666F32A2CC9DA00E1A20A /* StateComponent.swift */,
+				3E4B59CA2A2E0479009BAE80 /* MainButtonComponent.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				3E783CE42A27A766005EC804 /* ContentView.swift */,
+				3EC98BDB2A2F4704006F6B51 /* FlashCardView.swift */,
 				3E783CF02A27A893005EC804 /* TodayCheckView.swift */,
 				3E4666FA2A2DDC2F00E1A20A /* TodayCheckView2.swift */,
 			);
@@ -254,11 +260,13 @@
 				3E4666F92A2DD0D400E1A20A /* CalendarTextDetailView.swift in Sources */,
 				3E4666F02A2CAFCA00E1A20A /* TabDetailView.swift in Sources */,
 				3E4666FB2A2DDC2F00E1A20A /* TodayCheckView2.swift in Sources */,
+				3EC98BDC2A2F4704006F6B51 /* FlashCardView.swift in Sources */,
 				3E4666F72A2CD30400E1A20A /* CalendarModalView.swift in Sources */,
 				3E4666E92A2B338700E1A20A /* Models.swift in Sources */,
 				3E4666E32A2B318700E1A20A /* CalendarView.swift in Sources */,
 				3E4666EC2A2B3C7D00E1A20A /* Color+Ex.swift in Sources */,
 				3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */,
+				3E4B59CB2A2E0479009BAE80 /* MainButtonComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
