@@ -11,12 +11,12 @@ struct ContentView: View {
     @State var nickname: String = "Luna"
     
     var body: some View {
-        NavigationView{
-            ZStack{
+        NavigationView {
+            ZStack {
                 Color.backgroundColor.ignoresSafeArea()
                 VStack {
                     // 1. 상단의 달력, 설정 뷰
-                    HStack{
+                    HStack {
                         Spacer()
                         NavigationLink {
                             CalendarView()

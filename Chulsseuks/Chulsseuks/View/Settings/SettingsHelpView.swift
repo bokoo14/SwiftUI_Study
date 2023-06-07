@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+struct QNA {
+    let question: String
+    let answer: String
+}
+
 struct SettingsHelpView: View {
     // MARK: data를 따로 관리가 필요할거 같음 ... 
     @State var text1: String = "Q. ID와 비밀번호에 어떤 정보를 입력하나요?"
