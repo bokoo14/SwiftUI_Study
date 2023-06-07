@@ -45,7 +45,7 @@ struct ContentView: View {
                     // 2. 화이팅
                     HStack {
                         Text("월클 디벨로퍼 \(nickname).\n오늘도 화이팅하세요!")
-                            //.foregroundColor(.white)
+                        //.foregroundColor(.white)
                             .font(.system(size: 20, weight: .regular))
                             .lineSpacing(5)
                         Spacer()
@@ -53,7 +53,10 @@ struct ContentView: View {
                     .padding()
                     
                     // 이 card를 flash card로 바꿔줘야 함 .. -> rotation3DEffect로 ..
-                    TodayCheckView()
+                    // TodayCheckView()
+                    
+                    // onTap에 따라서 front가 나올지 back이 나올지 결정해야 함
+                    FlashCardView(front: {CardFrontView()}, back: {CardBackView()})
                     
                     MainButtonComponent()
                 }
