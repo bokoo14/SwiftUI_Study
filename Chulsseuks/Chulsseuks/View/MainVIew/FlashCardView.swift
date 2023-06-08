@@ -16,8 +16,8 @@ struct FlashCardView<Front, Back>: View  where Front: View, Back: View {
     var back: () -> Back
     
     @State var flipped: Bool = false
-    @State var flashcardRotation = 0.0
-    @State var contentRotation = 0.0
+    @State var flashcardRotation = 0.0 // 플래시 카드 뷰 전체의 회전을 제어
+    @State var contentRotation = 0.0 // 플래시 카드 내용의 회전을 제어
     
     var body: some View {
         ZStack{
@@ -28,8 +28,21 @@ struct FlashCardView<Front, Back>: View  where Front: View, Back: View {
                 front()
             }
         } //: ZStack
+        // card를 y축으로 3D로 돌리는 effect
+        .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
+        .frame(height: 463)
+        .frame(maxWidth: .infinity)
+        
     }
     
+    // function
+    func flipFlashedCard() {
+        
+    }
+    
+    func flipBackFlashedCard() {
+        
+    }
     
 }
 
@@ -118,7 +131,6 @@ struct CardBackView: View {
             }
         }
         .padding()
-        .frame(height: UIScreen.main.bounds.size.height*0.6)
     }
 }
 
