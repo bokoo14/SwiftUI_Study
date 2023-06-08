@@ -58,6 +58,7 @@ struct ContentView: View {
                     // onTap에 따라서 front가 나올지 back이 나올지 결정해야 함
                     FlashCardView(front: {CardFrontView()}, back: {CardBackView()})
                     
+                    
                     MainButtonComponent()
                 }
 //                .padding()

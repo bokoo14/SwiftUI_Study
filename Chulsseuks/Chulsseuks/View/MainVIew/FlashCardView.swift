@@ -46,7 +46,7 @@ struct FlashCardView<Front, Back>: View  where Front: View, Back: View {
         let animationTime: Double = 0.5
         // 카드 자체를 flip - duration: 0.5초
         withAnimation(Animation.linear(duration: animationTime)) {
-            contentRotation -= 180 //
+            flashcardRotation -= 180 //
         }
         
         // 카드 내의 컴포넌트들을 flip - duration을 엄청 작게 만들어서 마지막의 rotation 효과만 보여주게 함
@@ -62,7 +62,7 @@ struct FlashCardView<Front, Back>: View  where Front: View, Back: View {
         let animationTime: Double = 0.5
         // 카드 자체를 flip - duration: 0.5초
         withAnimation(Animation.linear(duration: animationTime)) {
-            contentRotation += 180 //
+            flashcardRotation += 180 //
         }
         
         // 카드 내의 컴포넌트들을 flip - duration을 엄청 작게 만들어서 마지막의 rotation 효과만 보여주게 함
