@@ -1,4 +1,3 @@
-//
 //  FlashCardView.swift
 //  Chulsseuks
 //
@@ -24,19 +23,20 @@ struct FlashCardView<Front, Back>: View  where Front: View, Back: View {
             // flppped가 true이면 back View를 보여줌, false이면 front View를 보여줌
             if flipped {
                 back()
-            }
-            else {
+            } else {
                 front()
             }
         } //: ZStack
+        .padding()
         // card를 y축으로 3D로 돌리는 effect
         .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0)) // 카드 내용을 제어
-        .rotation3DEffect(.degrees(flashcardRotation), axis: (x: 0, y: 1, z: 0), perspective: 0.2) // 플래시 카드 전체를 제어
+        
         .frame(height: 463)
         .frame(maxWidth: .infinity)
         .onTapGesture {
             flipped ? flipBackFlashedCard() : flipFlashedCard()
         }
+        .rotation3DEffect(.degrees(flashcardRotation), axis: (x: 0, y: 1, z: 0), perspective: 0.2) // 플래시 카드 전체를 제어
     } // : body: View
     
     
@@ -78,34 +78,34 @@ struct FlashCardView<Front, Back>: View  where Front: View, Back: View {
 // 카드의 앞면 View
 struct CardFrontView: View {
     var body: some View {
-        ZStack{
-            Rectangle()
-                .cornerRadius(25)
-                .foregroundColor(.white)
-                .shadow(radius: 15)
-            VStack (alignment: .center){
-                Spacer()
-                
-                Image("character")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 150)
-                
-                Spacer()
-                Text("아래 버튼을 눌러 \n 오늘의 출쓱을 진행해주세요.")
-                    .multilineTextAlignment(.center)
-                    .fontWeight(.light)
-                    .font(.system(size: 20))
-                    .lineSpacing(5)
-                
-                Text("출석 규정 보러가기 >")
-                    .foregroundColor(Color.TextColor)
-                    .font(.system(size: 15))
-                    .fontWeight(.light)
-                    .padding(.top, 5)
-                    .padding(.bottom, 30)
-            }
-        }
+        Rectangle()
+            .cornerRadius(25)
+            .foregroundColor(.white)
+            .shadow(radius:10)
+            .overlay {
+                VStack (alignment: .center) {
+                    Spacer()
+                    
+                    Image("character")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150)
+                    
+                    Spacer()
+                    Text("아래 버튼을 눌러 \n 오늘의 출쓱을 진행해주세요.")
+                        .multilineTextAlignment(.center)
+                        .fontWeight(.light)
+                        .font(.system(size: 20))
+                        .lineSpacing(5)
+                    
+                    Text("출석 규정 보러가기 >")
+                        .foregroundColor(Color.TextColor)
+                        .font(.system(size: 15))
+                        .fontWeight(.light)
+                        .padding(.top, 5)
+                        .padding(.bottom, 30)
+                } //: VStack
+            } //: overlay
     }
 }
 
@@ -115,51 +115,28 @@ struct CardBackView: View {
     @Environment(\.colorScheme) var colorMode
     
     var body: some View {
-        ZStack{
-            switch colorMode {
-            case .light:
-                Rectangle()
-                    .cornerRadius(25)
-                    .foregroundColor(.white)
-                    .shadow(radius: 15)
-            case .dark:
-                Rectangle()
-                    .cornerRadius(25)
-                    .foregroundColor(Color.backgroundColor2)
-                    .shadow(radius: 15)
-            @unknown default:
-                Text("default mode")
-            }
-            
-            VStack (alignment: .center){
-                HStack{
+        
+        Rectangle()
+            .cornerRadius(25)
+            .foregroundColor(.white)
+            .shadow(radius: 15)
+            .overlay {
+                VStack (alignment: .center){
+                    HStack{
+                        
+                        Text("한눈에 보는 출석 규정")
+                            .font(.system(size: 25, weight: .medium))
+                        Spacer()
+                    }
+                    .padding(30)
                     
-                    Text("한눈에 보는 출석 규정")
-                        .font(.system(size: 25, weight: .medium))
-                    Spacer()
-                }
-                .padding(30)
-                
-                switch colorMode {
-                case .light:
                     Image("regulationLight")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 170, height: 300)
-                case .dark:
-                    Image("regulationDark")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 170, height: 300)
-                @unknown default:
-                    Text("default mode")
+                    Spacer()
                 }
-                
-                
-                Spacer()
-            }
-        }
-        .padding()
+            } //: overlay
     }
 }
 

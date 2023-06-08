@@ -60,7 +60,7 @@ struct ContentView: View {
                     
                     MainButtonComponent()
                 }
-                .padding()
+//                .padding()
             } // ZStack
         }// NavigationView
     }
