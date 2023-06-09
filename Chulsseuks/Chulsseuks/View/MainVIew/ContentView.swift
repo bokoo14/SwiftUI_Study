@@ -16,31 +16,7 @@ struct ContentView: View {
                 Color.backgroundColor.ignoresSafeArea()
                 VStack {
                     // 1. 상단의 달력, 설정 뷰
-                    HStack {
-                        Spacer()
-                        NavigationLink {
-                            CalendarView()
-                        } label: {
-                            Image(systemName: "calendar")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 25)
-                                .padding(.trailing, 20)
-                        }
-                        
-                        NavigationLink {
-                            SettingsView()
-                        } label: {
-                            Image(systemName: "gearshape")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 25)
-                        }
-                        
-                    }
-                    .foregroundColor(.indigo)
-                    .padding(.horizontal, 15)
-                    
+                    HeaderView()
                     
                     // 2. 화이팅
                     HStack {

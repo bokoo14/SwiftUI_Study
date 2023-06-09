@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0389662A32FD0400D4EEF7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0389652A32FD0400D4EEF7 /* HeaderView.swift */; };
 		3E4666E32A2B318700E1A20A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E22A2B318700E1A20A /* CalendarView.swift */; };
 		3E4666E72A2B32C200E1A20A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E62A2B32C200E1A20A /* SettingsView.swift */; };
 		3E4666E92A2B338700E1A20A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E82A2B338700E1A20A /* Models.swift */; };
@@ -16,7 +17,6 @@
 		3E4666F42A2CC9DA00E1A20A /* StateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666F32A2CC9DA00E1A20A /* StateComponent.swift */; };
 		3E4666F72A2CD30400E1A20A /* CalendarModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666F62A2CD30400E1A20A /* CalendarModalView.swift */; };
 		3E4666F92A2DD0D400E1A20A /* CalendarTextDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666F82A2DD0D400E1A20A /* CalendarTextDetailView.swift */; };
-		3E4666FB2A2DDC2F00E1A20A /* TodayCheckView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666FA2A2DDC2F00E1A20A /* TodayCheckView2.swift */; };
 		3E4666FE2A2DEAAF00E1A20A /* SettingsHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666FD2A2DEAAF00E1A20A /* SettingsHelpView.swift */; };
 		3E4667002A2DEAC000E1A20A /* SettingsPrivateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666FF2A2DEAC000E1A20A /* SettingsPrivateView.swift */; };
 		3E4667022A2DEAD000E1A20A /* SettingsPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */; };
@@ -27,11 +27,11 @@
 		3E783CE52A27A766005EC804 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE42A27A766005EC804 /* ContentView.swift */; };
 		3E783CE72A27A767005EC804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E783CE62A27A767005EC804 /* Assets.xcassets */; };
 		3E783CEA2A27A767005EC804 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E783CE92A27A767005EC804 /* Preview Assets.xcassets */; };
-		3E783CF12A27A893005EC804 /* TodayCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CF02A27A893005EC804 /* TodayCheckView.swift */; };
 		3EC98BDC2A2F4704006F6B51 /* FlashCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC98BDB2A2F4704006F6B51 /* FlashCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E0389652A32FD0400D4EEF7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3E4666E22A2B318700E1A20A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		3E4666E62A2B32C200E1A20A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3E4666E82A2B338700E1A20A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -41,7 +41,6 @@
 		3E4666F32A2CC9DA00E1A20A /* StateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateComponent.swift; sourceTree = "<group>"; };
 		3E4666F62A2CD30400E1A20A /* CalendarModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModalView.swift; sourceTree = "<group>"; };
 		3E4666F82A2DD0D400E1A20A /* CalendarTextDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTextDetailView.swift; sourceTree = "<group>"; };
-		3E4666FA2A2DDC2F00E1A20A /* TodayCheckView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCheckView2.swift; sourceTree = "<group>"; };
 		3E4666FD2A2DEAAF00E1A20A /* SettingsHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpView.swift; sourceTree = "<group>"; };
 		3E4666FF2A2DEAC000E1A20A /* SettingsPrivateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPrivateView.swift; sourceTree = "<group>"; };
 		3E4667012A2DEAD000E1A20A /* SettingsPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPeopleView.swift; sourceTree = "<group>"; };
@@ -53,7 +52,6 @@
 		3E783CE42A27A766005EC804 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E783CE62A27A767005EC804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E783CE92A27A767005EC804 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3E783CF02A27A893005EC804 /* TodayCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCheckView.swift; sourceTree = "<group>"; };
 		3EC98BDB2A2F4704006F6B51 /* FlashCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,9 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				3E783CE42A27A766005EC804 /* ContentView.swift */,
+				3E0389652A32FD0400D4EEF7 /* HeaderView.swift */,
 				3EC98BDB2A2F4704006F6B51 /* FlashCardView.swift */,
-				3E783CF02A27A893005EC804 /* TodayCheckView.swift */,
-				3E4666FA2A2DDC2F00E1A20A /* TodayCheckView2.swift */,
 			);
 			path = MainVIew;
 			sourceTree = "<group>";
@@ -252,14 +249,13 @@
 				3E4666E72A2B32C200E1A20A /* SettingsView.swift in Sources */,
 				3E783CE52A27A766005EC804 /* ContentView.swift in Sources */,
 				3E4667022A2DEAD000E1A20A /* SettingsPeopleView.swift in Sources */,
-				3E783CF12A27A893005EC804 /* TodayCheckView.swift in Sources */,
 				3E4667002A2DEAC000E1A20A /* SettingsPrivateView.swift in Sources */,
 				3E4666EE2A2CAB4A00E1A20A /* CustomTabView.swift in Sources */,
 				3E4667042A2DEDCD00E1A20A /* SettingsHelpTextView.swift in Sources */,
 				3E4B59C92A2DFA5A009BAE80 /* NotionView.swift in Sources */,
 				3E4666F92A2DD0D400E1A20A /* CalendarTextDetailView.swift in Sources */,
 				3E4666F02A2CAFCA00E1A20A /* TabDetailView.swift in Sources */,
-				3E4666FB2A2DDC2F00E1A20A /* TodayCheckView2.swift in Sources */,
+				3E0389662A32FD0400D4EEF7 /* HeaderView.swift in Sources */,
 				3EC98BDC2A2F4704006F6B51 /* FlashCardView.swift in Sources */,
 				3E4666F72A2CD30400E1A20A /* CalendarModalView.swift in Sources */,
 				3E4666E92A2B338700E1A20A /* Models.swift in Sources */,
