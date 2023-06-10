@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HeaderView: View {
+    // MARK: 반응형으로 만들고 싶음 -> Geomerty Reader로 할지, UIScreen으로 할지
     var body: some View {
         HStack {
             Spacer()
@@ -17,7 +18,7 @@ struct HeaderView: View {
                 Image(systemName: "calendar")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 25)
+                    .frame(width: UIScreen.main.bounds.width * 0.06)
                     .padding(.trailing, 20)
             }
             
@@ -27,12 +28,13 @@ struct HeaderView: View {
                 Image(systemName: "gearshape")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 25)
+                    .frame(width: UIScreen.main.bounds.width * 0.06)
             }
             
         }
         .foregroundColor(.indigo)
-        .padding(.horizontal, 15)
+        .padding(.vertical, 20)
+        //.padding(.horizontal, 15)
     }
 }
 

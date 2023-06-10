@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E0389662A32FD0400D4EEF7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0389652A32FD0400D4EEF7 /* HeaderView.swift */; };
+		3E0389682A32FDF000D4EEF7 /* FightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0389672A32FDF000D4EEF7 /* FightingView.swift */; };
 		3E4666E32A2B318700E1A20A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E22A2B318700E1A20A /* CalendarView.swift */; };
 		3E4666E72A2B32C200E1A20A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E62A2B32C200E1A20A /* SettingsView.swift */; };
 		3E4666E92A2B338700E1A20A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E82A2B338700E1A20A /* Models.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		3E0389652A32FD0400D4EEF7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		3E0389672A32FDF000D4EEF7 /* FightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingView.swift; sourceTree = "<group>"; };
 		3E4666E22A2B318700E1A20A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		3E4666E62A2B32C200E1A20A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3E4666E82A2B338700E1A20A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				3E783CE42A27A766005EC804 /* ContentView.swift */,
 				3E0389652A32FD0400D4EEF7 /* HeaderView.swift */,
+				3E0389672A32FDF000D4EEF7 /* FightingView.swift */,
 				3EC98BDB2A2F4704006F6B51 /* FlashCardView.swift */,
 			);
 			path = MainVIew;
@@ -256,6 +259,7 @@
 				3E4666F92A2DD0D400E1A20A /* CalendarTextDetailView.swift in Sources */,
 				3E4666F02A2CAFCA00E1A20A /* TabDetailView.swift in Sources */,
 				3E0389662A32FD0400D4EEF7 /* HeaderView.swift in Sources */,
+				3E0389682A32FDF000D4EEF7 /* FightingView.swift in Sources */,
 				3EC98BDC2A2F4704006F6B51 /* FlashCardView.swift in Sources */,
 				3E4666F72A2CD30400E1A20A /* CalendarModalView.swift in Sources */,
 				3E4666E92A2B338700E1A20A /* Models.swift in Sources */,

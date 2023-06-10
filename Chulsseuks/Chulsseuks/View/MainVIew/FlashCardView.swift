@@ -27,10 +27,8 @@ struct FlashCardView<Front, Back>: View  where Front: View, Back: View {
                 front()
             }
         } //: ZStack
-        .padding()
         // card를 y축으로 3D로 돌리는 effect
         .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0)) // 카드 내용을 제어
-        
         .frame(height: 463)
         .frame(maxWidth: .infinity)
         .onTapGesture {
