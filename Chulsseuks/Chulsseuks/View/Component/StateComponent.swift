@@ -16,7 +16,7 @@ struct absenceComponent: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20)
-                Text("결석")
+                Text(stateComponentString().absence)
                     .font(.system(size: 20))
             }
             .frame(width: 75, height: 25, alignment: .center)
@@ -37,7 +37,7 @@ struct lateComponent: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20)
-                Text("지각")
+                Text(stateComponentString().late)
                     .font(.system(size: 20))
             }
             .frame(width: 75, height: 25, alignment: .center)
@@ -58,7 +58,7 @@ struct attendanceComponent: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20)
-                Text("출석")
+                Text(stateComponentString().attendance)
                     .font(.system(size: 20))
             }
             .frame(width: 75, height: 25, alignment: .center)
