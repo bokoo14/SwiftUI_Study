@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E0389662A32FD0400D4EEF7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0389652A32FD0400D4EEF7 /* HeaderView.swift */; };
 		3E0389682A32FDF000D4EEF7 /* FightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0389672A32FDF000D4EEF7 /* FightingView.swift */; };
+		3E03896A2A35F05100D4EEF7 /* SrtingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0389692A35F05100D4EEF7 /* SrtingData.swift */; };
 		3E4666E32A2B318700E1A20A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E22A2B318700E1A20A /* CalendarView.swift */; };
 		3E4666E72A2B32C200E1A20A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E62A2B32C200E1A20A /* SettingsView.swift */; };
 		3E4666E92A2B338700E1A20A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E82A2B338700E1A20A /* Models.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		3E0389652A32FD0400D4EEF7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3E0389672A32FDF000D4EEF7 /* FightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingView.swift; sourceTree = "<group>"; };
+		3E0389692A35F05100D4EEF7 /* SrtingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SrtingData.swift; sourceTree = "<group>"; };
 		3E4666E22A2B318700E1A20A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		3E4666E62A2B32C200E1A20A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3E4666E82A2B338700E1A20A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		3E4666E02A2B285200E1A20A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E0389692A35F05100D4EEF7 /* SrtingData.swift */,
 				3E4666E82A2B338700E1A20A /* Models.swift */,
 			);
 			path = Model;
@@ -263,6 +266,7 @@
 				3EC98BDC2A2F4704006F6B51 /* FlashCardView.swift in Sources */,
 				3E4666F72A2CD30400E1A20A /* CalendarModalView.swift in Sources */,
 				3E4666E92A2B338700E1A20A /* Models.swift in Sources */,
+				3E03896A2A35F05100D4EEF7 /* SrtingData.swift in Sources */,
 				3E4666E32A2B318700E1A20A /* CalendarView.swift in Sources */,
 				3E4666EC2A2B3C7D00E1A20A /* Color+Ex.swift in Sources */,
 				3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */,
