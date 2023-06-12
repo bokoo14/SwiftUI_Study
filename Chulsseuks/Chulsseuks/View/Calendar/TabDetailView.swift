@@ -36,7 +36,15 @@ struct TabDetailView: View {
                         Text("-6점")
                             .font(.system(size: 18))
                     }
-                }
+                    // 각각의 리스트의 요소에 색을 칠해준다
+                    //.listRowBackground(Color.green)
+                    
+                } // List
+                // .scrollContentBackground(.hidden) modifier를 사용해서 List의 표준 배경을 숨긴다.
+                // 새로운 배경색을 설정한다.
+                .scrollContentBackground(.hidden)
+                .background(Color("backgroundColor").ignoresSafeArea())
+                
                 
             case .two:
                 List {
@@ -61,7 +69,6 @@ struct TabDetailView: View {
                 }
                 
             }
-            
         }
     }
 }
