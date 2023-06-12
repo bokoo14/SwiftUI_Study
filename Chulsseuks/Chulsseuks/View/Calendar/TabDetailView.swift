@@ -67,6 +67,8 @@ struct TabDetailView: View {
                             .font(.system(size: 18))
                     }
                 }
+                .scrollContentBackground(.hidden)
+                .background(Color("backgroundColor").ignoresSafeArea())
                 
             }
         }
