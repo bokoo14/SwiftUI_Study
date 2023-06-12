@@ -16,17 +16,17 @@ struct ContentView: View {
                 Color("backgroundColor").ignoresSafeArea()
                 VStack(spacing: 0) {
                     HeaderView()
-                        .border(.blue)
+                        //.border(.blue)
                     
                     FightingView(nickname: $nickname)
-                        .border(.blue)
+                        //.border(.blue)
                     
                     // onTap -> front or back View를 띄워줘야 함
                     FlashCardView(front: {CardFrontView()}, back: {CardBackView()})
-                        .border(.blue)
+                        //.border(.blue)
                     
                     MainButtonComponent()
-                        .border(.blue)
+                        //.border(.blue)
                 }
                 .padding(.horizontal, 20)
             } // ZStack
