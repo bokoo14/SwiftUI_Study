@@ -49,6 +49,9 @@ struct testets_Previews: PreviewProvider {
 // 왜냐히면 상위 뷰에서 값을 바꾸면 하위뷰의 값은 바뀌면 안되기 때문..!!
 
 
+// Text("\(Image(systemName: "gearshape"))")
+// SF Symbol을 Text로도 사용 가능
+
 // 숙제
 // tabView, Geometry Reader
 

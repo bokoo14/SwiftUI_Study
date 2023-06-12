@@ -48,7 +48,7 @@ struct HeaderView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: UIScreen.main.bounds.width * 0.06)
-                    .border(.red)
+                    //.border(.red)
                 
                 //                Text("\(Image(systemName: "gearshape"))")
             }
