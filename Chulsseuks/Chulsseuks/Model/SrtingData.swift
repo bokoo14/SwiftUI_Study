@@ -8,6 +8,8 @@
 import Foundation
 
 // MARK: 각각의 String Data를 구조화
+
+// Componenet
 struct stateComponentString {
     let absence = "결석"
     let late = "지각"
@@ -18,10 +20,7 @@ struct MainButtonString {
     let mainBtn = "출쓱하기"
 }
 
-struct CalendarViewString {
-    let log = "출쓱기록"
-}
-
+// Main View - CardView
 struct CardFrontViewString {
     let image = "character"
     let text1 = "아래 버튼을 눌러\n 오늘의 출쓱을 진행해주세요."
@@ -32,6 +31,11 @@ struct CardBackViewString {
     let text1 = "한눈에 보는 출석 규정"
     let image = "regulation"
     
+}
+
+// Calendar
+struct CalendarViewString {
+    let log = "출쓱기록"
 }
 
 // Dummy Data
