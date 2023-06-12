@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainButtonComponent: View {
     var body: some View {
-        Button("출쓱하기") {
+        Button(MainButtonString().mainBtn) {
             //action
             //MARK: 여러가지 버튼으로 만들어보기, 아는 버튼만 쓰지 말고 여러개 시도해보기
         }
