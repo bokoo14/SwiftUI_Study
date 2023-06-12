@@ -19,8 +19,9 @@ struct CustomTabView: View {
     
     var body: some View {
         ZStack{
-            Color.backgroundColor.ignoresSafeArea()
+            Color("backgroundColor").ignoresSafeArea()
             VStack{
+                // picker로 이번달 출석 점수, 전체 출석 점수 선택
                 Picker("Calendar", selection: $selectedPicker) {
                     ForEach(CalendarTabInfo.allCases, id: \.self) {
                         Text($0.rawValue)
