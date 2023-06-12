@@ -29,7 +29,7 @@ struct FlashCardView<Front, Back>: View  where Front: View, Back: View {
         } //: ZStack
         // card를 y축으로 3D로 돌리는 effect
         .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0)) // 카드 내용을 제어
-        .frame(height: 463)
+        .frame(height: 450)
         .frame(maxWidth: .infinity)
         .onTapGesture {
             flipped ? flipBackFlashedCard() : flipFlashedCard()
@@ -78,26 +78,26 @@ struct CardFrontView: View {
     var body: some View {
         Rectangle()
             .cornerRadius(25)
-            .foregroundColor(.white)
+            .foregroundColor(Color("backgroundColor2"))
             .shadow(radius:10)
             .overlay {
                 VStack (alignment: .center) {
                     Spacer()
                     
-                    Image("character")
+                    Image(CardFrontViewString().image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 150)
                     
                     Spacer()
-                    Text("아래 버튼을 눌러 \n 오늘의 출쓱을 진행해주세요.")
+                    Text(CardFrontViewString().text1)
                         .multilineTextAlignment(.center)
                         .fontWeight(.light)
                         .font(.system(size: 20))
                         .lineSpacing(5)
                     
-                    Text("출석 규정 보러가기 >")
-                        .foregroundColor(Color.TextColor)
+                    Text(CardFrontViewString().text2)
+                        .foregroundColor(Color("textColor2"))
                         .font(.system(size: 15))
                         .fontWeight(.light)
                         .padding(.top, 5)
@@ -116,19 +116,19 @@ struct CardBackView: View {
         
         Rectangle()
             .cornerRadius(25)
-            .foregroundColor(.white)
+            .foregroundColor(Color("backgroundColor2"))
             .shadow(radius: 15)
             .overlay {
                 VStack (alignment: .center){
                     HStack{
-                        
-                        Text("한눈에 보는 출석 규정")
+                        Text(CardBackViewString().text1)
                             .font(.system(size: 25, weight: .medium))
+                            .foregroundColor(Color("textColor"))
                         Spacer()
                     }
                     .padding(30)
                     
-                    Image("regulationLight")
+                    Image(CardBackViewString().image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 170, height: 300)
