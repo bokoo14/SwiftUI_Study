@@ -15,7 +15,7 @@ struct CalendarModalView: View {
         
         // MARK: spacing을 잡을때 Spacer로 잡는게 좋을까 or frame으로 잡는게 좋을까 or padding을 주는게 좋을까?
         ScrollView{
-            VStack (alignment: .leading){
+            VStack (alignment: .leading) {
                 // X버튼
                 HStack {
                     Spacer()
