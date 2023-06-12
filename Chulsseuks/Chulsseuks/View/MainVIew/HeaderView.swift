@@ -12,9 +12,30 @@ struct HeaderView: View {
     var body: some View {
         HStack {
             Spacer()
-            NavigationLink {
-                CalendarView()
-            } label: {
+            
+            //            NavigationLink {
+            //                CalendarView()
+            //            } label: {
+            //                Image(systemName: "calendar")
+            //                    .resizable()
+            //                    .aspectRatio(contentMode: .fit)
+            //                    .frame(width: UIScreen.main.bounds.width * 0.06)
+            //                    .padding(.trailing, 20)
+            //            }
+            
+            
+            //            NavigationLink {
+            //                SettingsView()
+            //            } label: {
+            //                Image(systemName: "gearshape")
+            //                    .resizable()
+            //                    .aspectRatio(contentMode: .fit)
+            //                    .frame(width: UIScreen.main.bounds.width * 0.06)
+            //            }
+            
+            
+            // MARK: NavigationLink 가독성 - destination을 사용
+            NavigationLink (destination: CalendarView()) {
                 Image(systemName: "calendar")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -22,15 +43,12 @@ struct HeaderView: View {
                     .padding(.trailing, 20)
             }
             
-            NavigationLink {
-                SettingsView()
-            } label: {
+            NavigationLink (destination: SettingsView()) {
                 Image(systemName: "gearshape")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: UIScreen.main.bounds.width * 0.06)
             }
-            
         }
         .foregroundColor(.indigo)
         .padding(.vertical, 20)
