@@ -30,7 +30,6 @@ struct CardFrontViewString {
 struct CardBackViewString {
     let text1 = "한눈에 보는 출석 규정"
     let image = "regulation"
-    
 }
 
 // Calendar

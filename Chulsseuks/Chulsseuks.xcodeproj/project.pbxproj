@@ -10,9 +10,9 @@
 		3E0389662A32FD0400D4EEF7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0389652A32FD0400D4EEF7 /* HeaderView.swift */; };
 		3E0389682A32FDF000D4EEF7 /* FightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0389672A32FDF000D4EEF7 /* FightingView.swift */; };
 		3E03896A2A35F05100D4EEF7 /* SrtingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0389692A35F05100D4EEF7 /* SrtingData.swift */; };
+		3E03896C2A36F79500D4EEF7 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E03896B2A36F79500D4EEF7 /* testView.swift */; };
 		3E4666E32A2B318700E1A20A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E22A2B318700E1A20A /* CalendarView.swift */; };
 		3E4666E72A2B32C200E1A20A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E62A2B32C200E1A20A /* SettingsView.swift */; };
-		3E4666E92A2B338700E1A20A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666E82A2B338700E1A20A /* Models.swift */; };
 		3E4666EC2A2B3C7D00E1A20A /* Color+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666EB2A2B3C7D00E1A20A /* Color+Ex.swift */; };
 		3E4666EE2A2CAB4A00E1A20A /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666ED2A2CAB4A00E1A20A /* CustomTabView.swift */; };
 		3E4666F02A2CAFCA00E1A20A /* TabDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4666EF2A2CAFCA00E1A20A /* TabDetailView.swift */; };
@@ -25,6 +25,7 @@
 		3E4667042A2DEDCD00E1A20A /* SettingsHelpTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4667032A2DEDCD00E1A20A /* SettingsHelpTextView.swift */; };
 		3E4B59C92A2DFA5A009BAE80 /* NotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4B59C82A2DFA5A009BAE80 /* NotionView.swift */; };
 		3E4B59CB2A2E0479009BAE80 /* MainButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4B59CA2A2E0479009BAE80 /* MainButtonComponent.swift */; };
+		3E5F4C3F2A36FC740067DC16 /* testets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F4C3E2A36FC740067DC16 /* testets.swift */; };
 		3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */; };
 		3E783CE52A27A766005EC804 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E783CE42A27A766005EC804 /* ContentView.swift */; };
 		3E783CE72A27A767005EC804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E783CE62A27A767005EC804 /* Assets.xcassets */; };
@@ -36,9 +37,9 @@
 		3E0389652A32FD0400D4EEF7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3E0389672A32FDF000D4EEF7 /* FightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingView.swift; sourceTree = "<group>"; };
 		3E0389692A35F05100D4EEF7 /* SrtingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SrtingData.swift; sourceTree = "<group>"; };
+		3E03896B2A36F79500D4EEF7 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		3E4666E22A2B318700E1A20A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		3E4666E62A2B32C200E1A20A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		3E4666E82A2B338700E1A20A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		3E4666EB2A2B3C7D00E1A20A /* Color+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ex.swift"; sourceTree = "<group>"; };
 		3E4666ED2A2CAB4A00E1A20A /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		3E4666EF2A2CAFCA00E1A20A /* TabDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailView.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		3E4667032A2DEDCD00E1A20A /* SettingsHelpTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpTextView.swift; sourceTree = "<group>"; };
 		3E4B59C82A2DFA5A009BAE80 /* NotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionView.swift; sourceTree = "<group>"; };
 		3E4B59CA2A2E0479009BAE80 /* MainButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonComponent.swift; sourceTree = "<group>"; };
+		3E5F4C3E2A36FC740067DC16 /* testets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testets.swift; sourceTree = "<group>"; };
 		3E783CDF2A27A766005EC804 /* Chulsseuks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chulsseuks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E783CE22A27A766005EC804 /* ChulsseuksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChulsseuksApp.swift; sourceTree = "<group>"; };
 		3E783CE42A27A766005EC804 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,7 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				3E0389692A35F05100D4EEF7 /* SrtingData.swift */,
-				3E4666E82A2B338700E1A20A /* Models.swift */,
+				3E5F4C3E2A36FC740067DC16 /* testets.swift */,
+				3E03896B2A36F79500D4EEF7 /* testView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				3E4666F42A2CC9DA00E1A20A /* StateComponent.swift in Sources */,
 				3E4666E72A2B32C200E1A20A /* SettingsView.swift in Sources */,
 				3E783CE52A27A766005EC804 /* ContentView.swift in Sources */,
+				3E03896C2A36F79500D4EEF7 /* testView.swift in Sources */,
 				3E4667022A2DEAD000E1A20A /* SettingsPeopleView.swift in Sources */,
 				3E4667002A2DEAC000E1A20A /* SettingsPrivateView.swift in Sources */,
 				3E4666EE2A2CAB4A00E1A20A /* CustomTabView.swift in Sources */,
@@ -265,9 +269,9 @@
 				3E0389682A32FDF000D4EEF7 /* FightingView.swift in Sources */,
 				3EC98BDC2A2F4704006F6B51 /* FlashCardView.swift in Sources */,
 				3E4666F72A2CD30400E1A20A /* CalendarModalView.swift in Sources */,
-				3E4666E92A2B338700E1A20A /* Models.swift in Sources */,
 				3E03896A2A35F05100D4EEF7 /* SrtingData.swift in Sources */,
 				3E4666E32A2B318700E1A20A /* CalendarView.swift in Sources */,
+				3E5F4C3F2A36FC740067DC16 /* testets.swift in Sources */,
 				3E4666EC2A2B3C7D00E1A20A /* Color+Ex.swift in Sources */,
 				3E783CE32A27A766005EC804 /* ChulsseuksApp.swift in Sources */,
 				3E4B59CB2A2E0479009BAE80 /* MainButtonComponent.swift in Sources */,
