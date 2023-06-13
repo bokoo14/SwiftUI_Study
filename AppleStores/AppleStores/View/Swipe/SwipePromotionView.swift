@@ -15,21 +15,28 @@ struct SwipePromotionView: View {
         HStack (spacing: 0) {
             VStack (spacing: 0) {
                 Text("\(Image(systemName: swipeViewModel.swipePro[0].imageName))")
-                    .font(.system(size: 36))
+                // font size: Double
+                    .font(.system(size: swipeViewModel.swipePro[0].iconSize))
                     .border(.red)
+                Spacer()
             }
-            .padding(EdgeInsets(top: 20, leading: 20, bottom: 75, trailing: 12))
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 12))
             .border(.red)
             
             VStack (alignment: .leading, spacing: 0) {
                 Text(swipeViewModel.swipePro[0].title)
                     .font(.system(size: 13, weight: .medium))
                     .border(.green)
+                
+                Spacer().frame(height: 4)
+                
                 Text(swipeViewModel.swipePro[0].explain)
                     .font(.system(size: 12, weight: .light))
                     .frame(maxWidth: .infinity, alignment : .leading)
                     .border(.green)
                     .padding(.trailing, 20)
+                
+                Spacer().frame(height: 4)
                 
                 Text(swipeViewModel.swipePro[0].viewMore)
                     .font(.system(size: 12, weight: .medium))
@@ -40,7 +47,6 @@ struct SwipePromotionView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
             .border(.green)
-            .background(.red)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .frame(height: 138)
