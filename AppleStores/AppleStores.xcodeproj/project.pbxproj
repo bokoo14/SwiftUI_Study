@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EBC84EB2A389A6D00EC6986 /* SwipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC84EA2A389A6D00EC6986 /* SwipeTabView.swift */; };
 		3EE54A482A3772BC0072D51E /* AppleStoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE54A472A3772BC0072D51E /* AppleStoresApp.swift */; };
 		3EE54A4A2A3772BC0072D51E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE54A492A3772BC0072D51E /* ContentView.swift */; };
 		3EE54A4C2A3772BD0072D51E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE54A4B2A3772BD0072D51E /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3EBC84EA2A389A6D00EC6986 /* SwipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTabView.swift; sourceTree = "<group>"; };
 		3EE54A442A3772BC0072D51E /* AppleStores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleStores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE54A472A3772BC0072D51E /* AppleStoresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoresApp.swift; sourceTree = "<group>"; };
 		3EE54A492A3772BC0072D51E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +40,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EBC84EC2A389A8F00EC6986 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		3EE54A3B2A3772BC0072D51E = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +88,7 @@
 			children = (
 				3EE54A472A3772BC0072D51E /* AppleStoresApp.swift */,
 				3EE54A492A3772BC0072D51E /* ContentView.swift */,
+				3EBC84EC2A389A8F00EC6986 /* Header */,
 				3EE54A592A37F94A0072D51E /* Swipe */,
 			);
 			path = View;
@@ -95,6 +105,7 @@
 		3EE54A592A37F94A0072D51E /* Swipe */ = {
 			isa = PBXGroup;
 			children = (
+				3EBC84EA2A389A6D00EC6986 /* SwipeTabView.swift */,
 				3EE54A572A37F9430072D51E /* SwipePromotionView.swift */,
 			);
 			path = Swipe;
@@ -183,6 +194,7 @@
 				3EE54A4A2A3772BC0072D51E /* ContentView.swift in Sources */,
 				3EE54A582A37F9430072D51E /* SwipePromotionView.swift in Sources */,
 				3EE54A482A3772BC0072D51E /* AppleStoresApp.swift in Sources */,
+				3EBC84EB2A389A6D00EC6986 /* SwipeTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
