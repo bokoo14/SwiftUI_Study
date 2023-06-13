@@ -59,8 +59,6 @@
 			children = (
 				3EE54A562A37F9210072D51E /* Model */,
 				3EE54A552A37F9190072D51E /* View */,
-				3EE54A472A3772BC0072D51E /* AppleStoresApp.swift */,
-				3EE54A492A3772BC0072D51E /* ContentView.swift */,
 				3EE54A5C2A37F9B00072D51E /* ViewModel */,
 				3EE54A4B2A3772BD0072D51E /* Assets.xcassets */,
 				3EE54A4D2A3772BD0072D51E /* Preview Content */,
@@ -79,6 +77,8 @@
 		3EE54A552A37F9190072D51E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3EE54A472A3772BC0072D51E /* AppleStoresApp.swift */,
+				3EE54A492A3772BC0072D51E /* ContentView.swift */,
 				3EE54A592A37F94A0072D51E /* Swipe */,
 			);
 			path = View;
