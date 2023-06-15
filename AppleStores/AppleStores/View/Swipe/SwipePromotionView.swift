@@ -21,23 +21,23 @@ struct SwipePromotionView: View {
                 Text("\(Image(systemName: imageName))")
                 // font size: Double
                     .font(.system(size: iConSize))
-                    //.border(.red)
+                    .border(.red)
                 Spacer()
             }
-            .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 12))
-            //.border(.red)
+            .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 12))
+            .border(.red)
             
             VStack (alignment: .leading, spacing: 0) {
                 Text(title)
                     .font(.system(size: 13, weight: .medium))
-                    //.border(.green)
+                    .border(.green)
                 
                 Spacer().frame(height: 4)
                 
                 Text(explain)
                     .font(.system(size: 12, weight: .light))
                     .frame(maxWidth: .infinity, alignment : .leading)
-                    //.border(.green)
+                    .border(.green)
                     .padding(.trailing, 20)
                 
                 Spacer().frame(height: 4)
@@ -45,17 +45,16 @@ struct SwipePromotionView: View {
                 Text(viewMore)
                     .font(.system(size: 12, weight: .medium))
                     .foregroundColor(Color("ColorFontBlue"))
-                    //.border(.green)
+                    .border(.green)
                 Spacer()
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
-            //.border(.green)
-        }
+            .border(.green)
+        } //HStack
         .frame(maxWidth: .infinity, alignment: .leading)
         .frame(height: 138)
-        //.border(.blue)
-        
+        .border(.blue)
     }
 }
 

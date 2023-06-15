@@ -11,16 +11,25 @@ struct SwipeTabView: View {
     // ViewModel을 초기화할 떄는 @StateObject로 불러오기
     @StateObject var swipeViewModel: SwipeViewModel = SwipeViewModel()
     
+//    init() {
+//        UIPageControl.appearance().backgroundStyle = 
+//    }
     var body: some View {
-        VStack {
+        VStack{
             Divider()
             TabView {
-                            }
-            .tabViewStyle(.page)
-            .indexViewStyle(.page(backgroundDisplayMode: .always))
+                ForEach(swipeViewModel.swipePro){ sp in
+                    SwipePromotionView(imageName: sp.imageName, iConSize: sp.iconSize, title: sp.title, explain: sp.explain, viewMore: sp.viewMore)
+                }
+            
+            } // TabView
             Divider()
-        } // VStack
-        .border(.red)
+        }
+        .tabViewStyle(.page)
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
+        .frame(height: 138)
+        .frame(maxWidth: .infinity)
+        .border(.brown)
     }
 }
 
