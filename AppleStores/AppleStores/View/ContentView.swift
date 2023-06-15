@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack (spacing: 0){
+        ScrollView {
+            HeaderView()
+                .padding(.horizontal, 20)
+            
             SwipeTabView()
+                .padding(.horizontal, 20)
+            
+            NewView()
         }
-        .border(.red)
+        
+        .border(.blue)
     }
 }
 
