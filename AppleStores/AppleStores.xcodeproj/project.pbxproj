@@ -12,6 +12,10 @@
 		3EBC84F12A3ADF9900EC6986 /* NewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC84F02A3ADF9900EC6986 /* NewView.swift */; };
 		3EBC84F32A3ADFAA00EC6986 /* NewProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC84F22A3ADFAA00EC6986 /* NewProductView.swift */; };
 		3EBC84F52A3ADFC200EC6986 /* NewBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC84F42A3ADFC200EC6986 /* NewBuyView.swift */; };
+		3EBC84F82A3B0F4C00EC6986 /* RecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC84F72A3B0F4C00EC6986 /* RecommendView.swift */; };
+		3EBC84FA2A3B12B300EC6986 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC84F92A3B12B300EC6986 /* CardView.swift */; };
+		3EBC84FC2A3B131700EC6986 /* RecommendModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC84FB2A3B131700EC6986 /* RecommendModels.swift */; };
+		3EBC84FE2A3B147A00EC6986 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC84FD2A3B147A00EC6986 /* RecommendViewModel.swift */; };
 		3EE54A482A3772BC0072D51E /* AppleStoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE54A472A3772BC0072D51E /* AppleStoresApp.swift */; };
 		3EE54A4A2A3772BC0072D51E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE54A492A3772BC0072D51E /* ContentView.swift */; };
 		3EE54A4C2A3772BD0072D51E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE54A4B2A3772BD0072D51E /* Assets.xcassets */; };
@@ -27,6 +31,10 @@
 		3EBC84F02A3ADF9900EC6986 /* NewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewView.swift; sourceTree = "<group>"; };
 		3EBC84F22A3ADFAA00EC6986 /* NewProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductView.swift; sourceTree = "<group>"; };
 		3EBC84F42A3ADFC200EC6986 /* NewBuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBuyView.swift; sourceTree = "<group>"; };
+		3EBC84F72A3B0F4C00EC6986 /* RecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendView.swift; sourceTree = "<group>"; };
+		3EBC84F92A3B12B300EC6986 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3EBC84FB2A3B131700EC6986 /* RecommendModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendModels.swift; sourceTree = "<group>"; };
+		3EBC84FD2A3B147A00EC6986 /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		3EE54A442A3772BC0072D51E /* AppleStores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleStores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE54A472A3772BC0072D51E /* AppleStoresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoresApp.swift; sourceTree = "<group>"; };
 		3EE54A492A3772BC0072D51E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +77,8 @@
 		3EBC84F62A3ADFD400EC6986 /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
+				3EBC84F72A3B0F4C00EC6986 /* RecommendView.swift */,
+				3EBC84F92A3B12B300EC6986 /* CardView.swift */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -126,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				3EE54A5A2A37F96E0072D51E /* SwipeModels.swift */,
+				3EBC84FB2A3B131700EC6986 /* RecommendModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				3EE54A5D2A37FBB30072D51E /* SwipeViewModel.swift */,
+				3EBC84FD2A3B147A00EC6986 /* RecommendViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,11 +234,15 @@
 				3EBC84F52A3ADFC200EC6986 /* NewBuyView.swift in Sources */,
 				3EBC84F32A3ADFAA00EC6986 /* NewProductView.swift in Sources */,
 				3EE54A4A2A3772BC0072D51E /* ContentView.swift in Sources */,
+				3EBC84F82A3B0F4C00EC6986 /* RecommendView.swift in Sources */,
 				3EE54A582A37F9430072D51E /* SwipePromotionView.swift in Sources */,
 				3EE54A482A3772BC0072D51E /* AppleStoresApp.swift in Sources */,
 				3EBC84F12A3ADF9900EC6986 /* NewView.swift in Sources */,
 				3EBC84EB2A389A6D00EC6986 /* SwipeTabView.swift in Sources */,
+				3EBC84FC2A3B131700EC6986 /* RecommendModels.swift in Sources */,
+				3EBC84FA2A3B12B300EC6986 /* CardView.swift in Sources */,
 				3EBC84EE2A3AAA1900EC6986 /* HeaderView.swift in Sources */,
+				3EBC84FE2A3B147A00EC6986 /* RecommendViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
