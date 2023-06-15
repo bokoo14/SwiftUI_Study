@@ -38,7 +38,7 @@ struct SwipePromotionView: View {
                     .font(.system(size: 12, weight: .light))
                     .frame(maxWidth: .infinity, alignment : .leading)
                     .border(.green)
-                    .padding(.trailing, 20)
+                    //.padding(.trailing, 20)
                 
                 Spacer().frame(height: 4)
                 
