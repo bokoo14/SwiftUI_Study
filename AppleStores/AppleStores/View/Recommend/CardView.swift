@@ -22,14 +22,34 @@ struct CardOneView: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 14)
-            .frame(height: 509)
-            .frame(maxWidth: UIScreen.main.bounds.width*0.85)
+            .frame(height: 509) // 왜 상하에 검정 배경이 들어갈까
+            .frame(maxWidth: UIScreen.main.bounds.width * 0.85)
             .overlay {
-                Image(imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                ZStack{
+                    Image(imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    VStack (spacing: 0){
+                        Text(title)
+                            .font(.system(size: 24, weight: .semibold))
+                            .border(.orange)
+                            .padding(EdgeInsets(top: 24, leading: 20, bottom: 8, trailing: 142))
+                            .foregroundColor(Color("ColorFontBlack"))
+                            .border(.orange)
+                        
+                        Text(explain)
+                            .font(.system(size: 14, weight: .light))
+                            .border(.orange)
+                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 200))
+                            .foregroundColor(Color("ColorFontBlack"))
+                            .border(.orange)
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .border(.blue)
+                }
             }
-            .border(.red)
+            //.border(.red)
             
         
     }
