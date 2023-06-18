@@ -11,10 +11,13 @@ struct CardView: View {
     @StateObject var recommendViewModel: RecommendViewModel = RecommendViewModel()
     
     var body: some View {
-        
-        ForEach(recommendViewModel.recommendViewModel) { rv in
-            CardDetailView(title: rv.title, explain: rv.explain, imageName: rv.imageName, titleColor: rv.titleColor, explainColor: rv.explainColor)
+        TabView {
+            ForEach(recommendViewModel.recommendViewModel) { rv in
+                CardDetailView(title: rv.title, explain: rv.explain, imageName: rv.imageName, titleColor: rv.titleColor, explainColor: rv.explainColor)
+            }
         }
+        .tabViewStyle(.page)
+        
        
     }
 }
@@ -30,6 +33,7 @@ struct CardDetailView: View {
         RoundedRectangle(cornerRadius: 14)
             .frame(height: 509) // 왜 상하에 검정 배경이 들어갈까
             .frame(maxWidth: UIScreen.main.bounds.width * 0.85)
+            .shadow(radius: 10)
             .overlay {
                 ZStack{
                     Image(imageName)

@@ -18,9 +18,8 @@ struct ContentView: View {
             
             NewView()
             
-            CardView()
+            RecommendView()
         }
-        
         .border(.blue)
     }
 }

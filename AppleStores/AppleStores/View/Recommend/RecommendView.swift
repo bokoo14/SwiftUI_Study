@@ -18,6 +18,8 @@ struct RecommendView: View {
                 Spacer()
             }
             .border(.red)
+            
+            CardView()
         }
         .frame(height: 714)
         .frame(maxWidth: .infinity)

@@ -11,9 +11,12 @@ struct SwipeTabView: View {
     // ViewModel을 초기화할 떄는 @StateObject로 불러오기
     @StateObject var swipeViewModel: SwipeViewModel = SwipeViewModel()
     
-//    init() {
-//        UIPageControl.appearance().backgroundStyle = 
-//    }
+    init() {
+        //UIPageControl.appearance().
+        UIPageControl.appearance().currentPageIndicatorTintColor = .black
+        UIPageControl.appearance().pageIndicatorTintColor = .gray
+    }
+    
     var body: some View {
         VStack{
             Divider()
@@ -26,7 +29,7 @@ struct SwipeTabView: View {
             Divider()
         }
         .tabViewStyle(.page)
-        .indexViewStyle(.page(backgroundDisplayMode: .always))
+        .indexViewStyle(.page(backgroundDisplayMode: .never))
         .frame(height: 138)
         .frame(maxWidth: .infinity)
         .border(.brown)
