@@ -21,32 +21,32 @@ struct NewProductView: View {
             
             VStack (alignment: .leading, spacing: 0){
                 Text("NEW")
-                    .border(.blue)
+                    //.border(.blue)
                     .font(.system(size: 10))
                     .foregroundColor(Color(fontColor))
                     .padding(EdgeInsets(top: 24, leading: 20, bottom: 0, trailing: 0))
-                    .border(.red)
+                    //.border(.red)
                 
                 Text(productName)
-                    .border(.blue)
+                    //.border(.blue)
                     .font(.system(size: 30, weight: .semibold))
                     .foregroundColor(Color(fontColor))
                     .padding(EdgeInsets(top: 2, leading: 20, bottom: 0, trailing: 0))
-                    .border(.red)
+                    //.border(.red)
                 
                 Text(productexplain)
-                    .border(.blue)
+                    //.border(.blue)
                     .font(.system(size: 13, weight: .regular))
                     .foregroundColor(Color(fontColor))
                     .padding(EdgeInsets(top: 12, leading: 20, bottom: 0, trailing: 34))
                     .lineSpacing(3)
-                    .border(.red)
+                    //.border(.red)
                 
                 Spacer()
             }
         }
         .frame(height: 574)
-        .border(.red)
+        //.border(.red)
     }
 }
 

@@ -14,16 +14,16 @@ struct RecommendView: View {
                 Text("추천")
                     .font(.system(size: 24, weight: .semibold))
                     .padding(EdgeInsets(top: 38, leading: 20, bottom: 38, trailing: 0))
-                    .border(.red)
+                    //.border(.red)
                 Spacer()
             }
-            .border(.red)
+            //.border(.red)
             
             CardView()
         }
         .frame(height: 714)
         .frame(maxWidth: .infinity)
-        .border(.red)
+        //.border(.red)
     }
 }
 

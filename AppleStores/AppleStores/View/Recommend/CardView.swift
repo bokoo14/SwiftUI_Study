@@ -43,28 +43,26 @@ struct CardDetailView: View {
                     VStack (spacing: 0){
                         Text(title)
                             .font(.system(size: 24, weight: .semibold))
-                            .border(.orange)
+                            //.border(.orange)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(EdgeInsets(top: 24, leading: 20, bottom: 8, trailing: 0))
                             .foregroundColor(Color(titleColor))
-                            .border(.orange)
+                            //.border(.orange)
                         
                         Text(explain)
                             .font(.system(size: 14, weight: .light))
-                            .border(.orange)
+                            //.border(.orange)
                             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .foregroundColor(Color(explainColor))
-                            .border(.orange)
+                            //.border(.orange)
                         Spacer()
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .border(.blue)
+                    //.border(.blue)
                 }
             }
             //.border(.red)
-            
-        
     }
 }
 

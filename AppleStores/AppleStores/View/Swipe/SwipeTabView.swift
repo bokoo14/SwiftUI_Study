@@ -12,7 +12,6 @@ struct SwipeTabView: View {
     @StateObject var swipeViewModel: SwipeViewModel = SwipeViewModel()
     
     init() {
-        //UIPageControl.appearance().
         UIPageControl.appearance().currentPageIndicatorTintColor = .black
         UIPageControl.appearance().pageIndicatorTintColor = .gray
     }
