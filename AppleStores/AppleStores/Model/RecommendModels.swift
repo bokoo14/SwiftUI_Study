@@ -12,4 +12,6 @@ struct RecommendModels: Identifiable {
     let title: String
     let explain: String
     let imageName: String
+    let titleColor: String
+    let explainColor: String
 }

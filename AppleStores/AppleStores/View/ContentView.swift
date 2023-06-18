@@ -17,6 +17,8 @@ struct ContentView: View {
                 .padding(.horizontal, 20)
             
             NewView()
+            
+            CardView()
         }
         
         .border(.blue)
