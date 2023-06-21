@@ -11,16 +11,30 @@ struct CardView: View {
     @StateObject var recommendViewModel: RecommendViewModel = RecommendViewModel()
     let sideSpacing: CGFloat = 20 // Card 좌우 공백
     let totalSpacing: CGFloat = 60 // 전체 뷰에서 Card를 제외한 공백
-    @State var index: Int = 0
+    
+    @State var index: Int = 0 // 3개의 뷰 중,
     // Gesture를 감지하는 변수를 GestureState 키워드를 통해 바인딩을 하여 변수가 true일 때만 guesture를 실행하는 식으로 Gesture를 제공
+    // CGPoint와 CGSize의 차이를 생각하면서 하세요
     @GestureState var offset: CGFloat = 0
+    
+    let adjustMentWidth = (60 / 2) - 20
     
     // drag gesture
     var drag: some Gesture {
         DragGesture()
-            .onChanged { value in
+        // DragGesture를 하는 도중에 발생하는 event
+        //.updating(<#T##state: GestureState<State>##GestureState<State>#>, body: <#T##(DragGesture.Value, inout State, inout Transaction) -> Void#>)
+        // value의 값은 앞에 있는 state의 값과 동일한 변수
+            .updating($offset, body: { value, inoutState, inoutTransaction in
                 
-            }
+            })
+        // 변화가 있으면 실행해라
+        // value: value.startLocation같은 많은 것들이 들어있다
+            .onChanged({ value in
+               
+            })
+        // 손을 뗐을때 실행됨
+        // 마지막을 갖고 싶을때
             .onEnded { value in
                 
             }
@@ -38,12 +52,13 @@ struct CardView: View {
                 CardDetailView(title: rv.title, explain: rv.explain, imageName: rv.imageName, titleColor: rv.titleColor, explainColor: rv.explainColor)
                     .frame(width: 335, height: 509)
                     .border(.blue)
-            }
+            } // ForEach
         }
         .tabViewStyle(.page)
         .frame(height: 509)
         .border(.red)
         .gesture(drag)
+//        .offset(x: (CGFloat(index) * - UIScreen.main.bounds.width) + (index != 0 ? adjustMentWidth : 0) + offset)
     }
 }
 
