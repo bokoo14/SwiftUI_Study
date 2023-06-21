@@ -35,7 +35,7 @@ struct NewView: View {
                 .frame(height: 31)
             
             NewBuyView()
-                .border(.red)
+                //.border(.red)
             
             // iPad new Product
             NewProductView(imageName: iPadData.imageName, fontColor: iPadData.fontColor, productName: iPadData.productName, productexplain: iPadData.productexplain)
@@ -44,7 +44,7 @@ struct NewView: View {
                 .frame(height: 33)
             
             NewBuyView()
-                .border(.red)
+                //.border(.red)
             
         }
     }

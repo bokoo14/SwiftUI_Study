@@ -17,13 +17,13 @@ struct RecommendView: View {
                     //.border(.red)
                 Spacer()
             }
-            //.border(.red)
+            .border(.red)
             
             CardView()
         }
         .frame(height: 714)
         .frame(maxWidth: .infinity)
-        //.border(.red)
+        .border(.blue)
     }
 }
 

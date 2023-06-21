@@ -14,13 +14,12 @@ struct ContentView: View {
                 .padding(.horizontal, 20)
             
             SwipeTabView()
-                .padding(.horizontal, 20)
             
             NewView()
             
             RecommendView()
         }
-        .border(.blue)
+        //.border(.blue)
     }
 }
 

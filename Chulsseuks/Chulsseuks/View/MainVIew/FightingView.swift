@@ -15,9 +15,10 @@ struct FightingView: View {
             Text("월클 디벨로퍼 \(nickname).\n오늘도 화이팅하세요!")
                 .font(.system(size: 20, weight: .regular))
                 .lineSpacing(5)
-            Spacer()
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.vertical, 20)
+        .border(.red)
     }
 }
 

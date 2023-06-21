@@ -24,13 +24,13 @@ struct SwipePromotionView: View {
                     //.border(.red)
                 Spacer()
             }
-            .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 12))
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 12))
             //.border(.red)
             
             VStack (alignment: .leading, spacing: 0) {
                 Text(title)
                     .font(.system(size: 13, weight: .medium))
-                    //.border(.green)
+                    .border(.green)
                 
                 Spacer().frame(height: 4)
                 

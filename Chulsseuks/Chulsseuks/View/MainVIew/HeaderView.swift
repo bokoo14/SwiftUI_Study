@@ -39,7 +39,8 @@ struct HeaderView: View {
                 Image(systemName: "calendar")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: UIScreen.main.bounds.width * 0.06)
+//                    .frame(width: UIScreen.main.bounds.width * 0.06)
+                    .frame(width: 24)
                     .padding(.trailing, 20)
             }
             
@@ -48,7 +49,7 @@ struct HeaderView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: UIScreen.main.bounds.width * 0.06)
-                    //.border(.red)
+                    .border(.red)
                 
                 //                Text("\(Image(systemName: "gearshape"))")
             }

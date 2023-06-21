@@ -95,9 +95,7 @@ struct CardFrontView: View {
                         .fontWeight(.light)
                         .font(.system(size: 20))
                         .lineSpacing(5)
-                    
-                    Text(CardFrontViewString().text2)
-                        .foregroundColor(Color("textColor2"))
+                    Text(CardFrontViewString().text2).foregroundColor(Color("textColor2"))
                         .font(.system(size: 15))
                         .fontWeight(.light)
                         .padding(.top, 5)

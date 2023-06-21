@@ -31,7 +31,7 @@ struct SwipeTabView: View {
         .indexViewStyle(.page(backgroundDisplayMode: .never))
         .frame(height: 138)
         .frame(maxWidth: .infinity)
-        .border(.brown)
+        //.border(.brown)
     }
 }
 

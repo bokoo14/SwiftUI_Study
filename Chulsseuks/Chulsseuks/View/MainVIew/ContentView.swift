@@ -17,14 +17,13 @@ struct ContentView: View {
                 VStack(spacing: 0) {
                     HeaderView()
                         .border(.blue)
-                    
                     FightingView(nickname: $nickname)
                         .border(.blue)
                     
                     // onTap -> front or back View를 띄워줘야 함
                     FlashCardView(front: {CardFrontView()}, back: {CardBackView()})
                         .border(.blue)
-                    
+    
                     MainButtonComponent()
                         .border(.blue)
                 }
