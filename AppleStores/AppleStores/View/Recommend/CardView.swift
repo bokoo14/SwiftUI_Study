@@ -17,31 +17,33 @@ struct CardView: View {
     // CGPoint와 CGSize의 차이를 생각하면서 하세요
     @GestureState var offset: CGFloat = 0
     
-    let adjustMentWidth = (60 / 2) - 20
     
     // drag gesture
     var drag: some Gesture {
         DragGesture()
-        // DragGesture를 하는 도중에 발생하는 event
+        // updating: DragGesture를 하는 도중에 발생하는 event
         //.updating(<#T##state: GestureState<State>##GestureState<State>#>, body: <#T##(DragGesture.Value, inout State, inout Transaction) -> Void#>)
-        // value의 값은 앞에 있는 state의 값과 동일한 변수
+        // value에는 여러 값이 있고, 그 값을 활용 -> 예: translation과 같은 값을 가지고 있음
+        // inoutState의 값은 앞에 있는 state의 값과 동일한 변수
             .updating($offset, body: { value, inoutState, inoutTransaction in
-                
+                inoutState = value.translation.width
             })
-        // 변화가 있으면 실행해라
+        // onChanged: 변화가 있으면 실행해라
         // value: value.startLocation같은 많은 것들이 들어있다
-            .onChanged({ value in
-               
-            })
+            .onChanged({ value in })
         // 손을 뗐을때 실행됨
-        // 마지막을 갖고 싶을때
+        // 마지막 값을 갖고 싶을때
+        // value: value.startLocation같은 많은 것들이 들어있다
             .onEnded { value in
+                // draw gesture로 변화된 width값
+                let widthOffset = value.translation.width
+                //let howSwap = -widthOffset / (UIScreen.main.bounds)
                 
             }
     }
     
     var body: some View {
-        
+        let adjustmentWidth = (totalSpacing / 2) - sideSpacing
 //        TabView {
 //            ForEach(recommendViewModel.recommendViewModel) { rv in
 //                CardDetailView(title: rv.title, explain: rv.explain, imageName: rv.imageName, titleColor: rv.titleColor, explainColor: rv.explainColor)
@@ -54,11 +56,12 @@ struct CardView: View {
                     .border(.blue)
             } // ForEach
         }
-        .tabViewStyle(.page)
         .frame(height: 509)
         .border(.red)
         .gesture(drag)
-//        .offset(x: (CGFloat(index) * - UIScreen.main.bounds.width) + (index != 0 ? adjustMentWidth : 0) + offset)
+        // offset이
+        .animation(.easeInOut, value: offset == 0)
+        .offset(x: (CGFloat(index) * (-UIScreen.main.bounds.width) + (index != 0 ? adjustmentWidth : 0) + offset))
     }
 }
 
