@@ -8,6 +8,7 @@
 import Foundation
 
 // ViewModel은 class로 선언해야 함
+// MARK: ViewModel - model의 데이터 값을 변경할때 만드는 것
 class RecommendViewModel: ObservableObject {
     @Published var recommendViewModel: [RecommendModels] = []
     

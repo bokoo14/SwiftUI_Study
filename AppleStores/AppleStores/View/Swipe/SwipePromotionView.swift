@@ -9,10 +9,10 @@ import SwiftUI
 
 struct SwipePromotionView: View {
     // 상위 뷰에서 Data를 받아와야 함
-    var imageName: String
+    var imageName: String // imageTitle이 더 좋다고 합니다.
     var iConSize: Double
     var title: String
-    var explain: String
+    var explain: String // description 이 좀 더 좋을 듯 (변수는 명사형이 깔끔해요~)
     var viewMore: String
     
     var body: some View {
@@ -30,7 +30,7 @@ struct SwipePromotionView: View {
             VStack (alignment: .leading, spacing: 0) {
                 Text(title)
                     .font(.system(size: 13, weight: .medium))
-                    .border(.green)
+//                    .border(.green)
                 
                 Spacer().frame(height: 4)
                 
@@ -46,6 +46,7 @@ struct SwipePromotionView: View {
                     .font(.system(size: 12, weight: .medium))
                     .foregroundColor(Color("ColorFontBlue"))
                     //.border(.green)
+                    
                 Spacer()
             }
             .frame(maxWidth: .infinity, alignment: .leading)

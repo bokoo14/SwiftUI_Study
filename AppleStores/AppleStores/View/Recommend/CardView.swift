@@ -26,7 +26,7 @@ struct CardView: View {
             HStack (spacing: 20){
                 ForEach(recommendViewModel.recommendViewModel) { rv in
                     CardDetailView(title: rv.title, explain: rv.explain, imageName: rv.imageName, titleColor: rv.titleColor, explainColor: rv.explainColor)
-                        .frame(width: 335, height: 509)
+                        .frame(width: geo.size.width - totalSpacing) //, height: 509)
                         .border(.blue)
                 } // ForEach
             } // HStack
@@ -58,7 +58,7 @@ struct CardView: View {
                              
                          }) // gesture
         } // GeometryReader
-        .frame(height: 509)
+//        .frame(height: 509)
         .animation(.easeInOut, value: offset == 0)
         
     }
@@ -75,7 +75,6 @@ struct CardDetailView: View {
         Image(imageName)
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(height: 509)
             .frame(maxWidth: UIScreen.main.bounds.width * 0.85)
             .shadow(radius: 5, x: 1, y: 1)
             .overlay {

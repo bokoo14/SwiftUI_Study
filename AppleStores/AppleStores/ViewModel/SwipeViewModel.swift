@@ -8,6 +8,7 @@
 import Foundation
 
 // ViewModel은 Class로 선언해야 함
+// MARK: ObservableObject을 쓰는 이유?
 class SwipeViewModel: ObservableObject {
     @Published var swipePro: [SwipeModel] = []
     

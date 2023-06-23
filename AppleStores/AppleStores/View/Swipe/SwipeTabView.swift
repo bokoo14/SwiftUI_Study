@@ -21,6 +21,7 @@ struct SwipeTabView: View {
             Divider()
             TabView {
                 ForEach(swipeViewModel.swipePro){ sp in
+                    // 모델 자체를 넘겨서 사용하는 편이 깔끔할 수 있을 것 같아요~
                     SwipePromotionView(imageName: sp.imageName, iConSize: sp.iconSize, title: sp.title, explain: sp.explain, viewMore: sp.viewMore)
                 }
             
