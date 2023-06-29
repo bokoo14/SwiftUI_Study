@@ -14,7 +14,7 @@ struct DescribeView: View {
                 imageLayout(imageTitle: "ImgContentL01", overlayAlignment: .top, leadingOffset: 0, topOffset: 40) {
                     Text("채드도 놀란")
                         .foregroundColor(Color("ColorFontWhite"))
-                        .font(.system(size: 20, weight: .semibold))
+                        .font(.system(size: 20, weight: .bold))
                         .border(.red)
 
                     Text("iPhone 14 Pro")
@@ -26,7 +26,7 @@ struct DescribeView: View {
                 imageLayout(imageTitle: "ImgContentL02", overlayAlignment: .top, leadingOffset: 0, topOffset: 40) {
                     Text("Dynamic Island")
                         .foregroundColor(Color("ColorFontWhite"))
-                        .font(.system(size: 24, weight: .semibold))
+                        .font(.system(size: 20, weight: .medium))
                         .border(.red)
 
                     Text("iPhone을 다루는 완전히\n새로운 방법")
@@ -52,7 +52,7 @@ struct DescribeView: View {
                 
                 imageLayout(imageTitle: "ImgContentSm02", overlayAlignment: .center, leadingOffset: 0, topOffset: 0) {
                     Text("오래 가는 배터리")
-                        .font(.system(size: 22, weight: .semibold))
+                        .font(.system(size: 22, weight: .bold))
                         .border(.red)
                         .foregroundStyle(
                             LinearGradient(
@@ -65,6 +65,7 @@ struct DescribeView: View {
                     Text("온종일,\n올인.")
                         .multilineTextAlignment(.center)
                         .font(.system(size: 54, weight: .bold))
+                        .lineSpacing(5)
                         .foregroundStyle(
                             LinearGradient(
                                 colors: [Color("ColorFontPurpleTop"), Color("ColorFontPurpleDown")],

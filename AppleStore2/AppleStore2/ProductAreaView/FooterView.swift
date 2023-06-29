@@ -12,7 +12,7 @@ struct FooterView: View {
     
     var body: some View {
         ZStack{
-            Color("ColorBgGray")
+            Color.clear
             VStack (alignment: .center, spacing: 0){
                 Button {
                     // action
@@ -28,18 +28,17 @@ struct FooterView: View {
                             //.border(.red)
                     }
                     .padding(EdgeInsets(top: 11, leading: 25, bottom: 10, trailing: 25))
-                    .background(Color("ColorBgWhite"))
+                    .background(.white)
                     .cornerRadius(10)
                     //.border(.red)
                     
                     
                 } // Button
+                .padding(.vertical, 20)
                 
                 Text(footerText)
                     .font(.system(size: 10))
                     .foregroundColor(Color("ColorFontDarkGray"))
-                
-
             } // VStack
             
         } // ZStack

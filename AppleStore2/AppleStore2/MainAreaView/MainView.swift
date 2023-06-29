@@ -20,7 +20,7 @@ struct MainView: View {
                 .foregroundColor(Color("ColorFontWhite"))
                 .font(.system(size: 40, weight: .bold))
                 .border(.red)
-        }
+        } // imageLayout
         
        
     }

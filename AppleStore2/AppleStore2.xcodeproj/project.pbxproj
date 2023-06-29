@@ -19,6 +19,7 @@
 		3E051C452A484A0C00989EAB /* LearnMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E051C442A484A0C00989EAB /* LearnMoreView.swift */; };
 		3E051C472A484A1A00989EAB /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E051C462A484A1A00989EAB /* PurchaseView.swift */; };
 		3E051C492A484A4100989EAB /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E051C482A484A4100989EAB /* FooterView.swift */; };
+		3E229DA32A4D68C300EDD3EB /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E229DA22A4D68C300EDD3EB /* Modifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		3E051C442A484A0C00989EAB /* LearnMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreView.swift; sourceTree = "<group>"; };
 		3E051C462A484A1A00989EAB /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		3E051C482A484A4100989EAB /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		3E229DA22A4D68C300EDD3EB /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		3E051C262A46AA4D00989EAB /* AppleStore2 */ = {
 			isa = PBXGroup;
 			children = (
+				3E229DA12A4D68B000EDD3EB /* Modifier */,
 				3E051C3D2A4829B400989EAB /* Model */,
 				3E051C3A2A48237200989EAB /* ViewBuilder */,
 				3E051C272A46AA4D00989EAB /* AppleStore2App.swift */,
@@ -129,6 +132,14 @@
 				3E051C3E2A4829C800989EAB /* Models.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3E229DA12A4D68B000EDD3EB /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				3E229DA22A4D68C300EDD3EB /* Modifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 				3E051C472A484A1A00989EAB /* PurchaseView.swift in Sources */,
 				3E051C432A4849EB00989EAB /* ProductAreaView.swift in Sources */,
 				3E051C3F2A4829C800989EAB /* Models.swift in Sources */,
+				3E229DA32A4D68C300EDD3EB /* Modifier.swift in Sources */,
 				3E051C282A46AA4D00989EAB /* AppleStore2App.swift in Sources */,
 				3E051C452A484A0C00989EAB /* LearnMoreView.swift in Sources */,
 				3E051C412A482CC400989EAB /* DescribeView.swift in Sources */,
