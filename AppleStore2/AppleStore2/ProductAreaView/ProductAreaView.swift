@@ -10,13 +10,16 @@ import SwiftUI
 struct ProductAreaView: View {
     var body: some View {
         ZStack {
-            Color("ColorFontDarkGray")
-            VStack (spacing: 0){
-                LearnMoreView()
-                
-                PurchaseView()
-                
-                FooterView()
+            Color("ColorBgGray")
+            ScrollView{
+                VStack (spacing: 20){
+                    LearnMoreView()
+                    
+                    PurchaseView()
+                    
+                    FooterView()
+                } // VStack
+
             }
         }
        

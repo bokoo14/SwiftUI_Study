@@ -10,7 +10,7 @@ import SwiftUI
 struct PurchaseView: View {
     var body: some View {
         
-        imageLayout2(imageTitle: "Item", overlayAlignment: .top, leadingOffset: 0, topOffset: 60) {
+        imageLayout2(imageTitle: "image 8", overlayAlignment: .top, leadingOffset: 0, topOffset: 60) {
             VStack (spacing: 0){
                 Text("iPhone 14 Pro")
                     .font(.system(size: 26, weight: .bold))
