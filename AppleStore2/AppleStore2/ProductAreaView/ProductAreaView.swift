@@ -19,10 +19,9 @@ struct ProductAreaView: View {
                     
                     FooterView()
                 } // VStack
-
-            }
+            } // ScrollView
         }
-       
+        
     }
 }
 
@@ -31,3 +30,6 @@ struct ProductAreaView_Previews: PreviewProvider {
         ProductAreaView()
     }
 }
+
+
+

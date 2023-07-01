@@ -26,7 +26,7 @@ struct PurchaseView: View {
                         .background(Color("ColorBtnBlue"))
                         .cornerRadius(20)
                 }
-                .padding(.bottom, 12)
+                .padding(.bottom, 14)
                 Text("₩ 1,550,000부터")
                     .font(.system(size: 10))
                     .padding(.bottom, 51)

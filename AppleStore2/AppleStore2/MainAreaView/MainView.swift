@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
- 
         imageLayout(imageTitle: "ImgMain01", overlayAlignment: .top, leadingOffset: 0, topOffset: 70) {
             Text("iPhone 14 Pro")
                 .foregroundColor(Color("ColorFontWhite"))
@@ -21,8 +20,6 @@ struct MainView: View {
                 .font(.system(size: 40, weight: .bold))
                 .border(.red)
         } // imageLayout
-        
-       
     }
 }
 

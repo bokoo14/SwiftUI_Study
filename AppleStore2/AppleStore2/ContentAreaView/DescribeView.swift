@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DescribeView: View {
     var body: some View {
-        ScrollView {
+        
             VStack (spacing: 20){
                 imageLayout(imageTitle: "ImgContentL01", overlayAlignment: .top, leadingOffset: 0, topOffset: 40) {
                     Text("채드도 놀란")
@@ -111,14 +111,14 @@ struct DescribeView: View {
                         .multilineTextAlignment(.center)
                 }
             } // VStack
-        } // ScrollView
        
     }
 }
 
 struct DescribeView_Previews: PreviewProvider {
     static var previews: some View {
-        DescribeView()
+        //DescribeView()
+        ContentView()
     }
 }
 
