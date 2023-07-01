@@ -33,7 +33,7 @@ func imageLayout2<Content: View>
     VStack {
         Image(imageTitle)
             .resizable()
-            .aspectRatio(contentMode: .fill)
+            .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity)
             .overlay(alignment: overlayAlignment) {
                 VStack (spacing: 0){
