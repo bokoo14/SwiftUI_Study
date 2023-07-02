@@ -30,7 +30,7 @@ struct FooterView: View {
                     .cornerRadius(10)
                     .border(.red)
                 } // Button
-                .padding(.vertical, 20)
+                .padding(.bottom, 20)
                 
                 Text(footerText)
                     .font(.system(size: 10))

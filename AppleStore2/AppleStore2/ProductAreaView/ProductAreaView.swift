@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct ProductAreaView: View {
-    let geo: GeometryProxy
+    
+    @Binding var learnMoreViewHeight : CGFloat
     var body: some View {
         ZStack {
             Color("ColorBgGray").ignoresSafeArea()
             ScrollView{
                 VStack (spacing: 20){
-                    
                     LearnMoreView()
-                        .padding(.top, 20)
-                    // padding을 쓰지 않고 하는 법은 모르겠다 ...
-                    // TODO: 여기서 제일 위의 padding에 도달하면
-                    
+                        .background (
+                            //전체 뷰 높이값
+                            GeometryReader { geo -> Color in
+                                DispatchQueue.main.async {
+                                    learnMoreViewHeight = geo.size.height
+                                }
+                                return Color.clear
+                            }
+                        )
                     PurchaseView()
-                    
                     FooterView()
                 } // VStack
             } // ScrollView
@@ -37,8 +41,8 @@ struct ProductAreaView: View {
 //}
 
 
-struct ProductAreaView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ProductAreaView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(wholeViewHeight: 30)
+//    }
+//}

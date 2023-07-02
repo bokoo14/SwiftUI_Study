@@ -111,15 +111,16 @@ struct DescribeView: View {
                         .multilineTextAlignment(.center)
                 }
             } // VStack
+            .padding(.horizontal, 20)
        
     }
 }
-
-struct DescribeView_Previews: PreviewProvider {
-    static var previews: some View {
-        //DescribeView()
-        ContentView()
-    }
-}
+//
+//struct DescribeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //DescribeView()
+//        ContentView(wholeViewHeight: 30)
+//    }
+//}
 
 // ultrathinmaterial

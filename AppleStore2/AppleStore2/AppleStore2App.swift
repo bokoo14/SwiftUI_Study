@@ -11,7 +11,10 @@ import SwiftUI
 struct AppleStore2App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            
+            Test(wholeViewHeight: 30, CHeight: 30)
+            //ContentView(wholeViewHeight: 30, productAreaHeight: 30, learnMoreViewHeight: 30)
         }
     }
 }
