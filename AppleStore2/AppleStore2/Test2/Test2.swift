@@ -19,7 +19,6 @@ struct Test2: View {
     @State var DHeight : CGFloat
     @State var EHeight : CGFloat
     
-    
     @State var bottomBtnOffsetY : Double = 200
     
     var body: some View {
@@ -40,27 +39,31 @@ struct Test2: View {
                         }
                         return Color.clear
                     }
-                )
+                ) // background
+                
                 // ScrollOffsetPreferenceKey에 있는 key값에 value값을 넣어줌
                 .background(
                     GeometryReader { geometry in
                         Color.clear
                             .preference(key: ScrollOffsetPreferenceKey3.self, value: geometry.frame(in: .named("scroll")).origin)
-                    })
+                    }) // background
+                
+                // ScrollOffsetPreferenceKey3의 값이 변할때마다 실행됨
                 .onPreferenceChange(ScrollOffsetPreferenceKey3.self) { value in
                     self.scrollPosition = value
                     
+                    // UIScreen.main.bounds.height를 빼주는 이유: scrollPosition.y는 처음 시작이 0부터 시작하기 때문 ..
                     if (scrollPosition.y - UIScreen.main.bounds.height) > -(wholeViewHeight - (DHeight + EHeight)) {
                         
                         withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.5)) {
-                            bottomBtnOffsetY = -70
+                            bottomBtnOffsetY = -70 // ZStack(alignment: .bottom)을 하면 가장 아래에 붙어있음. bottomBtnOffsetY = -70를 해줘서 위로 70만큼 올려줨
                         }
                     } else {
                         withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.5)) {
-                            bottomBtnOffsetY = 200
+                            bottomBtnOffsetY = 200 // 화면에서 아예 안보이게 하기 위해 + 200을 해줌
                         }
                     }
-                }
+                } // onPreferenceChange
             } // ScrollView
             BottonNavigation2()
                 .offset(x: 0, y: bottomBtnOffsetY)
