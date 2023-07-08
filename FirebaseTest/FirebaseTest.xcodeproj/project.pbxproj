@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EE296A82A580693006B5E48 /* SendHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE296A72A580693006B5E48 /* SendHeartView.swift */; };
 		3EE9CA0D2A566F210069FF81 /* FirebaseTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9CA0C2A566F210069FF81 /* FirebaseTestApp.swift */; };
 		3EE9CA0F2A566F210069FF81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9CA0E2A566F210069FF81 /* ContentView.swift */; };
 		3EE9CA112A566F230069FF81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE9CA102A566F230069FF81 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3EE296A72A580693006B5E48 /* SendHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHeartView.swift; sourceTree = "<group>"; };
 		3EE9CA092A566F210069FF81 /* FirebaseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE9CA0C2A566F210069FF81 /* FirebaseTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTestApp.swift; sourceTree = "<group>"; };
 		3EE9CA0E2A566F210069FF81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				3EEF3BC12A56DDE6007EBE16 /* GoogleService-Info (1).plist */,
 				3EE9CA0C2A566F210069FF81 /* FirebaseTestApp.swift */,
 				3EE9CA0E2A566F210069FF81 /* ContentView.swift */,
+				3EE296A72A580693006B5E48 /* SendHeartView.swift */,
 				3EE9CA102A566F230069FF81 /* Assets.xcassets */,
 				3EE9CA122A566F230069FF81 /* Preview Content */,
 			);
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE296A82A580693006B5E48 /* SendHeartView.swift in Sources */,
 				3EE9CA0F2A566F210069FF81 /* ContentView.swift in Sources */,
 				3EE9CA0D2A566F210069FF81 /* FirebaseTestApp.swift in Sources */,
 			);

@@ -8,7 +8,6 @@
 import SwiftUI
 // UIApplicationDelegate의 FirebaseCore 모듈과 앱 대리자가 사용하는 다른 Firebase 모듈을 가져옵니다.
 import FirebaseCore
-import FirebaseCore
 import FirebaseFirestore
 
 
@@ -19,7 +18,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
       // 앱 대리자의 application(_:didFinishLaunchingWithOptions:) 메서드에서 FirebaseApp 공유 인스턴스를 구성합니다.
     FirebaseApp.configure()
       // Cloud Firestore 인스턴스를 초기화합니다
-    let db = Firestore.firestore()
+    //let db = Firestore.firestore()
 
     return true
   }
