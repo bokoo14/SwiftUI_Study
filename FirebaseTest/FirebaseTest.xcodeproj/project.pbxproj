@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E248EDA2A5D7D7400976038 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E248ED92A5D7D7400976038 /* UserModel.swift */; };
 		3E4123C22A5BD1DF0026D55F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E4123C12A5BD1DF0026D55F /* GoogleService-Info.plist */; };
-		3EE296A82A580693006B5E48 /* SendHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE296A72A580693006B5E48 /* SendHeartView.swift */; };
+		3EE296A82A580693006B5E48 /* MakeGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE296A72A580693006B5E48 /* MakeGroupView.swift */; };
 		3EE9CA0D2A566F210069FF81 /* FirebaseTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9CA0C2A566F210069FF81 /* FirebaseTestApp.swift */; };
 		3EE9CA0F2A566F210069FF81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9CA0E2A566F210069FF81 /* ContentView.swift */; };
 		3EE9CA112A566F230069FF81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE9CA102A566F230069FF81 /* Assets.xcassets */; };
@@ -42,8 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E248ED92A5D7D7400976038 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3E4123C12A5BD1DF0026D55F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "FirebaseTest/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		3EE296A72A580693006B5E48 /* SendHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHeartView.swift; sourceTree = "<group>"; };
+		3EE296A72A580693006B5E48 /* MakeGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGroupView.swift; sourceTree = "<group>"; };
 		3EE9CA092A566F210069FF81 /* FirebaseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE9CA0C2A566F210069FF81 /* FirebaseTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTestApp.swift; sourceTree = "<group>"; };
 		3EE9CA0E2A566F210069FF81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E248EDB2A5D7D7D00976038 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E248ED92A5D7D7400976038 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E248EDC2A5D7D9A00976038 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3EE296A72A580693006B5E48 /* MakeGroupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3EE9CA002A566F210069FF81 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +127,8 @@
 			children = (
 				3EE9CA0C2A566F210069FF81 /* FirebaseTestApp.swift */,
 				3EE9CA0E2A566F210069FF81 /* ContentView.swift */,
-				3EE296A72A580693006B5E48 /* SendHeartView.swift */,
+				3E248EDC2A5D7D9A00976038 /* View */,
+				3E248EDB2A5D7D7D00976038 /* Model */,
 				3EE9CA102A566F230069FF81 /* Assets.xcassets */,
 				3EE9CA122A566F230069FF81 /* Preview Content */,
 			);
@@ -227,8 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EE296A82A580693006B5E48 /* SendHeartView.swift in Sources */,
+				3EE296A82A580693006B5E48 /* MakeGroupView.swift in Sources */,
 				3EE9CA0F2A566F210069FF81 /* ContentView.swift in Sources */,
+				3E248EDA2A5D7D7400976038 /* UserModel.swift in Sources */,
 				3EE9CA0D2A566F210069FF81 /* FirebaseTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
