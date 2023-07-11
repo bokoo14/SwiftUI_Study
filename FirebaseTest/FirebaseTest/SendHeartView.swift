@@ -14,14 +14,16 @@ struct SendHeartView: View {
     var body: some View {
         VStack (spacing: 0){
             Button {
-                // action
                 // 단일 문서를 만들거나 덮어쓰려면 다음 언어별 set() 메서드를 사용합니다.
                 // Add a new document in collection "cities"
-                print("button is clicked!")
-                db.collection("cities").document("LA").setData([
-                    "name": "Los Angeles",
-                    "state": "CA",
-                    "country": "USA"
+                print("ADD ALL USER'S DATA!")
+                db.collection("user").document("R5Vbave5WZlo8D7PD0Os").setData([
+                    "usrName": "Luna",
+                    "userID": "1",
+                    "gender": "female",
+                    "email": "dasdsasdf@naver.com",
+                    "group": 1,
+                    "sentHeart": "Puppy"
                 ]) { err in
                     if let err = err {
                         print("Error writing document: \(err)")
@@ -30,10 +32,10 @@ struct SendHeartView: View {
                     }
                 }
             } label: {
-                Text("하트 보내기")
-            }
-
-        }
+                Text("사용자 데이터 추가")
+            } // button
+            
+        } // VStack
     }
 }
 
