@@ -15,10 +15,9 @@ let firebaseDB = ContentView().db
 struct ContentView: View {
     // Cloud Firestore 인스턴스 초기화
     var db = Firestore.firestore()
+    @State var selectedIndex: Int = 0
     
     var body: some View {
-        @State var selectedIndex: Int = 0
-        
         // 16명(4명*4그룹) 매칭되어 있는 상태
         // 16명의 Data를 Firebase에 데이터를 추가해놓음
         TabView(selection: $selectedIndex) {
