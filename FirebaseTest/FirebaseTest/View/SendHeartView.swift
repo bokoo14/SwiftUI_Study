@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SendHeartView: View {
     var body: some View {
-        Text("하트 보내기~")
+        VStack {
+            Text("하트 보내기~")
+        }
     }
 }
 

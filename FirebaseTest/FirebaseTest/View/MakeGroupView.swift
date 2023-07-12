@@ -10,7 +10,6 @@ import FirebaseCore
 import FirebaseFirestore
 
 struct MakeGroupView: View {
-    
     var body: some View {
         VStack (spacing: 0){
             // 버튼을 누르면 user에 대한 Data를 "user"라는 Collections에 저장
@@ -37,15 +36,6 @@ struct MakeGroupView: View {
             } label: {
                 Text("사용자 데이터 Firebase 추가")
             } // button
-            
-            // Firebase에 있는 Data불러와서 View에서 보여주기
-            Button {
-                // action
-                
-            } label: {
-                Text("사용자 데이터 Firebase에서 가져와서 View에서 그려주기")
-            }
-
         } // VStack
     }
 }
