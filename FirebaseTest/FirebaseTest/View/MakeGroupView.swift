@@ -20,12 +20,12 @@ struct MakeGroupView: View {
                 // 새 컬렉션과 문서를 만듦
                 users.forEach { user in
                     firebaseDB.collection("users").addDocument(data: [
-                        "usrName": "Puppy",
-                        "userID": "2",
-                        "gender": "male",
-                        "email": "dfgsd@naver.com",
-                        "group": 1,
-                        "sentHeart": "Kiwi"
+                        "usrName": user.userName,
+                        "userID": user.userID,
+                        "gender": user.gender,
+                        "email": user.email,
+                        "group": user.group,
+                        "target": user.target
                     ]) { err in
                         if let err = err {
                             print("Error adding document: \(err)")
@@ -33,33 +33,24 @@ struct MakeGroupView: View {
                             print("Document added with ID")
                         }
                     }
-                }
-
-                // 단일 문서를 만들거나 덮어쓰려면 다음 언어별 set() 메서드를 사용합니다.
-                // Add a new document in collection "cities"
-                //                firebaseDB.collection("user").document("R5Vbave5WZlo8D7PD0Os").setData([
-                //                    "usrName": "Luna",
-                //                    "userID": "1",
-                //                    "gender": "female",
-                //                    "email": "asdfssdf@naver.com",
-                //                    "group": 1,
-                //                    "sentHeart": "Heemoo"
-                //                ]) { err in
-                //                    if let err = err {
-                //                        print("Error writing document: \(err)")
-                //                    } else {
-                //                        print("Document successfully written!")
-                //                    }
-                //                }
+                } // forEach
             } label: {
-                Text("사용자 데이터 추가")
+                Text("사용자 데이터 Firebase 추가")
             } // button
             
+            // Firebase에 있는 Data불러와서 View에서 보여주기
+            Button {
+                // action
+                
+            } label: {
+                Text("사용자 데이터 Firebase에서 가져와서 View에서 그려주기")
+            }
+
         } // VStack
     }
 }
 
-struct SendHeartView_Previews: PreviewProvider {
+struct MakeGroupView_Previews: PreviewProvider {
     static var previews: some View {
         MakeGroupView()
     }
