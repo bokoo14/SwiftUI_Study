@@ -45,12 +45,19 @@ struct ContentView: View {
                 }
                 .tag(2)
             
+//            SelectMyGroupView(result: [["" : ""]])
+//                .tabItem {
+//                    Image(systemName: "heart.fill")
+//                    Text("내가 원하는 그룹 사용자 정보 보기")
+//                }
+//                .tag(3)
+            
             SendHeartView()
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("하트보내기")
                 }
-                .tag(3)
+                .tag(4)
         } // TabView
     }
 }

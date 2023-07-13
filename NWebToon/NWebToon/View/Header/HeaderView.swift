@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HeaderView: View {
-    @State var currentIndex: Int = 1
+    @State var currentIndex: Int = 0
     
     @GestureState var offset: CGFloat = 0
     
@@ -22,26 +22,30 @@ struct HeaderView: View {
     var body: some View {
         GeometryReader { geo in
             let width = geo.size.width // 전체 width
-            let adjustmentWidth = (width/2) - leftrightSpacing // 첫번째 index일때 왼쪽에 spacing을 추가적으로 더해줌 -> 피그마에서는 6임
-            
-            HStack (spacing: 0){
-                ForEach(1..<8) { index in
-                    Image("ImgBanner0"+"\(index)")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: geo.size.width) // 화면 전체를 차지
+            //let adjustmentWidth = (width/2) - leftrightSpacing // 첫번째 index일때 왼쪽에 spacing을 추가적으로 더해줌 -> 피그마에서는 6임
+            let adjustmentWidth = 6
+            ZStack (alignment: .bottom){
+                HStack(spacing: 0){
+                    ForEach(1..<8) { index in
+                        Image("ImgBanner0"+"\(index)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: geo.size.width) // 화면 전체를 차지
                         //.frame(width: 393, height: 250)
-                        .overlay(alignment: .bottom) {
-                            Image("ImgLineBanner0"+"\(index)")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: geo.size.width - totalSpacing) // 화면 전체 - 전체 공백
-                                //.frame(width: 361)
-                                //.offset(x: )
-                        }
-                } // ForEach
-            } // HStack
-            .offset(x: CGFloat(currentIndex)*(-width))
+                    } // ForEach
+                } // HStack
+                .offset(x: CGFloat(currentIndex)*(-width) + offset) // offset
+                
+                HStack(spacing: 10){
+                    ForEach(1..<8) { index in
+                        Image("ImgLineBanner0"+"\(index)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: geo.size.width - totalSpacing) // 화면 전체 - 전체 공백
+                    } // ForEach
+                } // HStack
+                .offset(x: CGFloat(currentIndex)*(-width) + (currentIndex == 0 ? adjustmentWidth : 0) + offset) // offset
+            } // ZStack
             .gesture(
                 DragGesture()
                 // updating: DragGesture를 하는 도중에 발생하는 event
@@ -65,7 +69,7 @@ struct HeaderView: View {
                         
                         currentIndex = max(min(currentIndex+Int(isNextIndex), 8), 0)
                     }
-            )
+            ) // gesture
             
         }
     }

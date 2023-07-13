@@ -12,6 +12,7 @@
 		3E248EE02A5E39E300976038 /* SendHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E248EDF2A5E39E300976038 /* SendHeartView.swift */; };
 		3E248EE22A5E3ADB00976038 /* ViewAllUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E248EE12A5E3ADB00976038 /* ViewAllUsersView.swift */; };
 		3E4123C22A5BD1DF0026D55F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E4123C12A5BD1DF0026D55F /* GoogleService-Info.plist */; };
+		3E4210C72A600E44001A6325 /* SelectMyGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4210C62A600E44001A6325 /* SelectMyGroupView.swift */; };
 		3EE296A82A580693006B5E48 /* MakeGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE296A72A580693006B5E48 /* MakeGroupView.swift */; };
 		3EE9CA0D2A566F210069FF81 /* FirebaseTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9CA0C2A566F210069FF81 /* FirebaseTestApp.swift */; };
 		3EE9CA0F2A566F210069FF81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9CA0E2A566F210069FF81 /* ContentView.swift */; };
@@ -51,6 +52,7 @@
 		3E248EDF2A5E39E300976038 /* SendHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHeartView.swift; sourceTree = "<group>"; };
 		3E248EE12A5E3ADB00976038 /* ViewAllUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllUsersView.swift; sourceTree = "<group>"; };
 		3E4123C12A5BD1DF0026D55F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "FirebaseTest/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3E4210C62A600E44001A6325 /* SelectMyGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMyGroupView.swift; sourceTree = "<group>"; };
 		3EE296A72A580693006B5E48 /* MakeGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGroupView.swift; sourceTree = "<group>"; };
 		3EE9CA092A566F210069FF81 /* FirebaseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE9CA0C2A566F210069FF81 /* FirebaseTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTestApp.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				3EE296A72A580693006B5E48 /* MakeGroupView.swift */,
 				3E248EDD2A5E36EF00976038 /* ModifyUserView.swift */,
 				3E248EE12A5E3ADB00976038 /* ViewAllUsersView.swift */,
+				3E4210C62A600E44001A6325 /* SelectMyGroupView.swift */,
 				3E248EDF2A5E39E300976038 /* SendHeartView.swift */,
 			);
 			path = View;
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE296A82A580693006B5E48 /* MakeGroupView.swift in Sources */,
+				3E4210C72A600E44001A6325 /* SelectMyGroupView.swift in Sources */,
 				3E248EDE2A5E36EF00976038 /* ModifyUserView.swift in Sources */,
 				3E248EE22A5E3ADB00976038 /* ViewAllUsersView.swift in Sources */,
 				3EE9CA0F2A566F210069FF81 /* ContentView.swift in Sources */,
