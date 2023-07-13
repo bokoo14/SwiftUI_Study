@@ -24,12 +24,12 @@ struct ViewAllUsersView: View {
                 Text("Document ID: \(documentID), Data: \(convertDataToString(data: data))")
             } // List
             
-            // Group1만 보기
-            List(documents, id: \.documentID) { document in
-                let documentID = document.documentID
-                let data = document.data()
-                Text("Document ID: \(documentID), Data: \(findGroup(data: data, groupNumber: 1))")
-            } // List
+//            // Group1만 보기
+//            List(documents, id: \.documentID) { document in
+//                let documentID = document.documentID
+//                let data = document.data()
+//                Text("Document ID: \(documentID), Data: \(findGroup(data: data, groupNumber: 1))")
+//            } // List
         } // VStack
     }
     
