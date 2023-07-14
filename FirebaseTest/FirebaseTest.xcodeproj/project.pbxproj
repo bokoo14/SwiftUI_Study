@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E09CD582A602682008A92FD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09CD572A602682008A92FD /* FirebaseManager.swift */; };
 		3E248EDA2A5D7D7400976038 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E248ED92A5D7D7400976038 /* UserModel.swift */; };
 		3E248EDE2A5E36EF00976038 /* ModifyUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E248EDD2A5E36EF00976038 /* ModifyUserView.swift */; };
 		3E248EE02A5E39E300976038 /* SendHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E248EDF2A5E39E300976038 /* SendHeartView.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E09CD572A602682008A92FD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		3E248ED92A5D7D7400976038 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3E248EDD2A5E36EF00976038 /* ModifyUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyUserView.swift; sourceTree = "<group>"; };
 		3E248EDF2A5E39E300976038 /* SendHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHeartView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E09CD562A602652008A92FD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3E09CD572A602682008A92FD /* FirebaseManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3E248EDB2A5D7D7D00976038 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 				3EE9CA0E2A566F210069FF81 /* ContentView.swift */,
 				3E248EDC2A5D7D9A00976038 /* View */,
 				3E248EDB2A5D7D7D00976038 /* Model */,
+				3E09CD562A602652008A92FD /* Utils */,
 				3EE9CA102A566F230069FF81 /* Assets.xcassets */,
 				3EE9CA122A566F230069FF81 /* Preview Content */,
 			);
@@ -261,6 +272,7 @@
 				3EE296A82A580693006B5E48 /* MakeGroupView.swift in Sources */,
 				3E4210C72A600E44001A6325 /* SelectMyGroupView.swift in Sources */,
 				3E248EDE2A5E36EF00976038 /* ModifyUserView.swift in Sources */,
+				3E09CD582A602682008A92FD /* FirebaseManager.swift in Sources */,
 				3E248EE22A5E3ADB00976038 /* ViewAllUsersView.swift in Sources */,
 				3EE9CA0F2A566F210069FF81 /* ContentView.swift in Sources */,
 				3E248EE02A5E39E300976038 /* SendHeartView.swift in Sources */,

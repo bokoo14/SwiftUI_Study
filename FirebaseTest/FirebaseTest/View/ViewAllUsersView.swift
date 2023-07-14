@@ -27,6 +27,7 @@ struct ViewAllUsersView: View {
         } // VStack
     }
     
+    // firebase의 users에 저장되어 있는 모든 정보 불러오기
     func fetchAllDocuments() {
         firebaseDB.collection("users").getDocuments { snapshot, error in
             if let error = error {

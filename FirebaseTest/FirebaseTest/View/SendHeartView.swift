@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
 
 struct SendHeartView: View {
+    @State var documents: [QueryDocumentSnapshot] = []
+    
     var body: some View {
         // Group1이라고 가정
         let lunaID: String = "Luna"
@@ -31,9 +35,32 @@ struct SendHeartView: View {
                 sendHeartToYou(myID: heemooID, targetID: puppyID)
             }
             
+            Divider()
+            Button("매칭 결과 확인해보기👻") {
+                fetchAllDocuments()
+                
+            }
             
         } // VStack
     }
+    
+    // 모든 사람들의 정보를 firebase에서 가져오기
+    func fetchAllDocuments() {
+        firebaseDB.collection("users").getDocuments { snapshot, error in
+            if let error = error {
+                print("Error fetching documents: \(error)")
+                return
+            }
+            
+            guard let documents = snapshot?.documents else {
+                print("No documents")
+                return
+            }
+            
+            self.documents = documents
+        }
+    } // fetchAllDocuments
+    
     
     // 내가 원하는 사람("userUUID")에게 하트 보내기
     func sendHeartToYou(myID: String, targetID: String) {
@@ -49,6 +76,15 @@ struct SendHeartView: View {
                 print("Document successfully updated")
             }
         }
+    } // sendHeartToYou
+    
+    func checkMatching(groupNum: Int){
+//        List(documents, id: \.documentID) { document in
+//            let documentID = document.documentID
+//            let data = document.data()
+//            Text("Document ID: \(documentID), Data: \(convertDataToString(data: data))")
+//        } // List
+        
     }
     
 }
