@@ -14,7 +14,7 @@ struct SendHeartView: View {
     
     var body: some View {
         // Group1이라고 가정
-        let lunaID: String = "Luna"
+        let lunaID: String = "luna"
         let heemooID: String = "Heemoo"
         let kiwiID: String = "Kiwi"
         let puppyID: String = "Puppy"

@@ -11,17 +11,17 @@ import FirebaseFirestore
 
 struct ViewAllUsersView: View {
     @State var documents: [QueryDocumentSnapshot] = []
-    
+    @State var userInfo: [UserModel] = []
+
     var body: some View {
         VStack {
             Button("사용자 데이터 불러오기") {
                 fetchAllDocuments()
             }
             
-            List(documents, id: \.documentID) { document in
-                let documentID = document.documentID
-                let data = document.data()
-                Text("Document ID: \(documentID), Data: \(convertDataToString(data: data))")
+            List(userInfo, id: \.userID) { document in
+                let documentID = document.userID
+                Text("Document ID: \(documentID), email: \(document.email), gender: \(document.gender), group: \(document.group), target: \(document.target), userName: \(document.userName)")
             } // List
 
         } // VStack
@@ -40,7 +40,11 @@ struct ViewAllUsersView: View {
                 return
             }
             
-            self.documents = documents
+            self.userInfo = documents.map {
+                return UserModel(userName: $0["userName"] as? String ?? "", userID: $0.documentID, gender: $0["gender"] as? String ?? "", email: $0["email"] as? String ?? "", group: $0["group"] as? Int ?? 0, target: $0["target"] as? String ?? "")
+            }
+
+            print(self.userInfo)
         }
     } // fetchAllDocuments
     
@@ -58,8 +62,8 @@ struct ViewAllUsersView: View {
     }
     
     // 원하는 그룹만 select해줌
-    func findGroup(data: [String: Any], groupNumber: Int) -> String {
-        var result = ""
+//    func findGroup(data: [String: Any], groupNumber: Int) -> String {
+//        var result = ""
 //        for (key, value) in data {
 //            if (key == "group" && value as! Int == groupNumber) { }
 //                let valueString = "\(value)"
@@ -69,8 +73,8 @@ struct ViewAllUsersView: View {
 //        if result.hasSuffix(", ") {
 //            result = String(result.dropLast(2))
 //        }
-        return result
-    }
+//        return result
+//    }
 }
 
 struct ViewAllUsersView_Previews: PreviewProvider {
