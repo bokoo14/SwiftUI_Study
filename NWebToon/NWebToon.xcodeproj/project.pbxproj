@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E09CD5A2A603FF9008A92FD /* WebToonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09CD592A603FF9008A92FD /* WebToonsView.swift */; };
 		3EA46E602A5E8F6D0072F8AE /* NWebToonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA46E5F2A5E8F6D0072F8AE /* NWebToonApp.swift */; };
 		3EA46E622A5E8F6D0072F8AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA46E612A5E8F6D0072F8AE /* ContentView.swift */; };
 		3EA46E642A5E8F6E0072F8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA46E632A5E8F6E0072F8AE /* Assets.xcassets */; };
@@ -169,6 +170,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E09CD592A603FF9008A92FD /* WebToonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebToonsView.swift; sourceTree = "<group>"; };
 		3EA46E5C2A5E8F6D0072F8AE /* NWebToon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NWebToon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA46E5F2A5E8F6D0072F8AE /* NWebToonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWebToonApp.swift; sourceTree = "<group>"; };
 		3EA46E612A5E8F6D0072F8AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -689,6 +691,7 @@
 		3EA46FB62A5E92CB0072F8AE /* Webtoons */ = {
 			isa = PBXGroup;
 			children = (
+				3E09CD592A603FF9008A92FD /* WebToonsView.swift */,
 			);
 			path = Webtoons;
 			sourceTree = "<group>";
@@ -925,6 +928,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EA46E622A5E8F6D0072F8AE /* ContentView.swift in Sources */,
+				3E09CD5A2A603FF9008A92FD /* WebToonsView.swift in Sources */,
 				3EA46FB42A5E920D0072F8AE /* HeaderView.swift in Sources */,
 				3EA46E602A5E8F6D0072F8AE /* NWebToonApp.swift in Sources */,
 			);
