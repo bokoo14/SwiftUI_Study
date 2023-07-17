@@ -19,10 +19,9 @@ struct ViewAllUsersView: View {
                 fetchAllDocuments()
             }
             
-            List(userInfo, id: \.userID) { document in
-                let documentID = document.userID
-                Text("Document ID: \(documentID), email: \(document.email), gender: \(document.gender), group: \(document.group), target: \(document.target), userName: \(document.userName)")
-            } // List
+//            List(userInfo, id: \.self) { document in
+//                Text("gender: \(document.gender), group: \(document.group), target: \(document.target), userName: \(document.userName)")
+            //} // List
 
         } // VStack
     }
@@ -41,40 +40,12 @@ struct ViewAllUsersView: View {
             }
             
             self.userInfo = documents.map {
-                return UserModel(userName: $0["userName"] as? String ?? "", userID: $0.documentID, gender: $0["gender"] as? String ?? "", email: $0["email"] as? String ?? "", group: $0["group"] as? Int ?? 0, target: $0["target"] as? String ?? "")
+                return UserModel(userName: $0["userName"] as? String ?? "", gender: $0["gender"] as? String ?? "", group: $0["group"] as? Int ?? 0, mySignal: $0["mySignal"] as? String ?? "", isParticipate: $0["isParticipate"] as? Bool ?? false)
             }
 
             print(self.userInfo)
         }
     } // fetchAllDocuments
-    
-    // data를 string으로 바꿔줌
-    func convertDataToString(data: [String: Any]) -> String {
-        var result = ""
-        for (key, value) in data {
-            let valueString = "\(value)"
-            result += "\(key): \(valueString), "
-        }
-        if result.hasSuffix(", ") {
-            result = String(result.dropLast(2))
-        }
-        return result
-    }
-    
-    // 원하는 그룹만 select해줌
-//    func findGroup(data: [String: Any], groupNumber: Int) -> String {
-//        var result = ""
-//        for (key, value) in data {
-//            if (key == "group" && value as! Int == groupNumber) { }
-//                let valueString = "\(value)"
-//                result += "\(key): \(valueString), "
-//
-//        }
-//        if result.hasSuffix(", ") {
-//            result = String(result.dropLast(2))
-//        }
-//        return result
-//    }
 }
 
 struct ViewAllUsersView_Previews: PreviewProvider {

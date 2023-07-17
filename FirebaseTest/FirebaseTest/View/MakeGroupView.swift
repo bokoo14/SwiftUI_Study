@@ -22,11 +22,10 @@ struct MakeGroupView: View {
                 users.forEach { user in
                     firebaseDB.collection("users").addDocument(data: [
                         "userName": user.userName,
-                        //"userID": user.userID,
                         "gender": user.gender,
-                        "email": user.email,
                         "group": user.group,
-                        "target": user.target
+                        "mySignal": user.mySignal,
+                        "isParticipate": user.isParticipate
                     ]) { err in
                         if let err = err {
                             print("Error adding document: \(err)")
@@ -34,11 +33,7 @@ struct MakeGroupView: View {
                             print("Document added with ID")
                         }
                     }
- 
                 } // forEach
-                
-                
-
             } label: {
                 Text("사용자 데이터 Firebase 추가")
             } // button

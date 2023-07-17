@@ -38,12 +38,8 @@ struct SelectMyGroupView: View {
             List(myGroupData, id: \.documentID) { document in
                 let documentID = document.documentID
                 let data = document.data()
-                Text("Document ID: \(documentID), Data: \(convertDataToString(data: data))")
+            Text("Document ID: \(documentID), Data: \(convertDataToString(data: data))")
             } // List
-            
-            
-            
-            // List로 내가 속한 Group을 보여주기
             
         } // VStack
     }
@@ -61,9 +57,6 @@ struct SelectMyGroupView: View {
                 }
                 myGroupData = documents
                 result = documents
-//                let users = documents.map { $0["name"] as? String ?? "" }
-//                print("Current cities in CA: \(users)")
-//                completion(users)
             }
         return result
     } // showMyGroup
