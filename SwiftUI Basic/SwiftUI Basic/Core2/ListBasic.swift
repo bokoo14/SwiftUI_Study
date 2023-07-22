@@ -88,6 +88,8 @@ struct ListBasic: View {
 
                 
             } // :List
+
+            
             .navigationTitle("우리 동네 마트")
             .navigationBarTitleDisplayMode(.inline) // navigationTitle을 어떻게 보여줄지
             .toolbar {
