@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        ScrollView {
             HeaderView()
-            WebToonsView()
-            Spacer()
+            WebtoonsTabView()
+            
+            //Spacer()
         }
     }
 }

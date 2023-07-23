@@ -7,7 +7,15 @@
 
 import Foundation
 
-struct WebToons: Identifiable {
+struct WebToons: Identifiable, Equatable, Hashable {
+    static func ==(lhs: WebToons, rhs: WebToons) -> Bool {
+        // 구조체의 모든 속성이 동일한지 비교하도록 구현합니다.
+        return lhs.id == rhs.id
+        && lhs.imageName == rhs.imageName
+        && lhs.imageTitle == rhs.imageTitle
+        && lhs.imageDetail == rhs.imageDetail
+    }
+    
     var id: UUID = UUID()
     var imageName: String
     var imageTitle: String
