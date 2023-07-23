@@ -18,7 +18,8 @@ struct WebtoonsBoxView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
-            
+                .frame(height: 152)
+            Spacer()
             Text(imageTitle)
                 .font(.system(size: 13))
                 .foregroundColor(Color("FontBlack"))
@@ -28,6 +29,8 @@ struct WebtoonsBoxView: View {
                 .foregroundColor(Color("FontGray100"))
             
         }
+        .frame(width: 117, height: 189)
+        //.border(.red)
         
     }
 }

@@ -9,11 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
         ScrollView {
             HeaderView()
             WebtoonsTabView()
-            
-            //Spacer()
+                //.frame(height: 850)
+            ButtonAreaView()
+            FooterAreaView()
         }
     }
 }

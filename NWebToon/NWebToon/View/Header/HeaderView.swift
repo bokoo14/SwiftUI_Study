@@ -68,8 +68,13 @@ struct HeaderView: View {
                         let howSwap = -widthOffset / width
                         let isNextIndex = howSwap.rounded()
                         
-                        currentIndex = max(min(currentIndex+Int(isNextIndex), 8), 0)
-                    }
+                        
+                        //                        currentIndex = max(min(currentIndex+Int(isNextIndex), 8), 0)
+                        
+                        withAnimation(.linear){
+                            currentIndex = max(min(currentIndex + Int(isNextIndex), 8),0)
+                        }
+                    } // onEnded
             ) // gesture
         } // GeometryReader
         .border(.red)

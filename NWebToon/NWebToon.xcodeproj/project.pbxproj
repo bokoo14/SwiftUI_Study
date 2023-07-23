@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E09CD5A2A603FF9008A92FD /* WebToonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09CD592A603FF9008A92FD /* WebToonsView.swift */; };
 		3E96E3522A6D08E30020A9FB /* WebtoonsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96E3512A6D08E30020A9FB /* WebtoonsTabView.swift */; };
 		3E96E3542A6D08FF0020A9FB /* WebtoonsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96E3532A6D08FF0020A9FB /* WebtoonsListView.swift */; };
 		3E96E3562A6D0FD80020A9FB /* WebtoonsBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96E3552A6D0FD80020A9FB /* WebtoonsBoxView.swift */; };
 		3E96E3582A6D16740020A9FB /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96E3572A6D16740020A9FB /* Tab.swift */; };
-		3E96E35A2A6D21120020A9FB /* WebToonsTabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96E3592A6D21120020A9FB /* WebToonsTabButtonView.swift */; };
 		3EA46E602A5E8F6D0072F8AE /* NWebToonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA46E5F2A5E8F6D0072F8AE /* NWebToonApp.swift */; };
 		3EA46E622A5E8F6D0072F8AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA46E612A5E8F6D0072F8AE /* ContentView.swift */; };
 		3EA46E642A5E8F6E0072F8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA46E632A5E8F6E0072F8AE /* Assets.xcassets */; };
@@ -179,12 +177,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E09CD592A603FF9008A92FD /* WebToonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebToonsView.swift; sourceTree = "<group>"; };
 		3E96E3512A6D08E30020A9FB /* WebtoonsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonsTabView.swift; sourceTree = "<group>"; };
 		3E96E3532A6D08FF0020A9FB /* WebtoonsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonsListView.swift; sourceTree = "<group>"; };
 		3E96E3552A6D0FD80020A9FB /* WebtoonsBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonsBoxView.swift; sourceTree = "<group>"; };
 		3E96E3572A6D16740020A9FB /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
-		3E96E3592A6D21120020A9FB /* WebToonsTabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebToonsTabButtonView.swift; sourceTree = "<group>"; };
 		3EA46E5C2A5E8F6D0072F8AE /* NWebToon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NWebToon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA46E5F2A5E8F6D0072F8AE /* NWebToonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWebToonApp.swift; sourceTree = "<group>"; };
 		3EA46E612A5E8F6D0072F8AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -713,9 +709,7 @@
 		3EA46FB62A5E92CB0072F8AE /* Webtoons */ = {
 			isa = PBXGroup;
 			children = (
-				3E09CD592A603FF9008A92FD /* WebToonsView.swift */,
 				3E96E3512A6D08E30020A9FB /* WebtoonsTabView.swift */,
-				3E96E3592A6D21120020A9FB /* WebToonsTabButtonView.swift */,
 				3E96E3532A6D08FF0020A9FB /* WebtoonsListView.swift */,
 				3E96E3552A6D0FD80020A9FB /* WebtoonsBoxView.swift */,
 			);
@@ -948,8 +942,6 @@
 			files = (
 				3EA46E622A5E8F6D0072F8AE /* ContentView.swift in Sources */,
 				3E96E3542A6D08FF0020A9FB /* WebtoonsListView.swift in Sources */,
-				3E09CD5A2A603FF9008A92FD /* WebToonsView.swift in Sources */,
-				3E96E35A2A6D21120020A9FB /* WebToonsTabButtonView.swift in Sources */,
 				3E96E3582A6D16740020A9FB /* Tab.swift in Sources */,
 				3EF9A8612A62A30200E35D93 /* Webtoons.swift in Sources */,
 				3EFFDCA62A629F08006A43E0 /* ButtonAreaView.swift in Sources */,

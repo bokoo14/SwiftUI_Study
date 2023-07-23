@@ -16,16 +16,14 @@ struct WebtoonsListView: View {
         GridItem(.flexible(), spacing: 6, alignment: .center)]
     
     var body: some View {
-        LazyVGrid(columns: columns, alignment: .center, spacing: 6, pinnedViews: [.sectionHeaders]) {
-            Section {
+            LazyVGrid(columns: columns, alignment: .center, spacing: 15) {
                 ForEach(selectedDay) { modaywebtoons in
                     WebtoonsBoxView(imageName: modaywebtoons.imageName, imageTitle: modaywebtoons.imageTitle, imageDetail: modaywebtoons.imageDetail)
                 }
-            } header: {
-               
-            }
-        } // LazyVGrid
-        .padding(.horizontal, 15)
+            } // LazyVGrid
+            .padding(.horizontal, 15)
+            .frame(height: UIScreen.main.bounds.height)
+            .border(.red)
     }
 }
 
