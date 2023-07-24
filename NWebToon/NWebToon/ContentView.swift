@@ -9,11 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
+        // 스크롤뷰는 하위뷰에서 받음
+        // 탭뷰는 상위뷰에서 받음
+        // 둘 다 없음
+        // 탭뷰는 사라짐. 값이 없어서
+        // 그럼 탭뷰에 높이값을 잡아줘야함
+        // 상수로 값을 주면 안됨 왜? 디바이스마다 
         ScrollView {
             HeaderView()
             WebtoonsTabView()
-                //.frame(height: 850)
+                .frame(height: 850)
             ButtonAreaView()
             FooterAreaView()
         }

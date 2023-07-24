@@ -35,8 +35,8 @@ struct HeaderView: View {
         GeometryReader { geo in
             let width = geo.size.width - (totalSpacing - leftrightSpacing)
             
-            Group {
-                ForEach(1..<headerInfo.count) { index in
+            ZStack (alignment: .bottomLeading) {
+                ForEach(0..<headerInfo.count) { index in
                     Image(headerInfo[index].imageTitle)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -50,10 +50,11 @@ struct HeaderView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: geo.size.width - totalSpacing) // 화면 전체 - 전체 공백
-                            .offset(x: CGFloat(currentIndex)*(-width) + offset, y: screeHeight/4.1)
+                            
                     } // ForEach
-                    .animation(.easeInOut, value: offset == 0)
+                    
                 } // HStack
+                .offset(x: CGFloat(currentIndex)*(-width) + offset)
                 .padding(.horizontal, 16)
                 
             } // Group
@@ -61,6 +62,8 @@ struct HeaderView: View {
                 DragGesture()
                     .updating($offset, body: { dragGestureValue, inoutState, inoutTransaction in
                         inoutState = dragGestureValue.translation.width
+                        
+                        
                     })
                 
                     .onEnded { value in
@@ -71,12 +74,13 @@ struct HeaderView: View {
                         
                         //                        currentIndex = max(min(currentIndex+Int(isNextIndex), 8), 0)
                         
-                        withAnimation(.linear){
-                            currentIndex = max(min(currentIndex + Int(isNextIndex), 8),0)
-                        }
+//                        withAnimation(.linear){
+                            currentIndex = max(min(currentIndex + Int(isNextIndex), headerInfo.count-1),0)
+                        //}
                     } // onEnded
             ) // gesture
         } // GeometryReader
+        .animation(.easeInOut, value: offset == 0)
         .border(.red)
         .frame(width: screenWidth, height: screeHeight/3.4)
     }
