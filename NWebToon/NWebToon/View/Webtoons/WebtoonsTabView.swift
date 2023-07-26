@@ -30,14 +30,6 @@ struct WebtoonsTabView: View {
                 } // ForEach
             } // TabView
             .tabViewStyle(.page(indexDisplayMode: .never))
-            //            .overlay (alignment: .top){
-            //                VStack(spacing: 0) {
-            //                    TabBar(items: tabModel, selectedTab: $selectedTab)
-            //                    Divider()
-            //                        .frame(minHeight: 1)
-            //                        .background(Color("DividerGray"))
-            //                }
-            //} // overlay
             
         } // VStack
         .border(.red)
