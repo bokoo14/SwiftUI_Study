@@ -19,7 +19,6 @@ struct ContentView: View {
         ScrollView { // 하위뷰에서 크기를 받음
             HeaderView()
             WebtoonsTabView() // 상위 뷰에서 크기를 받음
-                //.frame(height: 850)
             ButtonAreaView()
             FooterAreaView()
         }

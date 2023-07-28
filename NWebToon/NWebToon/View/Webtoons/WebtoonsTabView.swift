@@ -11,9 +11,10 @@ struct WebtoonsTabView: View {
     @State var selectedTab: TabModel = tabmodel[0]
     @State var tabModel: [TabModel] = tabmodel
     
+    @State private var contentAreaHeight: CGRect = .zero
+    
     var body: some View {
         GeometryReader { geo in
-            ScrollView{
                 VStack (spacing: 0){
                     TabBar(items: tabModel, selectedTab: $selectedTab)
                     Divider()
@@ -33,8 +34,7 @@ struct WebtoonsTabView: View {
                     } // TabView
                     .tabViewStyle(.page(indexDisplayMode: .never))
                 } // VStack
-                .frame(height: 1000)
-            } // ScrollView
+                .frame(height: geo.size.height) // Set the height to the parent view's height
             //.border(.red)
             .background(.red)
         }
@@ -75,6 +75,7 @@ struct TabBar: View {
 
 struct WebtoonsTabView_Previews: PreviewProvider {
     static var previews: some View {
-        WebtoonsTabView()
+        //WebtoonsTabView()
+        ContentView()
     }
 }
