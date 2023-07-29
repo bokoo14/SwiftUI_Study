@@ -50,7 +50,7 @@ struct HeaderView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: geo.size.width - totalSpacing) // 화면 전체 - 전체 공백
-                            
+                        
                     } // ForEach
                     
                 } // HStack
@@ -71,12 +71,7 @@ struct HeaderView: View {
                         let howSwap = -widthOffset / width
                         let isNextIndex = howSwap.rounded()
                         
-                        
-                        //                        currentIndex = max(min(currentIndex+Int(isNextIndex), 8), 0)
-                        
-//                        withAnimation(.linear){
-                            currentIndex = max(min(currentIndex + Int(isNextIndex), headerInfo.count-1),0)
-                        //}
+                        currentIndex = max(min(currentIndex + Int(isNextIndex), headerInfo.count-1),0)
                     } // onEnded
             ) // gesture
         } // GeometryReader
@@ -92,3 +87,8 @@ struct HeaderView_Previews: PreviewProvider {
         HeaderView()
     }
 }
+
+
+
+
+// TODO: opacity값 조정, color extension만들기

@@ -22,6 +22,11 @@ struct ContentView: View {
             ButtonAreaView()
             FooterAreaView()
         }
+        .ignoresSafeArea()
+        .onAppear {
+            // Scroll을 할때 bounce를 막아줌
+            UIScrollView.appearance().bounces = false
+        }
     }
 }
 
