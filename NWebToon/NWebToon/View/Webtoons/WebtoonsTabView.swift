@@ -28,7 +28,6 @@ struct WebtoonsTabView: View {
                     TabView(selection: $selectedTab) {
                         ForEach(tabModel) { currentTab in
                             WebtoonsListView(selectedDay: currentTab.tabView)
-                            //.padding(.top, 140)
                                 .tag(currentTab)
                         } // ForEach
                     } // TabView

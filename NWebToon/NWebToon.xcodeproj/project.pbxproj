@@ -170,6 +170,7 @@
 		3EA46FAD2A5E90E50072F8AE /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EA46F132A5E90E50072F8AE /* Pretendard-SemiBold.otf */; };
 		3EA46FAE2A5E90E50072F8AE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3EA46F142A5E90E50072F8AE /* LICENSE.txt */; };
 		3EA46FB42A5E920D0072F8AE /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA46FB32A5E920D0072F8AE /* HeaderView.swift */; };
+		3EC9D6572A74CEB600569FA0 /* GetHeightModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9D6562A74CEB600569FA0 /* GetHeightModifier.swift */; };
 		3EE07B242A6D04A300A1BAAB /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE07B232A6D04A300A1BAAB /* Header.swift */; };
 		3EF9A8612A62A30200E35D93 /* Webtoons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9A8602A62A30200E35D93 /* Webtoons.swift */; };
 		3EFFDCA62A629F08006A43E0 /* ButtonAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFFDCA52A629F08006A43E0 /* ButtonAreaView.swift */; };
@@ -341,6 +342,7 @@
 		3EA46F132A5E90E50072F8AE /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		3EA46F142A5E90E50072F8AE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		3EA46FB32A5E920D0072F8AE /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		3EC9D6562A74CEB600569FA0 /* GetHeightModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeightModifier.swift; sourceTree = "<group>"; };
 		3EE07B232A6D04A300A1BAAB /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		3EF9A8602A62A30200E35D93 /* Webtoons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webtoons.swift; sourceTree = "<group>"; };
 		3EFFDCA52A629F08006A43E0 /* ButtonAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAreaView.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 		3EA46E5E2A5E8F6D0072F8AE /* NWebToon */ = {
 			isa = PBXGroup;
 			children = (
+				3EC9D6552A74CE8900569FA0 /* Modifier */,
 				3EA46E5F2A5E8F6D0072F8AE /* NWebToonApp.swift */,
 				3EA46E612A5E8F6D0072F8AE /* ContentView.swift */,
 				3EA46FB02A5E91920072F8AE /* Model */,
@@ -716,6 +719,14 @@
 			path = Webtoons;
 			sourceTree = "<group>";
 		};
+		3EC9D6552A74CE8900569FA0 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				3EC9D6562A74CEB600569FA0 /* GetHeightModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -950,6 +961,7 @@
 				3E96E3522A6D08E30020A9FB /* WebtoonsTabView.swift in Sources */,
 				3EFFDCA82A629F12006A43E0 /* FooterAreaView.swift in Sources */,
 				3EA46E602A5E8F6D0072F8AE /* NWebToonApp.swift in Sources */,
+				3EC9D6572A74CEB600569FA0 /* GetHeightModifier.swift in Sources */,
 				3E96E3562A6D0FD80020A9FB /* WebtoonsBoxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
