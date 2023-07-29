@@ -25,6 +25,7 @@ struct WebtoonsBoxView: View {
                 .font(.system(size: 13))
                 .foregroundColor(Color("FontBlack"))
                 .padding(.bottom, 4)
+                .lineLimit(1)
             
             Text(imageDetail)
                 .font(.system(size: 10))

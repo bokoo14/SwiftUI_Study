@@ -14,34 +14,42 @@ struct WebtoonsTabView: View {
     @State private var contentAreaHeight: CGRect = .zero
     
     var body: some View {
-        GeometryReader { geo in
-                VStack (spacing: 0){
-                    TabBar(items: tabModel, selectedTab: $selectedTab)
-                    Divider()
-                        .frame(minHeight: 1)
-                        .background(Color("DividerGray"))
-                    
-                    // 높이값이 상수면 데이터값이 추가된 것을 알 수 없음
-                    // 탭뷰의 크기가 탭뷰안에 있는 자식안의 크기를 탭뷰의 높이값으로 잡아줘야 함
-                    // geometry로 잡아줘서
-                    // geo로 값을 받아와서 height값을 잡아줘야 한다
-                    TabView(selection: $selectedTab) {
-                        ForEach(tabModel) { currentTab in
-                            WebtoonsListView(selectedDay: currentTab.tabView)
-                                .tag(currentTab)
-                        } // ForEach
-                    } // TabView
-                    .tabViewStyle(.page(indexDisplayMode: .never))
-                } // VStack
-                .frame(height: geo.size.height) // Set the height to the parent view's height
-            //.border(.red)
-            .background(.red)
+        ScrollView {
+            VStack (spacing: 0){
+                        TabBar(items: tabModel, selectedTab: $selectedTab)
+                        Divider()
+                            .frame(minHeight: 1)
+                            .background(Color("DividerGray"))
+                        
+                        // 높이값이 상수면 데이터값이 추가된 것을 알 수 없음
+                        // 탭뷰의 크기가 탭뷰안에 있는 자식안의 크기를 탭뷰의 높이값으로 잡아줘야 함
+                        // geometry로 잡아줘서
+                        // geo로 값을 받아와서 height값을 잡아줘야 한다
+
+                        
+                        TabView(selection: $selectedTab) {
+                            ForEach(tabModel) { currentTab in
+                                WebtoonsListView(selectedDay: currentTab.tabView)
+                                    .tag(currentTab)
+                                    .modifier(GetHeightModifier())
+                                     // TabView의 각각의 height를 가져와서 저장
+                            } // ForEach
+                        } // TabView
+                        .tabViewStyle(.page)
+                        .frame(height: contentAreaHeight.size.height)
+                        .onPreferenceChange(ContentRectSize.self) { rects in
+                            self.contentAreaHeight = rects
+                            print(rects.height)
+                        }
+                        
+                    } // VStack
+//            .background(.red)
         }
-        
     }
 }
 
 
+// Tab바 상단의 월~금, 신작 버튼
 struct TabBar: View {
     var items: [TabModel]
     @Binding var selectedTab: TabModel
@@ -74,7 +82,8 @@ struct TabBar: View {
 
 struct WebtoonsTabView_Previews: PreviewProvider {
     static var previews: some View {
-        //WebtoonsTabView()
-        ContentView()
+//        WebtoonsTabView()
+        WebtoonsTabView()
+//        ContentView()
     }
 }
