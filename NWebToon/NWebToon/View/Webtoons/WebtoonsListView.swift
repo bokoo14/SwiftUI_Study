@@ -25,7 +25,6 @@ struct WebtoonsListView: View {
         .padding(.horizontal, 15)
         .frame(height: 850)
         .border(.red)
-        //.background(.red)
     }
 }
 
