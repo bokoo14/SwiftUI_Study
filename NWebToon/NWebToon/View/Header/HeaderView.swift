@@ -81,7 +81,7 @@ struct HeaderView: View {
             ) // gesture
         } // GeometryReader
         .animation(.easeInOut, value: offset == 0)
-        .border(.red)
+        //.border(.red)
         .frame(width: screenWidth, height: screeHeight/3.4)
     }
     

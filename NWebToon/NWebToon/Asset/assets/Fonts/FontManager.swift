@@ -44,7 +44,9 @@ extension Font {
                 return name
             }
         }
+    } // enum
+    
+    static func pretendard(_ type: Pretendard, size: CGFloat = 13) -> Font {
+        return .custom(type.value, size: size)
     }
-    
-    
 }

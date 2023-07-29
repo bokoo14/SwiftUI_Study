@@ -164,9 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				3E96E3512A6D08E30020A9FB /* WebtoonsTabView.swift */,
-				3EC9D6702A7500C500569FA0 /* SwiftUIView2.swift */,
 				3E96E3532A6D08FF0020A9FB /* WebtoonsListView.swift */,
 				3E96E3552A6D0FD80020A9FB /* WebtoonsBoxView.swift */,
+				3EC9D6702A7500C500569FA0 /* SwiftUIView2.swift */,
 			);
 			path = Webtoons;
 			sourceTree = "<group>";

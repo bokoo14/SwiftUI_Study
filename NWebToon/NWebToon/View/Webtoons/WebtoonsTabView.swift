@@ -27,8 +27,7 @@ struct WebtoonsTabView: View {
                 ForEach(tabModel) { currentTab in
                     WebtoonsListView(selectedDay: currentTab.tabView)
                         .tag(currentTab)
-                        .modifier(GetHeightModifier())
-                    // TabView의 각각의 height를 가져와서 저장
+                        .modifier(GetHeightModifier()) // TabView의 각각의 height를 가져와서 저장
                 } // ForEach
             } // TabView
             .tabViewStyle(.page)
@@ -42,35 +41,39 @@ struct WebtoonsTabView: View {
 }
 
 
-// Tab바 상단의 월~금, 신작 버튼
+// Tab바 상단의 월~일, 신작 버튼
 struct TabBar: View {
     var items: [TabModel]
     @Binding var selectedTab: TabModel
+    
+    // Namespace로 Text를 연결시켜줌 -> id는 모두 동일해야 함, namespace에 값을 저장시켜줌
     @Namespace var namespace
     
     var body: some View {
         HStack {
             ForEach(items) { item in
-                VStack(spacing: 0) {
-                    Text(item.tabTitle)
-                        .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(selectedTab == item ? Color("FontGreen") : Color("FontBlack"))
-                        .padding(.horizontal, items.last != item ? 4.5 : 0)
-                        .padding(.bottom, 14)
-                        .padding(.top, 12)
-                        .border(.red)
-                        .onTapGesture {
-                            withAnimation(.spring(response: 0.5, dampingFraction:0.8)){
-                                selectedTab = item
-                            }
+                Text(item.tabTitle)
+                    .font(.pretendard(.bold, size: 14))
+                    .foregroundColor(selectedTab == item ? Color("FontGreen") : Color("FontBlack"))
+                    .padding(.horizontal, items.last != item ? 4.5 : 0)
+                    .padding(.bottom, 14)
+                    .padding(.top, 12)
+                    .onTapGesture {
+                        // tap을 했을때, withAnimation으로 자연스럽게 이동시켜줌
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.8)){
+                            selectedTab = item
                         }
-                        .overlay(alignment:.bottom) {
-                            if selectedTab == item {
-                                activeStroke()
-                                    .matchedGeometryEffect(id: "activeStroke", in: namespace)
-                            }
+                    }
+                    .overlay(alignment:.bottom) {
+                        // matchedGeometryEffect로 하단의 모든 stroke를 연결시켜줌,
+                        if selectedTab == item {
+                            activeStroke()
+                                .matchedGeometryEffect(id: "activeStroke", in: namespace)
                         }
-                } // VStack
+                    }
+                
+                // HStack으로 쌓을때, 우측의 Spacer를 줘서 모든 text에 우측 Spacer를 줌 (device가 변하더라도 일정하게 Spacer를 줄 수 있음)
+                // 마지막이라면 우측에 Spacer를 주지 않음
                 if items.last != item {
                     Spacer()
                 }
@@ -79,7 +82,6 @@ struct TabBar: View {
         .padding(.horizontal, 15)
         .frame(maxWidth: .infinity)
         .background(Color.white)
-        .border(.green)
     }
 }
 

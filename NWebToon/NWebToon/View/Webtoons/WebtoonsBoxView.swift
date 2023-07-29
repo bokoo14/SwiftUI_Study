@@ -19,22 +19,17 @@ struct WebtoonsBoxView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
                 .padding(.bottom, 5)
-                //.frame(height: 152)
-            //Spacer()
+
             Text(imageTitle)
-                .font(.system(size: 13))
+                .font(.pretendard(.bold, size: 13))
                 .foregroundColor(Color("FontBlack"))
                 .padding(.bottom, 4)
                 .lineLimit(1)
             
             Text(imageDetail)
-                .font(.system(size: 10))
+                .font(.pretendard(.medium, size: 9))
                 .foregroundColor(Color("FontGray100"))
-            
-        }
-        //.frame(width: 117, height: 189)
-        //.border(.red)
-        
+        } 
     }
 }
 

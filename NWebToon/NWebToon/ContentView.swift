@@ -18,7 +18,7 @@ struct ContentView: View {
         // 상수로 값을 주면 안됨 왜? 디바이스마다 다르니까
         ScrollView { // 하위뷰에서 크기를 받음
             HeaderView()
-            WebtoonsTabView() // 상위 뷰에서 크기를 받음
+            WebtoonsTabView()
             ButtonAreaView()
             FooterAreaView()
         }
