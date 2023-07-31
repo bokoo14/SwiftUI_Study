@@ -35,3 +35,13 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
+// note
+/**
+ area의 기준
+ 고객에게 화면이 나가는 기준으로 View를 짠다
+View는  고객에게 보여지는 기준임
+ 
+ */

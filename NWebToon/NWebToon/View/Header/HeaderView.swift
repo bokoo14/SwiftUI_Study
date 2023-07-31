@@ -35,13 +35,12 @@ struct HeaderView: View {
         GeometryReader { geo in
             let width = geo.size.width - (totalSpacing - leftrightSpacing)
             
-            ZStack (alignment: .bottomLeading) {
+            ZStack (alignment: .bottomLeading){
                 ForEach(0..<headerInfo.count) { index in
                     Image(headerInfo[index].imageTitle)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .opacity(index == currentIndex ? 1 : 0)
-                    //.animation(.linear, value: 1)
                 } // ForEach
                 
                 HStack(spacing: leftrightSpacing){
@@ -60,12 +59,25 @@ struct HeaderView: View {
             } // Group
             .gesture(
                 DragGesture()
-                    .updating($offset, body: { dragGestureValue, inoutState, inoutTransaction in
-                        inoutState = dragGestureValue.translation.width
-                        
-                        
+                // [note]
+                /*
+                 updating: 실시간
+                 updating, onEnded의 value값은 둘 다 동일하다
+                 모든 값을 갖고 있는게 value값임
+                 inoutState의 값을 실시간으로 $offset에 넣어줌
+                 offset은 무조건 @GestureState로 구현해야 함
+                 offset에 실시간으로 값을 넣어줌
+                 
+                 value값은 DragGesture가 가지고 있다
+                 */
+                    .updating($offset, body: { value, inoutState, inoutTransaction in
+                        inoutState = value.translation.width // 실시간으로 드래그한 값이 들어간다
                     })
-                
+            // [note]
+            /*
+             onEnded: 손을 땠을때
+             value값은 손을 땠을때 한번 업데이트됨
+             */
                     .onEnded { value in
                         let widthOffset = value.translation.width
                         let howSwap = -widthOffset / width
@@ -78,6 +90,10 @@ struct HeaderView: View {
         .animation(.easeInOut, value: offset == 0)
         //.border(.red)
         .frame(width: screenWidth, height: screeHeight/3.4)
+    }
+    
+    private func offset(for banner: HeaderModel) {
+        
     }
     
 }
