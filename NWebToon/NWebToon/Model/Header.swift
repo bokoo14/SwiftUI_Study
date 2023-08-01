@@ -16,7 +16,7 @@ struct HeaderModel: Identifiable {
 
 let headerInfo: [HeaderModel] = {
     var headerArray: [HeaderModel] = []
-    for index in 0...7 {
+    for index in 1...7 {
         let header = HeaderModel(imageTitle: "ImgBanner0\(index)", lineImageTitle: "ImgLineBanner0\(index)", index: index)
         headerArray.append(header)
     }

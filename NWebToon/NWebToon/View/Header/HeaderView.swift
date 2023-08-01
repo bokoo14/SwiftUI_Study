@@ -16,7 +16,7 @@ struct HeaderView: View {
      */
     @State var currentIndex: Int = 0
     
-    @GestureState var dragOffset: CGFloat = 0
+    @GestureState var dragOffset: CGFloat = 0 // 실시간으로 얼마만큼 이동했는지
     
     // index가 1일때는 왼쪽 16만큼 보임, 오른쪽 spacing 10, 오른쪽에 보이는 것 6
     // index가 2이상일때는 왼쪽 오른쪽 10만큼 spacing, 오른쪽 왼쪽에 보이는 부분 6
@@ -38,7 +38,8 @@ struct HeaderView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: screenWidth)
-                        .opacity(index == currentIndex ? 1 : 0)
+                        //.opacity(index == currentIndex ? 1 : 0)
+                        .opacity(getOpacity(for: headerInfo[index], dragOffset: dragOffset, width: width))
                 } // ForEach
                 
                 HStack(spacing: leftrightSpacing){
@@ -90,9 +91,13 @@ struct HeaderView: View {
         .frame(width: screenWidth, height: screeHeight/3.4)
     }
     
-    private func getOpacity(for banner: HeaderModel, dragOffset: CGFloat, width: CGFloat) {
-        let indexOffset = CGFloat(banner.index - currentIndex)
-        let totalOffset = indexOffset
+    private func getOpacity(for banner: HeaderModel, dragOffset: CGFloat, width: CGFloat) -> Double{
+        let indexOffset = CGFloat(banner.index-1 - currentIndex)
+        let totalOffset = indexOffset * (width - CGFloat(headerInfo.count - 1))
+        let dragOffsetClamed = max(-width, min(dragOffset, width))
+        let changeOffset = totalOffset + dragOffsetClamed
+        
+        return Double(1 - (changeOffset/UIScreen.main.bounds.width).magnitude)
     }
     
 }
