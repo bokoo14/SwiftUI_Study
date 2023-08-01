@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct HeaderView: View {
+    /*
+     [Note]
+     CGFloat: width, height
+     CGPoint: x, y 좌표
+     CGRect: CGFloat + CGPoint
+     */
     @State var currentIndex: Int = 0
     
-    @GestureState var offset: CGFloat = 0
+    @GestureState var dragOffset: CGFloat = 0
     
     // index가 1일때는 왼쪽 16만큼 보임, 오른쪽 spacing 10, 오른쪽에 보이는 것 6
     // index가 2이상일때는 왼쪽 오른쪽 10만큼 spacing, 오른쪽 왼쪽에 보이는 부분 6
@@ -18,15 +24,6 @@ struct HeaderView: View {
     // index가 2이상일때: 6 10 카드 10 6
     let leftrightSpacing: CGFloat = 10 // 배너 좌우 공백
     let totalSpacing: CGFloat = 32 // 배너를 제외한 전체 공백
-    
-    let headerInfo: [HeaderModel] = {
-        var headerArray: [HeaderModel] = []
-        for index in 1..<9 {
-            let header = HeaderModel(imageTitle: "ImgBanner0\(index)", lineImageTitle: "ImgLineBanner0\(index)")
-            headerArray.append(header)
-        }
-        return headerArray
-    }()
     
     var body: some View {
         let screenWidth = UIScreen.main.bounds.width
@@ -40,6 +37,7 @@ struct HeaderView: View {
                     Image(headerInfo[index].imageTitle)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .frame(width: screenWidth)
                         .opacity(index == currentIndex ? 1 : 0)
                 } // ForEach
                 
@@ -53,7 +51,7 @@ struct HeaderView: View {
                     } // ForEach
                     
                 } // HStack
-                .offset(x: CGFloat(currentIndex)*(-width) + offset)
+                .offset(x: CGFloat(currentIndex)*(-width) + dragOffset)
                 .padding(.horizontal, 16)
                 
             } // Group
@@ -70,7 +68,7 @@ struct HeaderView: View {
                  
                  value값은 DragGesture가 가지고 있다
                  */
-                    .updating($offset, body: { value, inoutState, inoutTransaction in
+                    .updating($dragOffset, body: { value, inoutState, inoutTransaction in
                         inoutState = value.translation.width // 실시간으로 드래그한 값이 들어간다
                     })
             // [note]
@@ -87,13 +85,14 @@ struct HeaderView: View {
                     } // onEnded
             ) // gesture
         } // GeometryReader
-        .animation(.easeInOut, value: offset == 0)
+        .animation(.easeInOut, value: dragOffset == 0)
         //.border(.red)
         .frame(width: screenWidth, height: screeHeight/3.4)
     }
     
-    private func offset(for banner: HeaderModel) {
-        
+    private func getOpacity(for banner: HeaderModel, dragOffset: CGFloat, width: CGFloat) {
+        let indexOffset = CGFloat(banner.index - currentIndex)
+        let totalOffset = indexOffset
     }
     
 }
